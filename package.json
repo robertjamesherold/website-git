@@ -1,0 +1,55 @@
+{
+  "name": "vite-project",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host",
+    "build": "vite build",
+    "preview": "vite preview",
+    "build:analyze": "vite build --mode analyze",
+    "clean": "rm -rf dist",
+    "clean:install": "rm -rf node_modules package-lock.json && npm install",
+    "prepare": "husky install",
+    "lint": "eslint src",
+    "lint:fix": "eslint src --fix",
+    "lint-staged": {
+             "**/*.{css,scss}": "csscomb",
+             "**/*.{js,ts,jsx,tsx}": "eslint --fix",
+  "**/*.{js,ts,jsx,tsx,json,html,md}": "prettier --write"
+},
+    "format": "prettier --write \"src/**/*.{js,jsx,json,md}\"",
+    "format:check": "prettier --check \"src/**/*.{js,jsx,json,md}\"",
+    "check": "npm run lint && npm run format:check",
+    "fix": "npm run lint:fix && npm run format",
+    "update": "npx npm-check-updates -u && npm install",
+    "css:purge": "NODE_ENV=production postcss src/index.css -o dist/purged.css",
+    "scss:watch": "sass --watch src/styles/scss:src/styles/css"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.0.0",
+    "@fullhuman/postcss-purgecss": "^5.0.0",
+    "@vitejs/plugin-react": "^4.0.0",
+    "autoprefixer": "^10.4.21",
+    "csscomb": "^4.3.0",
+    "eslint": "^8.45.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-prettier": "^5.0.0",
+    "eslint-plugin-react": "^7.32.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.1.2",
+    "postcss": "^8.5.6",
+    "prettier": "^3.0.0",
+    "prettier-plugin-tailwindcss": "^0.6.14",
+    "react-router-dom": "^7.6.3",
+    "sass": "^1.89.2",
+    "tailwindcss": "^3.4.17",
+    "vite": "^4.4.0"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  }
+}

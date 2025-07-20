@@ -1,0 +1,29 @@
+.gridcontainer
+{
+    display: grid;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+    box-sizing: border-box;
+    width: $spaceFull;
+    max-width: 1200px;
+    height: $spaceAuto;
+
+    margin-inline: $spaceAuto;
+    padding-block: $space5;
+    padding-inline: $space1;
+    gap: $space1;
+    grid-template-columns: repeat(12, 1fr);
+    grid-auto-rows: minmax($space12, 1fr);
+}
+
+@media (max-width: $md) and (orientation: portrait)
+{
+    .gridcontainer
+    {
+        grid-template-columns: repeat(8, 1fr);
+        grid-auto-rows: minmax($space12, 1fr);
+        padding-block: $space3;
+    }
+}

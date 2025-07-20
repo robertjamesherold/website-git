@@ -1,0 +1,154 @@
+// Colors
+$clr1: #3b82f6;
+$primary: $clr1;
+$clr1D: #2563eb;
+$clr1D0: rgba(29, 79, 216, 0);
+$clr1D1: rgba(29, 79, 216, 1);
+$clr1L: #60a5fa;
+$primary-light: $clr1L;
+$clr2: #f97316;
+$clr2D: #ea580c;
+$clr2L: #fb923c;
+$clr3: #22c55e;
+$clr3D: #16a34a;
+$clr3L: #4ade80;
+$clr4: #f59e0b;
+$clr4D: #d97706;
+$clr4L: #fcd34d;
+$clr5: #ef4444;
+$clr5D: #dc2626;
+$clr5L: #f87171;
+$clrTx1: rgb(31, 41, 55);
+$clrTx2: #6b7280;
+$clrBg1: #f3f4f6;
+$clrBg2: #fff;
+$clr0W: #fff;
+$white: $clr0W;
+$clr0B: #000;
+
+
+
+// Gray Scale
+$gray-50: #f9fafb;
+$gray-100: #f3f4f6;
+$gray-200: #e5e7eb;
+$gray-300: #d1d5db;
+$gray-400: #9ca3af;
+$gray-500: #6b7280;
+$gray-600: #4b5563;
+$gray-700: #374151;
+$gray-800: #1f2937;
+$gray-900: #111827;
+
+// Spacing
+$space0: 0;
+$spacepx: 1px;
+$space0n25: .25rem;
+$space0n5: .5rem;
+$space0n75: .75rem;
+$space1: 1rem;
+$space1n5: 1.5rem;
+$space2: 2rem;
+$space2n5: 2.5rem;
+$space3: 3rem;
+$space3n5: 3.5rem;
+$space4: 4rem;
+$space4n5: 4.5rem;
+$space5: 5rem;
+$space5n5: 5.5rem;
+$space6: 6rem;
+$space7: 7rem;
+$space8: 8rem;
+$space9: 9rem;
+$space10: 10rem;
+$space11: 11rem;
+$space12: 12rem;
+$space13: 13rem;
+$space14: 14rem;
+$space15: 15rem;
+$space25: 25%;
+$space50: 50%;
+$space75: 75%;
+$space100: 100%;
+$spaceAuto: auto;
+$spaceFull: 100vw;
+$spaceScreen: 100vh;
+$spaceMin: min-content;
+$spaceMax: max-content;
+$spaceFit: fit-content;
+$spacing-xs: $space0n25;
+$spacing-sm: $space0n5;
+$spacing-md: $space1;
+$spacing-lg: $space2;
+$spacing-xl: $space3;
+$spacing-2xl: $space4;
+
+
+// Typography
+$fontFamily: 'Inter','system-ui', sans-serif;
+
+// Font Size
+$font-size-xs: .75rem; // 12px
+$font-size-sm: .875rem; // 14px
+$font-size-base: 1rem; // 16px
+$font-size-md: 1.125rem; // 18px
+$font-size-lg: 1.25rem; // 20px
+$font-size-xl: 1.5rem; // 24px
+$font-size-2xl: 1.875rem; // 30px
+$font-size-3xl: 2.25rem; // 36px
+$font-size-4xl: 3rem; // 48px
+$font-size-5xl: 3.75rem; // 60px
+$font-size-6xl: 4.5rem; // 72px
+$font-size-7xl: 6rem; // 96px
+$font-size-8xl: 8rem; // 128px
+$font-size-9xl: 9rem; // 144px
+// Font Sizes for Headings
+$p: 1rem;
+$h6: 1.25rem;
+$h5: 1.5rem;
+$h4: 1.75rem;
+$h3: 2rem;
+$h2: 2.25rem;
+$h1: 2.5rem;
+
+
+// Font Weights 
+$fw1: 100;
+$fw2: 200;
+$fw3: 300;
+$fw4: 400;
+$fw5: 500;
+$fw6: 600;
+$fw7: 700;
+$fw8: 800;
+$fw9: 900;
+
+// Border Radius
+
+$bR1: 1rem;
+$bR2: 2rem;
+$bR3: 3rem;
+$bR4: 4rem;
+$border-radius-sm: $bR1;
+$border-radius-md: $bR2;
+$border-radius-lg: $bR3;
+$border-radius-xl: $bR4;
+
+// Breakpoints
+$xs: 480px;
+$sm: 640px;
+$md: 768px;
+$lg: 1024px;
+$xl: 1280px;
+
+
+// Shadows
+$shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, .05);
+$shadow-md: 0 4px 6px -1px rgba(0, 0, 0, .1), 0 2px 4px -1px rgba(0, 0, 0, .06);
+$shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, .1), 0 4px 6px -2px rgba(0, 0, 0, .05);
+
+
+$line-height-tight: 1.3;
+$line-height-base: 1.6;
+
+$border1: 1px solid rgba(229, 231, 235, 1);

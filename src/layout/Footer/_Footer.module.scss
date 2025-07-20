@@ -1,0 +1,425 @@
+// =============================================================================
+// FOOTER COMPONENT - Responsive Footer mit deinen Variablen
+// =============================================================================
+
+.footer
+{
+    margin-top: $spaceAuto;
+    padding-top: $space3;
+    padding-bottom: $space2;
+
+    color: $gray-300;
+    border-top: 1px solid $gray-800;
+    background-color: $gray-900;
+}
+
+.container
+{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+    box-sizing: border-box;
+    width: $spaceFull;
+    max-width: 1200px;
+    height: $spaceAuto;
+
+    margin-inline: auto;
+    padding-inline: $space4;
+}
+
+@media (max-width: $xl)
+{
+    .container
+    {
+        padding-inline: $space3;
+        padding-block: $space4;
+    }
+}
+
+@media (max-width: $lg)
+{
+    .container
+    {
+        padding-inline: $space2n5;
+        padding-block: $space3n5;
+    }
+}
+
+@media (max-width: $md)
+{
+    .container
+    {
+        padding-inline: $space2;
+        padding-block: $space3;
+    }
+}
+
+@media (max-width: $sm)
+{
+    .container
+    {
+        padding-inline: $space1n5;
+        padding-block: $space2n5;
+    }
+}
+
+@media (max-width: $xs)
+{
+    .container
+    {
+        padding-inline: $space1;
+        padding-block: $space2;
+    }
+}
+
+// =============================================================================
+// MAIN GRID LAYOUT
+// =============================================================================
+
+.grid
+{
+    display: grid;
+
+    width: $space100;
+    margin-bottom: $space3;
+
+    grid-template-columns: 1fr;
+    gap: $space2;
+
+    @media (min-width: $sm)
+    {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (min-width: $lg)
+    {
+        grid-template-columns: repeat(3, 1fr);
+        gap: $space3;
+    }
+}
+
+// =============================================================================
+// SECTION STYLES
+// =============================================================================
+
+.section
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.sectionTitle
+{
+    font-size: $h6;
+    font-weight: 700;
+    line-height: $line-height-tight;
+
+    margin-bottom: $space1;
+
+    color: $clr0W;
+}
+
+.linkList
+{
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+
+    li
+    {
+        margin-bottom: $space0n5;
+    }
+}
+
+.link
+{
+    font-size: $p;
+    line-height: $line-height-base;
+
+    transition: color .2s ease-in-out;
+    text-decoration: none;
+
+    color: $gray-400;
+
+    &:hover,
+    &:focus
+    {
+        color: $clr1L;
+        outline: none;
+    }
+
+    &:focus
+    {
+        text-decoration: underline;
+    }
+}
+
+// =============================================================================
+// NEWSLETTER SECTION - Entfernt für Portfolio
+// =============================================================================
+
+// Newsletter Styles entfernt da nicht benötigt für Portfolio
+
+// =============================================================================
+// BOTTOM SECTION
+// =============================================================================
+
+.bottom
+{
+    width: $space100;
+    padding-top: $space2;
+
+    border-top: 1px solid $gray-800;
+}
+
+.bottomContent
+{
+    display: flex;
+    flex-direction: column;
+
+    margin-bottom: $space1n5;
+
+    gap: $space1n5;
+
+    @media (min-width: $md)
+    {
+        align-items: center;
+        flex-direction: row;
+        justify-content: space-between;
+
+        gap: $space2;
+    }
+}
+
+// =============================================================================
+// SOCIAL MEDIA SECTION
+// =============================================================================
+
+.socialSection
+{
+    display: flex;
+    flex-direction: column;
+
+    gap: $space0n5;
+
+    @media (min-width: $sm)
+    {
+        align-items: center;
+        flex-direction: row;
+
+        gap: $space1;
+    }
+}
+
+.socialTitle
+{
+    font-size: $p;
+    font-weight: 500;
+
+    color: $gray-400;
+}
+
+.socialLinks
+{
+    display: flex;
+
+    gap: $space1;
+}
+
+.socialLink
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 40px;
+    height: 40px;
+
+    transition: all .2s ease-in-out;
+    text-decoration: none;
+
+    color: $gray-400;
+    border-radius: $bR1;
+    background-color: $gray-800;
+
+    &:hover
+    {
+        transform: translateY(-2px);
+
+        color: $clr0W;
+        background-color: $clr1;
+    }
+
+    &:focus
+    {
+        outline: none;
+        box-shadow: 0 0 0 3px rgba($clr1, .3);
+    }
+
+    svg
+    {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+// =============================================================================
+// LEGAL SECTION
+// =============================================================================
+
+.legalSection
+{
+    display: flex;
+    flex-direction: column;
+
+    gap: $space1;
+
+    @media (min-width: $sm)
+    {
+        align-items: flex-end;
+    }
+}
+
+.legalLinks
+{
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: $space1;
+
+    @media (min-width: $sm)
+    {
+        gap: $space1n5;
+    }
+}
+
+.legalLink
+{
+    font-size: $p;
+
+    transition: color .2s ease-in-out;
+    white-space: nowrap;
+    text-decoration: none;
+
+    color: $gray-500;
+
+    &:hover,
+    &:focus
+    {
+        color: $clr1L;
+        outline: none;
+    }
+
+    &:focus
+    {
+        text-decoration: underline;
+    }
+}
+
+// =============================================================================
+// COPYRIGHT
+// =============================================================================
+
+.copyright
+{
+    padding-top: $space1;
+
+    text-align: center;
+
+    border-top: 1px solid $gray-800;
+
+    p
+    {
+        font-size: $p;
+
+        margin: 0;
+
+        color: $gray-500;
+    }
+
+    @media (min-width: $md)
+    {
+        text-align: left;
+    }
+}
+
+// =============================================================================
+// RESPONSIVE IMPROVEMENTS
+// =============================================================================
+
+@media (max-width: $sm - 1px)
+{
+    .footer
+    {
+        padding-top: $space2;
+    }
+
+    .grid
+    {
+        gap: $space1n5;
+    }
+
+    .newsletterForm
+    {
+        .newsletterButton
+        {
+            padding: $space1 $space1n5;
+        }
+    }
+
+    .socialLinks
+    {
+        justify-content: center;
+    }
+
+    .legalLinks
+    {
+        justify-content: center;
+
+        text-align: center;
+    }
+}
+
+// =============================================================================
+// ACCESSIBILITY IMPROVEMENTS
+// =============================================================================
+
+@media (prefers-reduced-motion: reduce)
+{
+    .link,
+    .newsletterInput,
+    .newsletterButton,
+    .socialLink,
+    .legalLink
+    {
+        transition: none;
+    }
+
+    .newsletterButton:hover,
+    .socialLink:hover
+    {
+        transform: none;
+    }
+}
+
+// High contrast mode support
+@media (prefers-contrast: high)
+{
+    .footer
+    {
+        border-top: 2px solid $clr0W;
+    }
+
+    .bottom
+    {
+        border-top: 2px solid $gray-700;
+    }
+
+    .copyright
+    {
+        border-top: 2px solid $gray-700;
+    }
+}

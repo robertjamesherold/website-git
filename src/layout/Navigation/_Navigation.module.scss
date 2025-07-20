@@ -1,0 +1,527 @@
+// =============================================================================
+// NAVIGATION COMPONENT - Responsive mit Mobile Dropdown
+// =============================================================================
+
+.navigation
+{
+    position: sticky;
+    z-index: 1100;
+    top: 0;
+
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+
+    width: 100%;
+    height: 64px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: $space2;
+    padding-left: $space2;
+
+    transition: all .2s ease-in-out;
+
+    border-bottom: 1px solid $gray-200;
+    background-color: rgba($clr0W, .95);
+
+    backdrop-filter: blur(10px);
+
+    .container
+    {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        justify-content: space-between;
+
+        width: 100%;
+        max-width: 1200px;
+    }
+
+
+    .brand .logo
+    {
+        font-size: 1.5rem;
+        font-weight: 800;
+        line-height: 1;
+
+        display: flex;
+        flex-direction: column;
+
+        text-decoration: none;
+
+        color: #111827;
+    }
+
+    .logoText
+    {
+        font-size: 1.5rem;
+    }
+
+    .logoSubtext
+    {
+        font-size: .9rem;
+
+        color: #6b7280;
+    }
+
+    @media (max-width: $md - 1px)
+    {
+        justify-content: space-between;
+    }
+}
+
+// =============================================================================
+// MENU TOGGLE (Hamburger)
+// =============================================================================
+
+.menuToggle
+{
+    position: relative;
+    z-index: 1400;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+    width: 40px;
+    height: 40px;
+    padding: $space1;
+
+    cursor: pointer;
+
+    border: none;
+    background: transparent;
+
+    @media (min-width: $md)
+    {
+        display: none;
+    }
+
+    &:focus
+    {
+        outline: 2px solid transparent;
+        outline-offset: 2px;
+        box-shadow: 0 0 0 2px $clr1;
+    }
+}
+
+.menuIcon
+{
+    position: absolute;
+    left: 50%;
+
+    width: 24px;
+    height: 2px;
+
+    transition: all .2s ease-in-out;
+    transform: translateX(-50%);
+    transform-origin: center;
+
+    border-radius: 9999px;
+    background-color: $gray-900;
+
+    &:first-child
+    {
+        top: calc(50% - 4px);
+    }
+
+    &:last-child
+    {
+        top: calc(50% + 4px);
+    }
+
+    // 2 Striche zu X Animation - perfekt zentriert
+    &.open
+    {
+        &:nth-child(1)
+        {
+            top: 50%;
+
+            transform: translateX(-50%) rotate(45deg);
+        }
+
+        &:nth-child(2)
+        {
+            top: 50%;
+
+            transform: translateX(-50%) rotate(-45deg);
+        }
+    }
+}
+
+// =============================================================================
+// DESKTOP NAVIGATION
+// =============================================================================
+
+.navList
+{
+    display: none;
+    align-items: center;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+
+    gap: $space4;
+
+    @media (min-width: $md)
+    {
+        display: flex;
+    }
+}
+
+.navItem
+{
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.navLink
+{
+    font-weight: 500;
+
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: $space1n5 $space2;
+
+    transition: all .2s ease-in-out;
+    text-decoration: none;
+
+    color: $gray-600;
+    border-radius: $bR2;
+
+    &:hover,
+    &:focus
+    {
+        color: $clr1;
+        background-color: rgba($clr1L, .1);
+    }
+
+    // Active State mit Underline
+    &.active
+    {
+        color: $clr1;
+
+        &::after
+        {
+            position: absolute;
+            bottom: -2px;
+            left: 50%;
+
+            width: 80%;
+            height: 2px;
+
+            content: '';
+            transform: translateX(-50%);
+
+            border-radius: 9999px;
+            background-color: $clr1;
+        }
+    }
+}
+
+// =============================================================================
+// MOBILE FULLSCREEN DROPDOWN
+// =============================================================================
+
+.mobileMenu
+{
+    position: fixed;
+    z-index: 1300;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    visibility: hidden;
+    align-items: center;
+    justify-content: center;
+
+    width: 100vw;
+    height: 100vh;
+
+    transition: all .2s ease-in-out;
+    // Slide down animation
+    transform: translateY(-100%);
+
+    opacity: 0;
+    background-color: $clr0W;
+
+    &.open
+    {
+        visibility: visible;
+
+        transform: translateY(0);
+
+        opacity: 1;
+    }
+
+    @media (min-width: $md)
+    {
+        display: none;
+    }
+}
+
+.mobileNavList
+{
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+
+    text-align: center;
+
+    // Staggered animation für Liste
+    .open &
+    {
+        .mobileNavItem
+        {
+            &:nth-child(1)
+            {
+                animation: slideInUp .3s ease-out 0ms both;
+            }
+            &:nth-child(2)
+            {
+                animation: slideInUp .3s ease-out 100ms both;
+            }
+            &:nth-child(3)
+            {
+                animation: slideInUp .3s ease-out 200ms both;
+            }
+            &:nth-child(4)
+            {
+                animation: slideInUp .3s ease-out 300ms both;
+            }
+            &:nth-child(5)
+            {
+                animation: slideInUp .3s ease-out 400ms both;
+            }
+            &:nth-child(6)
+            {
+                animation: slideInUp .3s ease-out 500ms both;
+            }
+        }
+    }
+}
+
+.mobileNavItem
+{
+    margin-bottom: $space4;
+
+    transform: translateY(30px);
+
+    opacity: 0;
+}
+
+.mobileNavLink
+{
+    font-size: $h4;
+    font-weight: 500;
+
+    position: relative;
+
+    display: block;
+
+    padding: $space2 $space4;
+
+    transition: all .2s ease-out;
+    text-decoration: none;
+
+    color: $gray-900;
+    border-radius: $bR3;
+
+    &:hover,
+    &:focus
+    {
+        color: $clr1;
+        background-color: rgba($clr1, .05);
+
+        &::after
+        {
+            width: 100%;
+        }
+    }
+
+    // Underline Effect - startet von der Mitte
+    &::after
+    {
+        position: absolute;
+        bottom: $space1n5;
+        left: 50%;
+
+        width: 0;
+        height: 3px;
+
+        content: '';
+        transition: width .3s ease-out;
+        transform: translateX(-50%);
+
+        border-radius: 9999px;
+        background-color: $clr1;
+    }
+
+    // Focus state
+    &:focus
+    {
+        outline: 0 solid transparent;
+        outline-offset: 4px;
+    }
+}
+
+// =============================================================================
+// ANIMATIONS
+// =============================================================================
+
+@keyframes slideInUp
+{
+    from
+    {
+        transform: translateY(30px);
+
+        opacity: 0;
+    }
+    to
+    {
+        transform: translateY(0);
+
+        opacity: 1;
+    }
+}
+
+// =============================================================================
+// RESPONSIVE IMPROVEMENTS
+// =============================================================================
+
+// Bessere Touch-Targets für Mobile
+@media (hover: none) and (pointer: coarse)
+{
+    .mobileNavLink
+    {
+        min-height: 48px; // iOS Accessibility
+        padding: $space4 $space5;
+    }
+
+    .menuToggle
+    {
+        min-width: 44px;
+        min-height: 44px;
+    }
+}
+
+// Reduzierte Motion für User die es bevorzugen
+@media (prefers-reduced-motion: reduce)
+{
+    .mobileMenu,
+    .menuIcon,
+    .mobileNavLink,
+    .overlay
+    {
+        transition-duration: .01ms;
+        animation-duration: .01ms;
+    }
+
+    .mobileNavItem
+    {
+        transform: none;
+        animation: none;
+
+        opacity: 1;
+    }
+}
+
+// =============================================================================
+// DARK MODE SUPPORT (Optional)
+// =============================================================================
+
+@media (prefers-color-scheme: dark)
+{
+    .navigation
+    {
+        border-bottom-color: $gray-700;
+        background-color: rgba($gray-900, .95);
+    }
+
+    .menuIcon
+    {
+        background-color: $gray-100;
+    }
+
+    .navLink
+    {
+        color: $gray-300;
+
+        &:hover,
+        &:focus
+        {
+            color: $clr1L;
+            background-color: rgba-hex($clr1L, .1);
+        }
+    }
+}
+
+
+
+.hasDropdown .dropdownIcon
+{
+    transition: transform .3s ease;
+}
+
+.hasDropdown .dropdownIcon.open
+{
+    transform: rotate(180deg);
+}
+
+.dropdown
+{
+    position: absolute;
+    z-index: 999;
+    top: 100%;
+    left: 0;
+
+    display: none;
+
+    width: 240px;
+    padding: 1rem;
+
+    border: 1px solid #e5e7eb;
+    border-radius: .5rem;
+    background-color: white;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, .05);
+}
+
+.dropdown.open
+{
+    display: block;
+}
+
+.dropdownItem
+{
+    display: block;
+
+    padding: .5rem 0;
+
+    transition: color .3s;
+    text-decoration: none;
+
+    color: #374151;
+
+    &:hover
+    {
+        color: #2563eb;
+    }
+}
+
+
+.dropdownItemDescription
+{
+    font-size: .85rem;
+
+    color: #6b7280;
+}

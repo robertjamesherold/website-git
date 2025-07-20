@@ -1,0 +1,64 @@
+
+
+
+.container
+{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+    box-sizing: border-box;
+    width: $spaceFull;
+    max-width: 1200px;
+    height: $spaceAuto;
+
+    margin-inline: auto;
+    padding-inline: $space4;
+}
+
+@media (max-width: $xl)
+{
+    .container
+    {
+        margin-inline: $space0;
+        padding-inline: $space3;
+        padding-block: $space4;
+    }
+}
+
+@media (max-width: $lg)
+{
+    .container
+    {
+        padding-inline: $space2n5;
+        padding-block: $space3n5;
+    }
+}
+
+@media (max-width: $md)
+{
+    .container
+    {
+        padding-inline: $space2;
+        padding-block: $space3;
+    }
+}
+
+@media (max-width: $sm)
+{
+    .container
+    {
+        padding-inline: $space1n5;
+        padding-block: $space2n5;
+    }
+}
+
+@media (max-width: $xs)
+{
+    .container
+    {
+        padding-inline: $space1;
+        padding-block: $space2;
+    }
+}

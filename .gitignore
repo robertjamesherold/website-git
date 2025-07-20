@@ -1,0 +1,65 @@
+# --- 🌐 Allgemeine Node/React ---
+node_modules/
+dist/
+build/
+out/
+temp/
+.tmp/
+
+# --- 🔐 Umgebungsvariablen ---
+.env
+.env.*.local
+
+# --- 🧪 Tests und Coverage ---
+coverage/
+*.lcov
+
+# --- 📝 Logs ---
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# --- 🛠️ Tooling ---
+.eslintcache
+.stylelintcache
+.vite/deps
+.vite-cache/
+
+# --- ⚙️ Lockfiles (je nach Paketmanager – ggf. nur eins verwenden) ---
+# package-lock.json
+# yarn.lock
+# pnpm-lock.yaml
+
+# --- 💻 Betriebssysteme ---
+.DS_Store
+Thumbs.db
+
+# --- 🧠 IDEs und Editoren ---
+.vscode/*
+!.vscode/extensions.json
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# --- 🔥 Deployment Plattformen ---
+.vercel/
+.netlify/
+firebase.json
+.firebaserc
+.firebase/
+
+# --- 📦 Yarn Plug’n’Play (wenn aktiv) ---
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+.pnp.*

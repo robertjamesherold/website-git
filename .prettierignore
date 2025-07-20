@@ -1,0 +1,25 @@
+# Build outputs
+dist
+build
+node_modules
+
+# CSS files (Tailwind @apply syntax causes issues)
+src/index.css
+src/**/tailwind.css
+src/**/*tailwind*
+
+# SCSS files (optional - uncomment if needed)
+# *.scss
+
+# Config files
+*.config.js
+vite.config.js
+tailwind.config.js
+postcss.config.js
+
+# Package files
+package-lock.json
+yarn.lock
+
+# Logs
+*.log

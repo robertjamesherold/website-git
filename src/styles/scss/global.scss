@@ -1,0 +1,40 @@
+@use '@scss/_reset.scss' as *;
+@use '@scss/_variables.scss' as *;
+
+h1
+{
+    font-size: $h1;
+
+    color: $clr1;
+}
+
+h2
+{
+    font-size: $h2;
+
+    color: $clr2;
+}
+h3
+{
+    font-size: $h3;
+
+    color: $clr1;
+}
+h4
+{
+    font-size: $h4;
+
+    color: $clr2;
+}
+h5
+{
+    font-size: $h5;
+
+    color: $clr1;
+}
+h6
+{
+    font-size: $h6;
+
+    color: $clr2;
+}

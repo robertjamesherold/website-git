@@ -1,0 +1,27 @@
+
+
+
+.button
+{
+    @include button-base;
+}
+
+.primary.filled
+{
+    @include button-variant(primary, filled);
+}
+
+.secondary.filled
+{
+    @include button-variant(secondary, filled);
+}
+
+.primary.outlined
+{
+    @include button-variant(primary, outlined);
+}
+
+.secondary.outlined
+{
+    @include button-variant(secondary, outlined);
+}
