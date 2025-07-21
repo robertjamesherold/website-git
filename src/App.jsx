@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { Navigation } from '@ly/Navigation/Navigation'
-import  { Home }   from '@ly/Home/Home'
-import { ContactPage } from '@pg/ContactPage'
+import  { HomePage }   from '@pg/HomePage'
+import { Contact } from '@ly/Contact/Contact'
 import { AboutPage } from '@pg/AboutPage'
 import { ScrollToTop } from '@ho/ScrollToTop'
 import { Story } from '@ly/Story/Story'
@@ -17,12 +17,12 @@ return (
     <Navigation />
     <ScrollToTop />
     <Routes>
-      <Route path='/' element={ <Home /> } />
+      <Route path='/' element={ <HomePage /> } />
       <Route path='/übermich' element={ <AboutPage /> } />
-      <Route path='/kontakt' element={ <ContactPage /> } />
+      <Route path='/kontakt' element={ <Contact /> } />
       <Route path='/story' element={ <Story /> } />
       <Route path='/lebenslauf' element={ <CV /> } />
-       <Route path='/skills' element={ <Skills /> } />
+      <Route path='/skills' element={ <Skills /> } />
       <Route path='/projekte' element={ <Projects /> } />
     </Routes>
     <Footer />

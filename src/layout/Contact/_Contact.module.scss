@@ -1,0 +1,741 @@
+// =============================================================================
+// CONTACT COMPONENT - Moderne Kontaktseite
+// =============================================================================
+
+.contact
+{
+    min-height: 100vh;
+    padding-top: $space4;
+    padding-bottom: $space5;
+
+    background: linear-gradient(135deg, $clrBg2 0%, $clrBg1 100%);
+}
+
+// =============================================================================
+// HEADER SECTION
+// =============================================================================
+
+.header
+{
+    margin-bottom: $space5;
+
+    text-align: center;
+
+    @media (min-width: $lg)
+    {
+        margin-bottom: $space6;
+    }
+}
+
+.title
+{
+    font-size: $h1;
+    font-weight: 700;
+    line-height: $line-height-tight;
+
+    margin-bottom: $space1;
+
+    color: $clrTx1;
+
+    @media (min-width: $md)
+    {
+        font-size: 3rem;
+    }
+}
+
+.subtitle
+{
+    font-size: $h6;
+    line-height: $line-height-base;
+
+    max-width: 600px;
+    margin: 0 auto;
+
+    color: $clrTx2;
+
+    @media (min-width: $md)
+    {
+        font-size: $h5;
+    }
+}
+
+// =============================================================================
+// MAIN GRID LAYOUT
+// =============================================================================
+
+.mainGrid
+{
+    display: grid;
+
+    margin-bottom: $space5;
+
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+    gap: $space2;
+
+    @media (min-width: $lg)
+    {
+        grid-template-columns: 1.2fr 1fr;
+        gap: $space5;
+    }
+}
+
+// =============================================================================
+// FORM SECTION
+// =============================================================================
+
+.formSection
+{
+    @media (min-width: $lg)
+    {
+        order: 2;
+    }
+}
+
+.formWrapper
+{
+    padding: $space3;
+
+    border: 1px solid $gray-200;
+    border-radius: $bR1;
+    background: $clr0W;
+    box-shadow: $shadow-lg;
+
+    @media (min-width: $md)
+    {
+        padding: $space4;
+    }
+
+    // Override ContactForm styles for better integration
+    :global(.contactForm)
+    {
+        width: 100%;
+        padding: 0;
+    }
+}
+
+// =============================================================================
+// INFO SECTION
+// =============================================================================
+
+.infoSection
+{
+    display: flex;
+    flex-direction: column;
+
+    gap: $space3;
+
+    @media (min-width: $lg)
+    {
+        order: 1;
+    }
+}
+
+.quickContact
+{
+    padding: $space3;
+
+    border: 1px solid $gray-200;
+    border-radius: $bR1;
+    background: $clr0W;
+    box-shadow: $shadow-md;
+
+    @media (min-width: $md)
+    {
+        padding: $space4;
+    }
+}
+
+.infoTitle
+{
+    font-size: $h4;
+    font-weight: 700;
+
+    position: relative;
+
+    margin-bottom: $space1;
+
+    color: $clrTx1;
+
+    &::after
+    {
+        position: absolute;
+        bottom: -$space0n5;
+        left: 0;
+
+        width: 60px;
+        height: 3px;
+
+        content: '';
+
+        border-radius: $bR1;
+        background: linear-gradient(90deg, $clr1, $clr1D);
+    }
+}
+
+.infoDescription
+{
+    font-size: $p;
+    line-height: $line-height-base;
+
+    margin-bottom: $space2;
+
+    color: $clrTx2;
+}
+
+// =============================================================================
+// CONTACT CARDS
+// =============================================================================
+
+.contactCards
+{
+    display: grid;
+
+    grid-template-columns: 1fr;
+    gap: $space2;
+
+    @media (min-width: $sm)
+    {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (min-width: $lg)
+    {
+        grid-template-columns: 1fr;
+    }
+}
+
+.contactCard
+{
+    display: flex;
+    align-items: flex-start;
+
+    padding: $space2;
+
+    transition: all .3s ease;
+
+    border-radius: $bR1;
+    background: $clrBg1;
+
+    gap: $space1;
+
+    &:hover
+    {
+        transform: translateY(-2px);
+
+        background: $clr0W;
+        box-shadow: $shadow-md;
+    }
+}
+
+.cardIcon
+{
+    font-size: $h4;
+
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    justify-content: center;
+
+    width: 48px;
+    height: 48px;
+
+    border-radius: $bR1;
+    background: linear-gradient(135deg, rgba($clr1, .1), rgba($clr1D, .1));
+}
+
+.cardContent
+{
+    flex: 1;
+}
+
+.cardTitle
+{
+    font-size: $h6;
+    font-weight: 600;
+
+    margin-bottom: $space0n25;
+
+    color: $clrTx1;
+}
+
+.cardLink,
+.cardText
+{
+    font-size: $p;
+    line-height: $line-height-base;
+
+    display: flex;
+    flex-direction: column;
+
+    color: $clrTx2;
+
+    gap: $space0n25;
+
+    span
+    {
+        display: block;
+    }
+}
+
+.cardLink
+{
+    transition: color .2s ease;
+    text-decoration: none;
+
+    &:hover
+    {
+        color: $clr1;
+    }
+}
+
+// =============================================================================
+// RESPONSE TIME
+// =============================================================================
+
+.responseTime
+{
+    display: flex;
+    align-items: center;
+
+    padding: $space2;
+
+    border: 1px solid rgba($clr3, .2);
+    border-radius: $bR1;
+    background: linear-gradient(135deg, rgba($clr3, .1), rgba($clr3D, .1));
+
+    gap: $space1n5;
+}
+
+.responseIcon
+{
+    font-size: $h3;
+
+    flex-shrink: 0;
+}
+
+.responseContent
+{
+    flex: 1;
+}
+
+.responseTitle
+{
+    font-size: $h6;
+    font-weight: 600;
+
+    margin-bottom: $space0n25;
+
+    color: $clrTx1;
+}
+
+.responseText
+{
+    font-size: $p;
+    line-height: $line-height-base;
+
+    color: $clrTx2;
+}
+
+// =============================================================================
+// SOCIAL SECTION
+// =============================================================================
+
+.socialSection
+{
+    padding: $space3;
+
+    text-align: center;
+
+    border: 1px solid $gray-200;
+    border-radius: $bR1;
+    background: $clr0W;
+    box-shadow: $shadow-sm;
+}
+
+.socialTitle
+{
+    font-size: $h5;
+    font-weight: 600;
+
+    margin-bottom: $space1n5;
+
+    color: $clrTx1;
+}
+
+.socialLinks
+{
+    display: flex;
+    justify-content: center;
+
+    gap: $space1;
+}
+
+.socialLink
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 48px;
+    height: 48px;
+
+    transition: all .3s ease;
+
+    color: $clrTx2;
+    border-radius: $bR1;
+    background: $clrBg1;
+
+    &:hover
+    {
+        transform: translateY(-3px);
+
+        color: $clr0W;
+        background: $clr1;
+        box-shadow: $shadow-md;
+    }
+
+    svg
+    {
+        width: 24px;
+        height: 24px;
+    }
+}
+
+// =============================================================================
+// ADDITIONAL INFO
+// =============================================================================
+
+.additionalInfo
+{
+    padding: $space3;
+
+    border: 1px solid $gray-200;
+    border-radius: $bR1;
+    background: $clr0W;
+    box-shadow: $shadow-sm;
+}
+
+.additionalTitle
+{
+    font-size: $h5;
+    font-weight: 600;
+
+    margin-bottom: $space1;
+
+    color: $clrTx1;
+}
+
+.additionalText
+{
+    font-size: $p;
+    line-height: $line-height-base;
+
+    margin-bottom: $space1n5;
+
+    color: $clrTx2;
+}
+
+.availability
+{
+    display: inline-flex;
+    align-items: center;
+}
+
+.availableStatus
+{
+    font-size: $p;
+    font-weight: 500;
+
+    display: inline-flex;
+    align-items: center;
+
+    padding: $space0n5 $space1;
+
+    color: $clr3D;
+    border-radius: $bR1;
+    background: rgba($clr3, .1);
+
+    gap: $space0n5;
+}
+
+.statusDot
+{
+    width: 8px;
+    height: 8px;
+
+    animation: pulse 2s infinite;
+
+    border-radius: 50%;
+    background: $clr3;
+}
+
+@keyframes pulse
+{
+    0%
+    {
+        box-shadow: 0 0 0 0 rgba($clr3, .4);
+    }
+    70%
+    {
+        box-shadow: 0 0 0 10px rgba($clr3, 0);
+    }
+    100%
+    {
+        box-shadow: 0 0 0 0 rgba($clr3, 0);
+    }
+}
+
+// =============================================================================
+// FAQ SECTION
+// =============================================================================
+
+.faqSection
+{
+    height: $spaceMin;
+    padding: $space3;
+
+    text-align: center;
+
+    border: 1px solid $gray-200;
+    border-radius: $bR1;
+    background: $clr0W;
+    box-shadow: $shadow-sm;
+
+    grid-row: 2;
+    @media (min-width: $md)
+    {
+        padding: $space5;
+    }
+}
+
+.faqTitle
+{
+    font-size: $h3;
+    font-weight: 700;
+
+    position: relative;
+
+    margin-bottom: $space3;
+
+    text-align: center;
+
+    color: $clrTx1;
+
+    &::after
+    {
+        position: absolute;
+        bottom: -$space1;
+        left: 50%;
+
+        width: 80px;
+        height: 4px;
+
+        content: '';
+        transform: translateX(-50%);
+
+        border-radius: $bR1;
+        background: linear-gradient(90deg, $clr1, $clr1D);
+    }
+}
+
+.faqGrid
+{
+    display: grid;
+
+    width: 100%;
+
+    grid-template-columns: 1fr;
+    gap: $space2;
+
+    @media (min-width: $md)
+    {
+        grid-template-columns: repeat(2, 1fr);
+        gap: $space3;
+    }
+}
+
+.faqItem
+{
+    padding: $space2;
+
+    transition: all .3s ease;
+
+    border-radius: $bR1;
+    background: $clrBg1;
+
+    &:hover
+    {
+        transform: translateY(-2px);
+
+        box-shadow: $shadow-md;
+    }
+}
+
+.faqQuestion
+{
+    font-size: $h6;
+    font-weight: 600;
+
+    margin-bottom: $space0n75;
+
+    color: $clrTx1;
+}
+
+.faqAnswer
+{
+    font-size: $p;
+    line-height: $line-height-base;
+
+    color: $clrTx2;
+}
+
+// =============================================================================
+// RESPONSIVE IMPROVEMENTS
+// =============================================================================
+
+@media (max-width: $sm - 1px)
+{
+    .contact
+    {
+        padding-top: $space3;
+        padding-bottom: $space4;
+    }
+
+    .title
+    {
+        font-size: $h3;
+    }
+
+    .subtitle
+    {
+        font-size: $p;
+    }
+
+    .mainGrid
+    {
+        gap: $space3;
+    }
+
+    .formWrapper,
+    .quickContact,
+    .socialSection,
+    .additionalInfo
+    {
+        padding: $space2;
+    }
+
+    .contactCards
+    {
+        gap: $space1n5;
+    }
+
+    .contactCard
+    {
+        padding: $space1n5;
+    }
+
+    .faqSection
+    {
+        padding: $space3;
+    }
+
+    .faqGrid
+    {
+        gap: $space1n5;
+    }
+}
+
+// =============================================================================
+// DARK MODE SUPPORT
+// =============================================================================
+
+@media (prefers-color-scheme: dark)
+{
+    .contact
+    {
+        background: linear-gradient(135deg, $gray-900 0%, $gray-800 100%);
+    }
+
+    .title,
+    .infoTitle,
+    .cardTitle,
+    .responseTitle,
+    .socialTitle,
+    .additionalTitle,
+    .faqTitle,
+    .faqQuestion
+    {
+        color: $clr0W;
+    }
+
+    .subtitle,
+    .infoDescription,
+    .cardText,
+    .cardLink,
+    .responseText,
+    .additionalText,
+    .faqAnswer
+    {
+        color: $gray-300;
+    }
+
+    .formWrapper,
+    .quickContact,
+    .socialSection,
+    .additionalInfo,
+    .faqSection
+    {
+        border-color: $gray-700;
+        background: $gray-800;
+    }
+
+    .contactCard,
+    .faqItem
+    {
+        background: $gray-700;
+
+        &:hover
+        {
+            background: $gray-600;
+        }
+    }
+
+    .socialLink
+    {
+        color: $gray-300;
+        background: $gray-700;
+
+        &:hover
+        {
+            color: $clr0W;
+            background: $clr1;
+        }
+    }
+}
+
+// =============================================================================
+// ACCESSIBILITY IMPROVEMENTS
+// =============================================================================
+
+@media (prefers-reduced-motion: reduce)
+{
+    .contactCard,
+    .socialLink,
+    .faqItem
+    {
+        transition: none;
+    }
+
+    .contactCard:hover,
+    .socialLink:hover,
+    .faqItem:hover
+    {
+        transform: none;
+    }
+
+    .statusDot
+    {
+        animation: none;
+    }
+}

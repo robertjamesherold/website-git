@@ -6,24 +6,64 @@
     justify-content: center;
 
     box-sizing: border-box;
-    width: $spaceFull;
+    width: $space100;
     max-width: 1200px;
     height: $spaceAuto;
 
     margin-inline: $spaceAuto;
-    padding-block: $space5;
-    padding-inline: $space1;
+    padding-inline: $space4;
     gap: $space1;
     grid-template-columns: repeat(12, 1fr);
     grid-auto-rows: minmax($space12, 1fr);
 }
 
-@media (max-width: $md) and (orientation: portrait)
+@media (max-width: $md)
 {
     .gridcontainer
     {
-        grid-template-columns: repeat(8, 1fr);
+        grid-template-columns: repeat(6, 1fr);
         grid-auto-rows: minmax($space12, 1fr);
-        padding-block: $space3;
+    }
+}
+
+
+@media (max-width: $xl)
+{
+    .gridcontainer
+    {
+        margin-inline: $space0;
+        padding-inline: $space3;
+    }
+}
+
+@media (max-width: $lg)
+{
+    .gridcontainer
+    {
+        padding-inline: $space2n5;
+    }
+}
+
+@media (max-width: $md)
+{
+    .gridcontainer
+    {
+        padding-inline: $space2;
+    }
+}
+
+@media (max-width: $sm)
+{
+    .gridcontainer
+    {
+        padding-inline: $space1n5;
+    }
+}
+
+@media (max-width: $xs)
+{
+    .gridcontainer
+    {
+        padding-inline: $space1;
     }
 }
