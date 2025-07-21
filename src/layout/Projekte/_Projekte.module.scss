@@ -523,17 +523,29 @@
     }
 }
 
-.projectContent
+.projectContent,
+.studyContent
 {
-    padding: $space2;
+    display: flex;
+    flex-direction: column;
+
+    width: $space100;
+
+    @media (min-width: $md)
+    {
+        padding: $space2n5;
+    }
 }
 
-.projectMeta
+
+.projectMeta,
+.studyMeta
 {
     margin-bottom: $space0n75;
 }
 
-.projectCategory
+.projectCategory,
+.studyCategory
 {
     font-size: $p;
     font-weight: 600;

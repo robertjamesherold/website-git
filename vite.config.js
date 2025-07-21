@@ -25,7 +25,6 @@ export default defineConfig({
       '@img': resolve(__dirname, 'src/assets/images'),
       '@svg': resolve(__dirname, 'src/assets/svg'),
       '@fonts': resolve(__dirname, 'src/assets/fonts'),
-      '@scss': resolve(__dirname, 'src/styles/scss'),
       '@css': resolve(__dirname, 'src/styles/css'),
       '@ho': resolve(__dirname, 'src/hooks'),
       '@ly': resolve(__dirname, 'src/layout'),
