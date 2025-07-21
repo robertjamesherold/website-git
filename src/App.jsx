@@ -13,7 +13,7 @@ return (
     <Navigation />
     <ScrollToTop />
     <Routes>
-      <Route path='/' element={ <Startseite /> } />
+      <Route path='./' element={ <Startseite /> } />
       <Route path='/story' element={ <Storyseite /> } />
       <Route path='/skills' element={ <Skillseite /> } />
       <Route path='/lebenslauf' element={ <Lebenslaufseite /> } />
