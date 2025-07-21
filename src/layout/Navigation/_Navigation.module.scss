@@ -264,7 +264,6 @@
     max-height: 0;
 
     transition: all .3s ease-out;
-    transition-delay: .5s;
     transform: translateX(-50%);
 
     opacity: 0;
@@ -321,7 +320,6 @@
 .megaMenuSection
 {
     display: flex;
-    flex-direction: column;
 }
 
 .megaMenuSectionTitle

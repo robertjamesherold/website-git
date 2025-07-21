@@ -1,0 +1,190 @@
+.formWrapper
+{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    order: 2;
+
+    width: $space100;
+    height: $spaceFit;
+    padding: $space3;
+
+    border: 1px solid $gray-200;
+    border-radius: $bR1;
+    background: $clr0W;
+    box-shadow: $shadow-lg;
+
+    @media (min-width: $md)
+    {
+        order: initial;
+
+        padding: $space4;
+    }
+
+    // Override ContactForm styles for better integration
+    :global(.contactForm)
+    {
+        width: 100%;
+        padding: 0;
+    }
+}
+
+
+
+
+
+.title
+{
+    font-size: $h4;
+    font-weight: 700;
+
+    position: relative;
+
+    margin-bottom: $space1;
+
+    color: $clrTx1;
+
+    &::after
+    {
+        position: absolute;
+        bottom: -$space0n5;
+        left: 0;
+
+        width: 60px;
+        height: 3px;
+
+        content: '';
+
+        border-radius: $bR1;
+        background: linear-gradient(90deg, $clr1, $clr1D);
+    }
+}
+.Icon
+{
+    font-size: $h3;
+
+    align-items: center;
+    align-self: center;
+    flex-shrink: 0;
+    justify-content: flex-start;
+
+    height: $space100;
+
+    text-align: left;
+
+    justify-self: center;
+}
+
+.Content
+{
+    flex: 1;
+}
+.Content > .Text:is(:nth-last-child(2))
+{
+    font-size: $p;
+    line-height: $line-height-base;
+
+    margin-bottom: $space1n5;
+
+    color: $clrTx2;
+}
+
+.green
+{
+    display: flex;
+    align-items: center;
+    order: 1;
+
+    padding: $space2;
+
+    border: 1px solid rgba($clr3, .2);
+    border-radius: $bR1;
+    background: linear-gradient(135deg, rgba($clr3, .1), rgba($clr3D, .1));
+
+    grid-column: span 1;
+    grid-row: span 1;
+    gap: $space1n5;
+
+    @media (min-width: $md)
+    {
+        order: initial;
+    }
+}
+
+.default
+{
+    display: flex;
+    align-items: center;
+    order: 3;
+
+    padding: $space2;
+
+    border-radius: $bR1;
+
+    grid-column: span 1;
+    grid-row: span 1;
+    gap: $space1n5;
+    @media (min-width: $md)
+    {
+        order: initial;
+    }
+}
+.blue
+{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    order: 3;
+
+    padding: $space2;
+
+    border-radius: $bR1;
+
+    grid-column: span 1;
+    grid-row: span 1;
+    gap: $space1n5;
+    @media (min-width: $md)
+    {
+        order: initial;
+    }
+}
+
+
+.full
+{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    order: 4;
+
+    padding: $space2;
+
+    border-radius: $bR1;
+
+    grid-row: span 2;
+    grid-column: span 2;
+    gap: $space1n5;
+    @media (min-width: $md)
+    {
+        order: initial;
+    }
+}
+.form
+{
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+    order: 2;
+
+    padding: $space2;
+
+    border-radius: $bR1;
+
+    grid-column: span 1;
+    grid-row: span 4;
+    gap: $space1n5;
+    @media (min-width: $md)
+    {
+        order: initial;
+    }
+}

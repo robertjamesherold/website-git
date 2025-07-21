@@ -1,0 +1,43 @@
+.header
+{
+    margin-bottom: $space5;
+
+    text-align: center;
+
+    @media (min-width: $lg)
+    {
+        margin-bottom: $space6;
+    }
+}
+
+.title
+{
+    font-size: $h1;
+    font-weight: 700;
+    line-height: $line-height-tight;
+
+    margin-bottom: $space1;
+
+    color: $clrTx1;
+
+    @media (min-width: $md)
+    {
+        font-size: 3rem;
+    }
+}
+
+.subtitle
+{
+    font-size: $h6;
+    line-height: $line-height-base;
+
+    max-width: 600px;
+    margin: 0 auto;
+
+    color: $clrTx2;
+
+    @media (min-width: $md)
+    {
+        font-size: $h5;
+    }
+}

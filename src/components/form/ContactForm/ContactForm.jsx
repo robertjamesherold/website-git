@@ -8,12 +8,7 @@ export function ContactForm({
   
   return (
     <form className={styles.contactForm} name="contact" method="POST" data-netlify="true">
-      <div className={styles.formHeader}>
-        <div className={styles.formHeadlines}>
-      <h2 className={styles.formTitle}>{formTitle}</h2>
-          <div className={styles.formDivider}> </div></div>
-      </div>
-      <input type="hidden" name="form-name" value="contact" />
+       <input type="hidden" name="form-name" value="contact" />
       <TextInput 
         label="Vorname"
         inputName="Vorname"

@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react'
 import styles from './_Home.module.scss'
+import { Link } from 'react-router-dom'
+
 
 export function Home() {
   const [currentTech, setCurrentTech] = useState(0)
@@ -44,12 +46,12 @@ export function Home() {
             </p>
             
             <div className={styles.heroButtons}>
-              <a href="#projects" className={styles.ctaButton}>
+              <Link to="/projekte"  className={styles.ctaButton}>
                 Meine Projekte ansehen
-              </a>
-              <a href="#contact" className={styles.ctaButtonSecondary}>
+              </Link>
+              <Link to="/kontakt" className={styles.ctaButtonSecondary}>
                 Kontakt aufnehmen
-              </a>
+              </Link>
             </div>
 
             {/* Social Links */}
@@ -220,9 +222,9 @@ export function Home() {
           </div>
           
           <div className={styles.projectsCta}>
-            <a href="#projects" className={styles.viewAllButton}>
+            <Link to="/projects" className={styles.viewAllButton}>
               Alle Projekte ansehen
-            </a>
+            </Link>
           </div>
         </div>
 
@@ -234,9 +236,9 @@ export function Home() {
               Lassen Sie uns gemeinsam Ihre Ideen visuell zum Leben erwecken. 
               Ich freue mich auf Ihre Nachricht!
             </p>
-            <a href="#contact" className={styles.contactButton}>
+            <Link to="/kontakt" className={styles.contactButton}>
               Projekt besprechen
-            </a>
+            </Link>
           </div>
         </div>
       </div>

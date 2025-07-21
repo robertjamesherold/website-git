@@ -56,60 +56,29 @@ export function Navigation() {
       
             items: [
               { label: 'Meine Story', href: '/story', description: 'Wie alles begann und was mich antreibt' },
-              { label: 'Philosophie', href: '/philosophie', description: 'Meine Arbeitsweise und Werte' },
-              { label: 'Interessen', href: '/interessen', description: 'Was mich neben der Arbeit bewegt' }
             ]
           },
           {
  
             items: [
-              { label: 'Frontend Development', href: '/frontend', description: 'React, Vue, Angular & mehr' },
-              { label: 'Backend Development', href: '/backend', description: 'Node.js, Python, Databases' },
-              { label: 'UI/UX Design', href: '/design', description: 'User Experience & Interface Design' }
+              { label: 'Skills', href: '/skills', description: 'React, Figma, Photoshop, Illustrator' },
             ]
           },
           {
      
             items: [
               { label: 'Lebenslauf', href: '/lebenslauf', description: 'Mein beruflicher Werdegang' },
-              { label: 'Ausbildung', href: '/ausbildung', description: 'Studium und Weiterbildungen' },
-              { label: 'Zertifikate', href: '/zertifikate', description: 'Offizielle Qualifikationen' }
             ]
           }
         ]
       }
     },
     {
-      label: 'Portfolio',
-      hasMegaMenu: true,
-      megaMenuContent: {
-        sections: [
-          {
-            title: 'Web Development',
-            items: [
-              { label: 'E-Commerce Projekte', href: '/ecommerce', description: 'Online-Shops und Marktplätze' },
-              { label: 'Corporate Websites', href: '/corporate', description: 'Unternehmenswebsites und Portale' },
-              { label: 'Web Applications', href: '/webapps', description: 'Komplexe Webanwendungen' }
-            ]
-          },
-          {
-            title: 'Mobile Development',
-            items: [
-              { label: 'iOS Apps', href: '/ios', description: 'Native und Cross-Platform Apps' },
-              { label: 'Android Apps', href: '/android', description: 'Native Android Entwicklung' },
-              { label: 'Progressive Web Apps', href: '/pwa', description: 'PWAs für alle Plattformen' }
-            ]
-          },
-          {
-            title: 'Showcases',
-            items: [
-              { label: 'Case Studies', href: '/casestudies', description: 'Detaillierte Projektanalysen' },
-              { label: 'Live Demos', href: '/demos', description: 'Interaktive Projektvorführungen' },
-              { label: 'GitHub Repository', href: '/github', description: 'Open Source Projekte' }
-            ]
-          }
-        ]
-      }
+      label: 'Projekte',
+      href: '/projekte',
+
+      hasMegaMenu: false,
+   
     },
    
     {
@@ -257,13 +226,13 @@ export function Navigation() {
                       </div>
                     </>
                   ) : (
-                    <a 
-                      href={item.href} 
+                    <Link 
+                      to={item.href} 
                       className={styles.mobileNavLink} 
                       onClick={closeMenu}
                     >
                       {item.label}
-                    </a>
+                    </Link>
                   )}
                 </div>
               ))}
