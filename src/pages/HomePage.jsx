@@ -1,11 +1,8 @@
-import { GridContainer } from '@ly/Container/GridContainer';
+import { Home } from '@ly/Home/Home';
 
 export function HomePage() {
     return (
  
-        <GridContainer>
-            <h1>Willkommen auf der Startseite</h1>
-            <p>Hier ist der Inhalt der Startseite.</p>
-        </GridContainer>
+        <Home></Home>
     )
 }  

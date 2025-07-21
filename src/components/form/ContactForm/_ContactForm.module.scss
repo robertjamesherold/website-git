@@ -3,18 +3,17 @@
 {
     display: grid;
 
-    width: $space50;
+    width: $space100;
 
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: repeat(7, 1fr);
     row-gap: $space1n5;
     column-gap: $space1n5;
-    padding-block: $space8;
 
 
     @media (max-width: $xl)
     {
-        width: $space75;
+        width: $space100;
     }
 
     @media (max-width: $md)

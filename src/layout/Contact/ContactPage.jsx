@@ -2,7 +2,7 @@ import styles from './_Contact.module.scss'
 import { ContactForm } from '@cm/form/ContactForm/ContactForm'
 import { Container } from '@ly/Container/Container'
 
-export function Contact() {
+export function ContactPage() {
   const contactInfo = [
     {
       icon: '📍',
@@ -119,7 +119,7 @@ export function Contact() {
                 </p>
               </div>
             </div>
-</div>
+
             {/* Social Links */}
             <div className={styles.socialSection}>
               <h3 className={styles.socialTitle}>Folgen Sie mir</h3>
@@ -155,7 +155,7 @@ export function Contact() {
               </div>
             </div>
           </div>
-    
+        </div>
 
         {/* FAQ Section */}
         <div className={styles.faqSection}>
