@@ -1,0 +1,298 @@
+// =============================================================================
+// CASE STUDIES COMPONENT - Detaillierte Projektpräsentation
+// =============================================================================
+
+.caseStudies
+{
+    min-height: 100vh;
+    padding-top: $space4;
+    padding-bottom: $space5;
+
+    background: $clrBg2;
+}
+
+// =============================================================================
+// HEADER SECTION
+// =============================================================================
+
+.header
+{
+    margin-bottom: $space4;
+
+    text-align: center;
+
+    @media (min-width: $lg)
+    {
+        margin-bottom: $space5;
+    }
+}
+
+.title
+{
+    font-size: $h1;
+    font-weight: 700;
+    line-height: $line-height-tight;
+
+    margin-bottom: $space1;
+
+    color: $clrTx1;
+
+    @media (min-width: $md)
+    {
+        font-size: 3rem;
+    }
+}
+
+.subtitle
+{
+    font-size: $h6;
+    line-height: $line-height-base;
+
+    max-width: 700px;
+    margin: 0 auto;
+
+    color: $clrTx2;
+
+    @media (min-width: $md)
+    {
+        font-size: $h5;
+    }
+}
+
+// =============================================================================
+// FILTER SECTION
+// =============================================================================
+
+.filterSection
+{
+    display: flex;
+    justify-content: center;
+
+    margin-bottom: $space4;
+
+    @media (min-width: $lg)
+    {
+        margin-bottom: $space5;
+    }
+}
+
+.filterButtons
+{
+    display: flex;
+    flex-wrap: wrap;
+
+    padding: $space1;
+
+    border-radius: $bR1;
+    background: $clr0W;
+    box-shadow: $shadow-sm;
+
+    gap: $space1;
+
+    @media (min-width: $md)
+    {
+        padding: $space1n5;
+
+        gap: $space1n5;
+    }
+}
+
+.filterButton
+{
+    font-size: $p;
+    font-weight: 500;
+
+    display: flex;
+    align-items: center;
+
+    padding: $space0n75 $space1n5;
+
+    cursor: pointer;
+    transition: all .3s ease;
+
+    color: $clrTx2;
+    border: none;
+    border-radius: $bR1;
+    background: transparent;
+
+    gap: $space0n5;
+
+    &:hover
+    {
+        color: $clrTx1;
+        background: $clrBg1;
+    }
+
+    &.active
+    {
+        color: $clr0W;
+        background: $clr1;
+        box-shadow: $shadow-md;
+
+        .filterCount
+        {
+            color: $clr0W;
+            background: rgba($clr0W, .2);
+        }
+    }
+
+    &:focus
+    {
+        outline: none;
+        box-shadow: 0 0 0 3px rgba($clr1, .3);
+    }
+}
+
+.filterCount
+{
+    font-size: $font-size-sm;
+    font-weight: 600;
+
+    padding: $space0n25 $space0n5;
+
+    color: $clrTx2;
+    border-radius: $bR1;
+    background: $clrBg1;
+}
+
+// =============================================================================
+// STUDIES GRID
+// =============================================================================
+
+.studiesGrid
+{
+    display: grid;
+
+    margin-bottom: $space5;
+
+    grid-template-columns: 1fr;
+    gap: $space3;
+
+    @media (min-width: $md)
+    {
+        grid-template-columns: repeat(2, 1fr);
+        gap: $space3;
+    }
+
+    @media (min-width: $lg)
+    {
+        grid-template-columns: repeat(3, 1fr);
+        gap: $space2n5;
+    }
+}
+
+.studyCard
+{
+    overflow: hidden;
+
+    transition: all .3s ease-in-out;
+
+    border: 1px solid $gray-200;
+    border-radius: $bR1;
+    background-color: $clr0W;
+    box-shadow: $shadow-sm;
+
+    &:hover
+    {
+        transform: translateY(-4px);
+
+        box-shadow: $shadow-lg;
+    }
+}
+
+@keyframes fadeInUp
+{
+    from
+    {
+        transform: translateY(30px);
+
+        opacity: 0;
+    }
+    to
+    {
+        transform: translateY(0);
+
+        opacity: 1;
+    }
+}
+
+.studyImage
+{
+    position: relative;
+
+    overflow: hidden;
+
+    height: 200px;
+
+    img
+    {
+        width: $space100;
+        height: $space100;
+
+        transition: transform .3s ease-in-out;
+
+        object-fit: cover;
+    }
+
+    &:hover img
+    {
+        transform: scale(1.05);
+    }
+}
+
+.studyOverlay
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: opacity .3s ease-in-out;
+
+    opacity: 0;
+    background: rgba($clr1, .9);
+
+    .projectCard:hover &
+    {
+        opacity: 1;
+    }
+}
+.studyActions
+{
+    display: flex;
+
+    gap: $space1;
+}
+
+.viewButton,
+.detailsButton
+{
+    font-size: $p;
+    font-weight: 600;
+
+    display: inline-flex;
+    align-items: center;
+
+    padding: $space0n5 $space1;
+
+    transition: all .3s ease-in-out;
+    text-decoration: none;
+
+    color: $clr1;
+    border-radius: $bR1;
+    background-color: $clr0W;
+
+    gap: $space0n5;
+
+    &:hover
+    {
+        transform: translateY(-1px);
+
+        background-color: $gray-100;
+    }
+}

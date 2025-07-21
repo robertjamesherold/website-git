@@ -54,14 +54,7 @@ export function ContactPage() {
   return (
     <section id="contact" className={styles.contact}>
       <Container>
-        {/* Header */}
-        <div className={styles.header}>
-          <h1 className={styles.title}>Kontakt</h1>
-          <p className={styles.subtitle}>
-            Haben Sie ein spannendes Projekt im Kopf? Lassen Sie uns darüber sprechen! 
-            Ich freue mich auf Ihre Nachricht.
-          </p>
-        </div>
+  
 
         {/* Main Content Grid */}
         <div className={styles.mainGrid}>

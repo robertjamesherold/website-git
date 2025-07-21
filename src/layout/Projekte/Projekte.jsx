@@ -1,7 +1,7 @@
 import { useState } from 'react'
-import styles from './_Projects.module.scss'
+import styles from './_Projekte.module.scss'
 
-export function Projects() {
+export function Projekte() {
   const [activeFilter, setActiveFilter] = useState('all')
 
   const projectCategories = [

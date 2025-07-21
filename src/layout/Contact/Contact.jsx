@@ -1,6 +1,8 @@
 import styles from './_Contact.module.scss'
+import Header from '@cm/Header/Header'
 import { ContactForm } from '@cm/form/ContactForm/ContactForm'
 import { Container } from '@ly/Container/Container'
+import  FormWrapper  from '@cm/FormWrapper/FormWrapper'
 
 export function Contact() {
   const contactInfo = [
@@ -22,12 +24,7 @@ export function Contact() {
       content: ['+49 151 616 60 444'],
       link: 'tel:+4915161660444'
     },
-    {
-      icon: '🌐',
-      title: 'Portfolio',
-      content: ['robertjamesherold.com'],
-      link: 'https://robertjamesherold.com'
-    }
+  
   ]
 
   const socialLinks = [
@@ -54,76 +51,31 @@ export function Contact() {
   return (
     <section id="contact" className={styles.contact}>
       <Container>
-        {/* Header */}
-        <div className={styles.header}>
-          <h1 className={styles.title}>Kontakt</h1>
-          <p className={styles.subtitle}>
-            Haben Sie ein spannendes Projekt im Kopf? Lassen Sie uns darüber sprechen! 
-            Ich freue mich auf Ihre Nachricht.
-          </p>
-        </div>
+        <Header
+        title="Kontakt"
+        description="Haben Sie ein spannendes Projekt im Kopf? Lassen Sie uns darüber sprechen! Ich freue mich auf Ihre Nachricht."
+        ></Header>
+     
 
         {/* Main Content Grid */}
         <div className={styles.mainGrid}>
           {/* Contact Form Section */}
-          <div className={styles.formSection}>
-            <div className={styles.formWrapper}>
-              <ContactForm 
-                formTitle="Nachricht senden"
-              />
-            </div>
-          </div>
+          <FormWrapper showIcon={false} className='form' title='Kontaktformular' >
+              <ContactForm/>
+            </FormWrapper>
 
-          {/* Contact Info Section */}
-          <div className={styles.infoSection}>
-            {/* Quick Contact */}
-            <div className={styles.quickContact}>
-              <h2 className={styles.infoTitle}>Direkter Kontakt</h2>
-              <p className={styles.infoDescription}>
-                Sie bevorzugen den direkten Weg? Hier finden Sie alle Möglichkeiten, 
-                um mit mir in Kontakt zu treten.
-              </p>
-              
-              <div className={styles.contactCards}>
-                {contactInfo.map((info, index) => (
-                  <div key={index} className={styles.contactCard}>
-                    <div className={styles.cardIcon}>{info.icon}</div>
-                    <div className={styles.cardContent}>
-                      <h3 className={styles.cardTitle}>{info.title}</h3>
-                      {info.link ? (
-                        <a href={info.link} className={styles.cardLink}>
-                          {info.content.map((line, i) => (
-                            <span key={i}>{line}</span>
-                          ))}
-                        </a>
-                      ) : (
-                        <div className={styles.cardText}>
-                          {info.content.map((line, i) => (
-                            <span key={i}>{line}</span>
-                          ))}
-                        </div>
-                      )}
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
 
-            {/* Response Time */}
-            <div className={styles.responseTime}>
-              <div className={styles.responseIcon}>⏱️</div>
-              <div className={styles.responseContent}>
-                <h3 className={styles.responseTitle}>Schnelle Antwort</h3>
-                <p className={styles.responseText}>
-                  Ich antworte normalerweise innerhalb von 24 Stunden auf alle Anfragen.
-                </p>
-              </div>
-            </div>
-</div>
+        <FormWrapper  className='green' title='Schnelle Antwort' icon='⏱️' description='Ich antworte normalerweise innerhalb von 24 Stunden auf alle Anfragen.'/>
+        <FormWrapper  className='default' title='Adresse' icon='📍'><span>Im Kammerfest 23<br/>
+63628 Bad Soden-Salmünster</span></FormWrapper>
+        <FormWrapper  className='default' title='E-Mail' icon='📧'><a href='mailto:robertjamesherold@icloud.com'>robertjamesherold@icloud.com</a></FormWrapper>
+        <FormWrapper  className='default' title='Telefon' icon='📱'><a href='tel:+4915161660444'>+49 151 616 60 444</a></FormWrapper>
+   
+
+
             {/* Social Links */}
-            <div className={styles.socialSection}>
-              <h3 className={styles.socialTitle}>Folgen Sie mir</h3>
-              <div className={styles.socialLinks}>
+            <FormWrapper   title='Folgen Sie mir'>
+<div className={styles.socialLinks}>
                 {socialLinks.map((social, index) => (
                   <a
                     key={index}
@@ -136,30 +88,19 @@ export function Contact() {
                     {social.icon}
                   </a>
                 ))}
-              </div>
-            </div>
-
+             </div>
+            </FormWrapper>
             {/* Map or Additional Info */}
-            <div className={styles.additionalInfo}>
-              <h3 className={styles.additionalTitle}>Verfügbarkeit</h3>
-              <p className={styles.additionalText}>
-                Ich bin offen für Freelance-Projekte, Zusammenarbeit und neue 
-                Herausforderungen. Remote-Arbeit ist kein Problem – ich arbeite 
-                gerne mit Kunden aus ganz Deutschland und darüber hinaus.
-              </p>
-              <div className={styles.availability}>
+     <FormWrapper className='blue' title='Verfügbarkeit' description='Ich bin offen für Freelance-Projekte, Zusammenarbeit und neue Herausforderungen. Remote-Arbeit ist kein Problem – ich arbeite gerne mit Kunden aus ganz Deutschland und darüber hinaus.'><div className={styles.availability}>
                 <span className={styles.availableStatus}>
                   <span className={styles.statusDot}></span>
                   Verfügbar für neue Projekte
                 </span>
               </div>
-            </div>
-          </div>
-    
+    </FormWrapper>
 
-        {/* FAQ Section */}
-        <div className={styles.faqSection}>
-          <h2 className={styles.faqTitle}>Häufige Fragen</h2>
+   
+     <FormWrapper  className='full' title='Häufige Fragen' >
           <div className={styles.faqGrid}>
             <div className={styles.faqItem}>
               <h3 className={styles.faqQuestion}>Wie läuft ein Projekt ab?</h3>
@@ -190,7 +131,8 @@ export function Contact() {
               </p>
             </div>
           </div>
-        </div>
+        </FormWrapper>
+          </div>
       </Container>
     </section>
   )

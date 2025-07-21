@@ -4,6 +4,7 @@
     display: grid;
 
     width: $space100;
+    padding-top: $space2n5;
 
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: repeat(7, 1fr);
@@ -21,8 +22,6 @@
         width: $space100;
 
         border-right: none;
-
-        grid-area: span 3 / span 12;
     }
     @media (max-width: $sm)
     {
