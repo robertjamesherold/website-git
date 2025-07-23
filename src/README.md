@@ -105,8 +105,8 @@ import ContactPage from '@pages/ContactPage'
 ```scss
 .my-component {
   color: $primary;           // ✅ Automatisch verfügbar
-  padding: $spacing-lg;      // ✅ Automatisch verfügbar
-  font-size: $font-size-xl;  // ✅ Automatisch verfügbar
+  padding: $space2;      // ✅ Automatisch verfügbar
+  font-size: $fs3;  // ✅ Automatisch verfügbar
 }
 ```
 

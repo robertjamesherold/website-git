@@ -10,14 +10,12 @@
     "build:analyze": "vite build --mode analyze",
     "clean": "rm -rf dist",
     "clean:install": "rm -rf node_modules package-lock.json && npm install",
-    "prepare": "husky install",
     "lint": "eslint src",
     "lint:fix": "eslint src --fix",
     "lint-staged": {
-             "**/*.{css,scss}": "csscomb",
-             "**/*.{js,ts,jsx,tsx}": "eslint --fix",
-  "**/*.{js,ts,jsx,tsx,json,html,md}": "prettier --write"
-},
+      "**/*.{js,ts,jsx,tsx}": "eslint --fix",
+      "**/*.{js,ts,jsx,tsx,json,html,md}": "prettier --write"
+    },
     "format": "prettier --write \"src/**/*.{js,jsx,json,md}\"",
     "format:check": "prettier --check \"src/**/*.{js,jsx,json,md}\"",
     "check": "npm run lint && npm run format:check",
@@ -31,7 +29,6 @@
     "@fullhuman/postcss-purgecss": "^5.0.0",
     "@vitejs/plugin-react": "^4.0.0",
     "autoprefixer": "^10.4.21",
-    "csscomb": "^4.3.0",
     "eslint": "^8.45.0",
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-prettier": "^5.0.0",
@@ -49,6 +46,7 @@
     "vite": "^4.4.0"
   },
   "dependencies": {
+    "framer-motion": "^12.23.6",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   }

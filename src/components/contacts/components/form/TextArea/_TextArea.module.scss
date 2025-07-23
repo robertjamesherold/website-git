@@ -1,0 +1,289 @@
+
+.textAreaContainer
+{
+    display: flex;
+    flex-direction: column;
+
+    width: $space100;
+
+    gap: $space0n5;
+    grid-column: span 12;
+}
+
+.colSix
+{
+    display: flex;
+    flex-direction: column;
+
+    grid-column: span 6;
+}
+
+.colFull
+{
+    display: flex;
+    flex-direction: column;
+
+    grid-column: span 12;
+}
+
+// Label Styles
+.textAreaLabel
+{
+    font-size: $fs2;
+    font-weight: $fw7;
+
+    width: $space100;
+    margin-bottom: $space0n25;
+    padding-left: $space0n25;
+
+    color: $codeBg;
+    border-radius: $bR1;
+}
+
+// TextArea Field Styles
+.textAreaField
+{
+    font-size: $fs16;
+    font-weight: $fw4;
+    // Text und Placeholder immer oben
+    line-height: $baseH;
+    // Explizit für alle Browser - Text beginnt oben
+
+    display: block;
+    overflow: hidden;
+
+    box-sizing: border-box;
+    width: $space100;
+    min-height: $space8;
+    margin-top: $space0n5;
+    padding: $space1;
+    padding-bottom: $space12;
+
+    resize: vertical;
+    transition: all .2s ease-in-out;
+    text-align: left;
+    vertical-align: top;
+
+    color: $codeBg;
+    border: $border1;
+    border-radius: $bR1;
+    background-color: rgba-hex($codeBgPri, .5);
+
+    direction: ltr;
+    // Für Safari und andere Browser
+    -webkit-appearance: none;
+    appearance: none;
+    // Mobile Safari Fix
+    -webkit-text-fill-color: $codeTextPri;
+    -webkit-opacity: 1;
+
+    // Focus State
+    &:focus
+    {
+        border-color: $codePink;
+        outline: none;
+        background-color: rgba-hex($codeBgPri, .25);
+        box-shadow: $shadSm;
+    }
+
+    // Placeholder Styles
+    &::placeholder
+    {
+        font-size: $fs16;
+        font-weight: $fw4;
+
+        transition: opacity .1s ease;
+
+        color: $codeGray;
+    }
+
+    &:focus::placeholder
+    {
+        transition: opacity .1s ease;
+
+        opacity: .2;
+    }
+
+    // Browser-specific placeholder styles
+    &::-webkit-input-placeholder
+    {
+        transition: color .1s ease;
+
+        color: $codeTextPriSec;
+    }
+
+    &::-moz-placeholder
+    {
+        transition: color .1s ease;
+
+        color: $codeTextPriSec;
+    }
+
+    &::-ms-input-placeholder
+    {
+        transition: color .1s ease;
+
+        color: $codeTextPriSec;
+    }
+
+    // Invalid State - nur wenn das Feld bereits berührt wurde
+    &:invalid:not(:placeholder-shown)
+    {
+        border-color: $clr5;
+
+        &::placeholder
+        {
+            color: $clr5;
+        }
+    }
+
+    // Valid State - nur wenn das Feld bereits berührt wurde
+    &:valid:not(:placeholder-shown)
+    {
+        border-color: $clr3;
+
+        &::placeholder
+        {
+            color: $clr3;
+        }
+    }
+
+    // Disabled State
+    &:disabled
+    {
+        cursor: not-allowed;
+
+        color: $codeTextPriSec;
+        border-color: $gray-300;
+        background-color: $gray-100;
+
+        &::placeholder
+        {
+            color: $codeTextPriSec;
+        }
+
+        &:focus
+        {
+            border-color: $gray-300;
+            outline: none;
+            box-shadow: none;
+
+            &::placeholder
+            {
+                transition: opacity .1s ease;
+
+                opacity: .5;
+            }
+        }
+    }
+
+    // Focus-within (für Container)
+    &:focus-within
+    {
+        border-color: $clr1;
+
+        &::placeholder
+        {
+            transition: opacity .1s ease;
+
+            opacity: .2;
+        }
+
+        &::-webkit-input-placeholder
+        {
+            transition: color .1s ease;
+
+            color: $codeTextPriSec;
+        }
+
+        &::-moz-placeholder
+        {
+            transition: color .1s ease;
+
+            color: $codeTextPriSec;
+        }
+
+        &::-ms-input-placeholder
+        {
+            transition: color .1s ease;
+
+            color: $codeTextPriSec;
+        }
+    }
+}
+
+// =============================================================================
+// RESPONSIVE IMPROVEMENTS
+// =============================================================================
+
+@media (max-width: $md)
+{
+    .colSix
+    {
+        grid-column: span 12;
+    }
+
+    .textAreaField
+    {
+        display: block;
+
+        min-height: 100px;
+        // Android Fix
+
+        resize: none;
+        text-align: left;
+        // Explizit für Mobile - Text oben
+        vertical-align: top;
+        // iOS Safari Fix
+
+        -webkit-text-fill-color: $codeTextPri;
+        -webkit-opacity: 1;
+    }
+}
+
+// =============================================================================
+// ACCESSIBILITY IMPROVEMENTS
+// =============================================================================
+
+@media (prefers-reduced-motion: reduce)
+{
+    .textAreaField
+    {
+        transition: none;
+
+        &::placeholder,
+        &::-webkit-input-placeholder,
+        &::-moz-placeholder,
+        &::-ms-input-placeholder
+        {
+            transition: none;
+        }
+    }
+}
+
+// Dark mode support (falls gewünscht)
+@media (prefers-color-scheme: dark)
+{
+    .textAreaField
+    {
+        color: $clr0W;
+        border-color: $gray-600;
+        background-color: $gray-800;
+
+        &:focus
+        {
+            border-color: $clr1L;
+            background-color: $gray-700;
+        }
+
+        &::placeholder
+        {
+            color: $gray-400;
+        }
+    }
+
+    .textAreaLabel
+    {
+        color: $clr0W;
+    }
+}

@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react'
 import styles from './_Navigation.module.scss'
 import { Link } from 'react-router-dom'
-import { InContainer, Container } from '@ly/Container/Container'
+import { InContainer } from '@ly/Container/Container'
+
 
 export function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -93,10 +94,10 @@ export function Navigation() {
       <nav className={styles.navigation}>
       <InContainer>
         <div className={styles.brand}>
-          <a href="#home" className={styles.logo} onClick={closeMenu}>
+          <Link to="/" className={styles.logo} onClick={closeMenu}>
             <span className={styles.logoText}>Robert James</span>
             <span className={styles.logoSubtext}>Herold</span>
-          </a>
+          </Link>
         </div>
 
         {/* Desktop Navigation */}
@@ -108,8 +109,9 @@ export function Navigation() {
               onMouseEnter={() => item.hasMegaMenu && setActiveMegaMenu(item.label)}
               onMouseLeave={() => item.hasMegaMenu && setActiveMegaMenu(null)}
             >
-              <a 
-                href={item.href} 
+              <Link
+                to={item.href} 
+               
                 className={styles.navLink}
                 onClick={() => !item.hasMegaMenu && setActiveMegaMenu(null)}
               >
@@ -125,7 +127,7 @@ export function Navigation() {
                     <path d="M7 10l5 5 5-5z"/>
                   </svg>
                 )}
-              </a>
+              </Link>
               
               {/* Desktop Mega Menu */}
               {item.hasMegaMenu && (

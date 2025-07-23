@@ -1,0 +1,46 @@
+
+.socialLinks
+{
+    display: flex;
+    justify-content: center;
+
+    gap: $space1;
+
+    @media (min-width: $lg)
+    {
+        justify-content: flex-start;
+    }
+}
+
+.socialLink
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: $space4;
+    height: $space4;
+
+    transition: all .3s ease-in-out;
+    text-decoration: none;
+
+    color: $codeTextPriSec;
+    border: 1px solid $gray-300;
+    border-radius: $bR1;
+    background-color: $clrBg1;
+
+    &:hover
+    {
+        transform: translateY(-2px);
+
+        color: $clr0W;
+        background-color: $clr1;
+        box-shadow: $shadMd;
+    }
+
+    &:focus
+    {
+        outline: none;
+        box-shadow: 0 0 0 3px rgba($clr1, .3);
+    }
+}

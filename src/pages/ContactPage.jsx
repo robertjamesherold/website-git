@@ -1,4 +1,4 @@
-import { Contact } from '@ly/Contact/Contact.jsx'
+import { Contact } from '@cm/contacts/Contact.jsx'
 
 export function ContactPage() {
     return (

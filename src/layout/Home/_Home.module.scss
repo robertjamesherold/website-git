@@ -8,7 +8,7 @@
     padding-top: $space2;
     padding-bottom: $space4;
 
-    color: $clrTx1;
+    color: $codeTextPri;
     background: linear-gradient(135deg, $clrBg2 0%, $clrBg1 100%);
 }
 
@@ -110,11 +110,11 @@
 {
     font-size: $h1;
     font-weight: 700;
-    line-height: $line-height-tight;
+    line-height: $tightH;
 
     margin-bottom: $space1;
 
-    color: $clrTx1;
+    color: $codeTextPri;
 
     @media (min-width: $md)
     {
@@ -128,7 +128,7 @@
 
     background: linear-gradient(135deg, $clr1, $clr1D);
     -webkit-background-clip: text;
-            background-clip: text;
+    background-clip: text;
 
     -webkit-text-fill-color: transparent;
 }
@@ -136,11 +136,11 @@
 .heroSubtitle
 {
     font-size: $h5;
-    line-height: $line-height-base;
+    line-height: $baseH;
 
     margin-bottom: $space1n5;
 
-    color: $clrTx2;
+    color: $codeTextPriSec;
 
     @media (min-width: $md)
     {
@@ -161,7 +161,7 @@
 
     background: linear-gradient(135deg, $clr1, $clr1D);
     -webkit-background-clip: text;
-            background-clip: text;
+    background-clip: text;
 
     -webkit-text-fill-color: transparent;
 
@@ -185,14 +185,14 @@
 .heroDescription
 {
     font-size: $h6;
-    line-height: $line-height-base;
+    line-height: $baseH;
 
     max-width: 600px;
     margin-right: auto;
     margin-bottom: $space2n5;
     margin-left: auto;
 
-    color: $clrTx2;
+    color: $codeTextPriSec;
 
     @media (min-width: $lg)
     {
@@ -242,13 +242,13 @@
     color: $clr0W;
     border-radius: $bR1;
     background: linear-gradient(135deg, $clr1, $clr1D);
-    box-shadow: $shadow-md;
+    box-shadow: $shadMd;
 
     &:hover
     {
         transform: translateY(-2px);
 
-        box-shadow: $shadow-lg;
+        box-shadow: $shadLg;
     }
 
     &:focus
@@ -284,7 +284,7 @@
 
         color: $clr0W;
         background-color: $clr1;
-        box-shadow: $shadow-lg;
+        box-shadow: $shadLg;
     }
 
     &:focus
@@ -319,7 +319,7 @@
     transition: all .3s ease-in-out;
     text-decoration: none;
 
-    color: $clrTx2;
+    color: $codeTextPriSec;
     border: 1px solid $gray-300;
     border-radius: $bR1;
     background-color: $clrBg1;
@@ -330,7 +330,7 @@
 
         color: $clr0W;
         background-color: $clr1;
-        box-shadow: $shadow-md;
+        box-shadow: $shadMd;
     }
 
     &:focus
@@ -360,7 +360,7 @@
     border: 1px solid $gray-700;
     border-radius: $bR1;
     background-color: $gray-900;
-    box-shadow: $shadow-lg;
+    box-shadow: $shadLg;
 }
 
 .codeLines
@@ -479,7 +479,7 @@
         transform: translateY(-4px);
 
         border-color: $clr1;
-        box-shadow: $shadow-lg;
+        box-shadow: $shadLg;
     }
 }
 
@@ -487,7 +487,7 @@
 {
     font-size: $h3;
     font-weight: 700;
-    line-height: $line-height-tight;
+    line-height: $tightH;
 
     display: block;
 
@@ -501,7 +501,7 @@
 
     margin-top: $space0n5;
 
-    color: $clrTx2;
+    color: $codeTextPriSec;
 }
 
 // =============================================================================
@@ -518,13 +518,13 @@
 {
     font-size: $h2;
     font-weight: 700;
-    line-height: $line-height-tight;
+    line-height: $tightH;
 
     margin-bottom: $space3;
 
     text-align: center;
 
-    color: $clrTx1;
+    color: $codeTextPri;
 }
 
 .servicesGrid
@@ -562,7 +562,7 @@
         transform: translateY(-6px);
 
         border-color: $clr1;
-        box-shadow: $shadow-lg;
+        box-shadow: $shadLg;
     }
 }
 
@@ -579,21 +579,21 @@
 {
     font-size: $h6;
     font-weight: 600;
-    line-height: $line-height-tight;
+    line-height: $tightH;
 
     margin-bottom: $space0n75;
 
-    color: $clrTx1;
+    color: $codeTextPri;
 }
 
 .serviceDescription
 {
     font-size: $p;
-    line-height: $line-height-base;
+    line-height: $baseH;
 
     margin: 0;
 
-    color: $clrTx2;
+    color: $codeTextPriSec;
 }
 
 // =============================================================================
@@ -610,13 +610,13 @@
 {
     font-size: $h2;
     font-weight: 700;
-    line-height: $line-height-tight;
+    line-height: $tightH;
 
     margin-bottom: $space3;
 
     text-align: center;
 
-    color: $clrTx1;
+    color: $codeTextPri;
 }
 
 .projectsGrid
@@ -644,13 +644,13 @@
     border: 1px solid $gray-200;
     border-radius: $bR1;
     background-color: $clr0W;
-    box-shadow: $shadow-md;
+    box-shadow: $shadMd;
 
     &:hover
     {
         transform: translateY(-6px);
 
-        box-shadow: $shadow-lg;
+        box-shadow: $shadLg;
     }
 }
 
@@ -685,21 +685,21 @@
 {
     font-size: $h5;
     font-weight: 600;
-    line-height: $line-height-tight;
+    line-height: $tightH;
 
     margin-bottom: $space0n75;
 
-    color: $clrTx1;
+    color: $codeTextPri;
 }
 
 .projectDescription
 {
     font-size: $p;
-    line-height: $line-height-base;
+    line-height: $baseH;
 
     margin-bottom: $space1n5;
 
-    color: $clrTx2;
+    color: $codeTextPriSec;
 }
 
 .projectTech
@@ -754,7 +754,7 @@
 
         color: $clr0W;
         background-color: $clr1;
-        box-shadow: $shadow-lg;
+        box-shadow: $shadLg;
     }
 
     &:focus
@@ -795,7 +795,7 @@
 {
     font-size: $h3;
     font-weight: 700;
-    line-height: $line-height-tight;
+    line-height: $tightH;
 
     margin-bottom: $space1;
 }
@@ -803,7 +803,7 @@
 .ctaDescription
 {
     font-size: $h6;
-    line-height: $line-height-base;
+    line-height: $baseH;
 
     margin-bottom: $space2n5;
 
@@ -827,14 +827,14 @@
     color: $clr1;
     border-radius: $bR1;
     background-color: $clr0W;
-    box-shadow: $shadow-md;
+    box-shadow: $shadMd;
 
     &:hover
     {
         transform: translateY(-2px);
 
         background-color: $gray-100;
-        box-shadow: $shadow-lg;
+        box-shadow: $shadLg;
     }
 
     &:focus
@@ -848,7 +848,7 @@
 // RESPONSIVE IMPROVEMENTS
 // =============================================================================
 
-@media (max-width: $sm - 1px)
+@media (max-width: $sm)
 {
     .home
     {
@@ -1013,7 +1013,7 @@
     {
         background: linear-gradient(135deg, $clr1L, $clr1);
         -webkit-background-clip: text;
-                background-clip: text;
+        background-clip: text;
 
         -webkit-text-fill-color: transparent;
     }

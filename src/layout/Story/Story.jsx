@@ -1,5 +1,7 @@
 import styles from './_Story.module.scss'
 import Me from '@img/me.png'
+import Header from '@ly/Header/Header'
+import  {CallToAction} from '@ly/CallToAction/CallToAction'
 
 
 export function Story() {
@@ -7,23 +9,11 @@ export function Story() {
     <section id="about" className={styles.story}>
       <div className={styles.container}>
         {/* Hero Section */}
-        <div className={styles.hero}>
-          <div className={styles.heroContent}>
-            <h1 className={styles.heroTitle}>
-              Meine Story
-            </h1>
-            <p className={styles.heroSubtitle}>
-              Wie aus Neugier Leidenschaft wurde und aus Code echte Lösungen entstehen.
-            </p>
-          </div>
-          <div className={styles.heroImage}>
-            <img 
-              src={Me} 
-              alt="Profilbild" 
-              className={styles.profileImage}
-            />
-          </div>
-        </div>
+        <Header 
+          title="Meine Story"
+          text="Wie aus Neugier Leidenschaft wurde und aus Code echte Lösungen entstehen."
+        ></Header>
+ 
 
         {/* Story Timeline */}
         <div className={styles.timeline}>
@@ -198,22 +188,8 @@ export function Story() {
           </div>
         </div>
 
-        {/* CTA Section */}
-        <div className={styles.cta}>
-          <h2 className={styles.ctaTitle}>Lassen Sie uns zusammenarbeiten</h2>
-          <p className={styles.ctaText}>
-            Haben Sie ein spannendes Design-Projekt oder möchten Sie einfach über Kreativität sprechen? 
-            Ich freue mich auf Ihre Nachricht!
-          </p>
-          <div className={styles.ctaButtons}>
-            <a href="#contact" className={styles.ctaButton}>
-              Kontakt aufnehmen
-            </a>
-            <a href="/cv" className={styles.ctaButtonSecondary}>
-              Lebenslauf ansehen
-            </a>
-          </div>
-        </div>
+ 
+
       </div>
     </section>
   )

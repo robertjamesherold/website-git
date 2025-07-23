@@ -1,0 +1,117 @@
+
+.contactForm
+{
+    position: relative;
+
+    display: grid;
+
+    width: $space100;
+    max-width: $space100;
+    margin: $space0;
+
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto;
+    row-gap: $space1n5;
+    column-gap: $space1n5;
+
+
+    @media (max-width: $xl)
+    {
+        width: $space100;
+    }
+
+    @media (max-width: $md)
+    {
+        width: $space100;
+
+        border-right: none;
+    }
+    @media (max-width: $sm)
+    {
+        display: flex;
+        flex-direction: column;
+
+        width: $space100;
+
+        border-right: none;
+
+        gap: $space1n5;
+        grid-area: span 3 / span 12;
+    }
+}
+
+
+
+*.colSix
+{
+    display: flex;
+    flex-direction: column;
+
+    grid-column: span 6;
+
+    @media (max-width: $sm)
+    {
+        grid-column: span 12;
+    }
+}
+
+*.colFull
+{
+    display: flex;
+    flex-direction: column;
+
+    grid-column: span 12;
+}
+
+.submitButton
+{
+    align-items: center;
+    justify-content: center;
+
+    width: $space100;
+    max-height: $space3;
+    padding: $space0n5 $space1n5;
+
+    text-align: center;
+
+    @include button-base;
+    @include button-variant(primary, filled);
+    margin-block: $space0n5;
+}
+
+.formTitle
+{
+    font-size: $h2;
+    font-weight: 700;
+    line-height: $tightH;
+
+    width: $spaceFit;
+    margin: $space0;
+
+    color: var(--clr-text);;
+}
+.formDivider
+{
+    width: $space100;
+    height: $spacepx;
+    margin: 0;
+
+    background-color: $clr1;
+}
+
+.formHeadline
+{
+    width: $spaceFit;
+}
+
+.formHeader
+{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+
+    width: $space100;
+
+    grid-column: span 12;
+}

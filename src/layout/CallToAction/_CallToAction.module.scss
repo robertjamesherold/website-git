@@ -1,0 +1,141 @@
+.ctaSection
+{
+    width: $space100;
+    padding: $space3;
+
+    text-align: center;
+
+    color: $clr0W;
+    border-radius: $bR1;
+    background: linear-gradient(135deg, $clr1, $clr1D);
+
+    @media (min-width: $md)
+    {
+        padding: $space4;
+    }
+
+    @media (max-width: $sm - 1px)
+    {
+        padding: $space2;
+    }
+}
+
+.ctaTitle
+{
+    font-size: $h3;
+    font-weight: 700;
+    line-height: $tightH;
+
+    margin-bottom: $space1;
+
+    @media (max-width: $sm - 1px)
+    {
+        font-size: $h5;
+    }
+}
+
+.ctaDescription
+{
+    font-size: $h6;
+    line-height: $baseH;
+
+    max-width: 600px;
+    margin-right: auto;
+    margin-bottom: $space2n5;
+    margin-left: auto;
+
+    opacity: .95;
+
+    @media (max-width: $sm - 1px)
+    {
+        font-size: $p;
+    }
+}
+
+.ctaButtons
+{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    gap: $space1;
+
+    @media (min-width: $sm)
+    {
+        flex-direction: row;
+        justify-content: center;
+
+        gap: $space1n5;
+    }
+}
+
+.ctaButton
+{
+    font-size: $h6;
+    font-weight: 600;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 160px;
+    padding: $space1 $space2;
+
+    transition: all .3s ease-in-out;
+    text-decoration: none;
+
+    color: $clr1;
+    border-radius: $bR1;
+    background-color: $clr0W;
+    box-shadow: $shadMd;
+
+    &:hover
+    {
+        transform: translateY(-2px);
+
+        background-color: $gray-100;
+        box-shadow: $shadLg;
+    }
+
+    &:focus
+    {
+        outline: none;
+        box-shadow: 0 0 0 3px rgba($clr0W, .3);
+    }
+}
+
+.ctaButtonSecondary
+{
+    font-size: $h6;
+    font-weight: 600;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 160px;
+    padding: $space1 $space2;
+
+    transition: all .3s ease-in-out;
+    text-decoration: none;
+
+    color: $clr0W;
+    border: 2px solid $clr0W;
+    border-radius: $bR1;
+    background-color: transparent;
+
+    &:hover
+    {
+        transform: translateY(-2px);
+
+        color: $clr1;
+        background-color: $clr0W;
+        box-shadow: $shadLg;
+    }
+
+    &:focus
+    {
+        outline: none;
+        box-shadow: 0 0 0 3px rgba($clr0W, .3);
+    }
+}

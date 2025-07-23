@@ -8,8 +8,8 @@
     padding-top: $space3;
     padding-bottom: $space4;
 
-    color: $clrTx1;
-    background-color: $clrBg2;
+    color: $codeTextPri;
+    background-color: $codeBgPri;
 }
 
 .container
@@ -89,11 +89,11 @@
 {
     font-size: $h1;
     font-weight: 700;
-    line-height: $line-height-tight;
+    line-height: $tightH;
 
     margin-bottom: $space1;
 
-    color: $clrTx1;
+    color: $codeTextPri;
 
     @media (min-width: $md)
     {
@@ -104,12 +104,12 @@
 .subtitle
 {
     font-size: $h6;
-    line-height: $line-height-base;
+    line-height: $baseH;
 
     max-width: 700px;
     margin: 0 auto;
 
-    color: $clrTx2;
+    color: $codeTextPriSec;
 
     @media (min-width: $md)
     {
@@ -136,7 +136,7 @@
 {
     font-size: $h2;
     font-weight: 700;
-    line-height: $line-height-tight;
+    line-height: $tightH;
 
     position: relative;
 
@@ -144,7 +144,7 @@
 
     text-align: center;
 
-    color: $clrTx1;
+    color: $codeTextPri;
 
     &::after
     {
@@ -158,7 +158,7 @@
         content: '';
         transform: translateX(-50%);
 
-        border-radius: $border-radius-xl;
+        border-radius: $bR4;
         background: linear-gradient(90deg, $clr1, $clr1D);
     }
 
@@ -212,15 +212,15 @@
 
     opacity: 0;
     border: 1px solid $gray-200;
-    border-radius: $border-radius-lg;
+    border-radius: $bR3;
     background-color: $clr0W;
-    box-shadow: $shadow-sm;
+    box-shadow: $shadSm;
 
     &:hover
     {
         transform: translateY(-4px);
 
-        box-shadow: $shadow-lg;
+        box-shadow: $shadLg;
     }
 
     @media (min-width: $md)
@@ -257,21 +257,21 @@
 {
     font-size: $h5;
     font-weight: 600;
-    line-height: $line-height-tight;
+    line-height: $tightH;
 
     margin-bottom: $space0n5;
 
-    color: $clrTx1;
+    color: $codeTextPri;
 }
 
 .skillDescription
 {
-    font-size: $font-size-sm;
-    line-height: $line-height-base;
+    font-size: $fs14;
+    line-height: $baseH;
 
     margin: 0;
 
-    color: $clrTx2;
+    color: $codeTextPriSec;
 }
 
 .skillLevel
@@ -289,7 +289,7 @@
 
     height: 8px;
 
-    border-radius: $border-radius-xl;
+    border-radius: $bR4;
     background-color: $gray-200;
 }
 
@@ -300,13 +300,13 @@
 
     transition: width 1s ease-out;
 
-    border-radius: $border-radius-xl;
+    border-radius: $bR4;
     background: linear-gradient(90deg, $clr1, $clr1D);
 }
 
 .skillPercent
 {
-    font-size: $font-size-sm;
+    font-size: $fs14;
     font-weight: 600;
 
     min-width: 35px;
@@ -354,16 +354,16 @@
 
     opacity: 0;
     border: 1px solid $gray-200;
-    border-radius: $border-radius-lg;
+    border-radius: $bR3;
     background-color: $clr0W;
-    box-shadow: $shadow-sm;
+    box-shadow: $shadSm;
 
     &:hover
     {
         transform: translateY(-6px);
 
         border-color: $clr1;
-        box-shadow: $shadow-lg;
+        box-shadow: $shadLg;
     }
 }
 
@@ -380,21 +380,21 @@
 {
     font-size: $h6;
     font-weight: 600;
-    line-height: $line-height-tight;
+    line-height: $tightH;
 
     margin-bottom: $space1;
 
-    color: $clrTx1;
+    color: $codeTextPri;
 }
 
 .processDescription
 {
-    font-size: $font-size-sm;
-    line-height: $line-height-base;
+    font-size: $fs14;
+    line-height: $baseH;
 
     margin-bottom: $space1n5;
 
-    color: $clrTx2;
+    color: $codeTextPriSec;
 }
 
 .processSkills
@@ -408,7 +408,7 @@
 
 .processSkill
 {
-    font-size: $font-size-xs;
+    font-size: $fs12;
     font-weight: 500;
 
     display: inline-block;
@@ -416,7 +416,7 @@
     padding: $space0n25 $space0n75;
 
     color: $clr1;
-    border-radius: $border-radius-md;
+    border-radius: $bR2;
     background-color: rgba($clr1, .1);
 }
 
@@ -448,7 +448,7 @@
 
 .toolTag
 {
-    font-size: $font-size-base;
+    font-size: $fs16;
     font-weight: 600;
 
     display: inline-flex;
@@ -461,9 +461,9 @@
     text-decoration: none;
 
     opacity: 0;
-    color: $clrTx1;
+    color: $codeTextPri;
     border: 2px solid var(--tool-color, $clr1);
-    border-radius: $border-radius-xl;
+    border-radius: $bR4;
     background-color: $clr0W;
 
     &:hover
@@ -472,7 +472,7 @@
 
         color: $clr0W;
         background-color: var(--tool-color, $clr1);
-        box-shadow: $shadow-md;
+        box-shadow: $shadMd;
     }
 }
 
@@ -516,9 +516,9 @@
 
     opacity: 0;
     border: 1px solid $gray-200;
-    border-radius: $border-radius-lg;
+    border-radius: $bR3;
     background-color: $clr0W;
-    box-shadow: $shadow-sm;
+    box-shadow: $shadSm;
 
     gap: $space1n5;
 
@@ -527,7 +527,7 @@
         transform: translateY(-2px);
 
         border-color: $clr1;
-        box-shadow: $shadow-md;
+        box-shadow: $shadMd;
     }
 
     @media (max-width: $sm - 1px)
@@ -556,26 +556,26 @@
 {
     font-size: $h6;
     font-weight: 600;
-    line-height: $line-height-tight;
+    line-height: $tightH;
 
     margin-bottom: $space0n25;
 
-    color: $clrTx1;
+    color: $codeTextPri;
 }
 
 .achievementDescription
 {
-    font-size: $font-size-sm;
-    line-height: $line-height-base;
+    font-size: $fs14;
+    line-height: $baseH;
 
     margin-bottom: $space0n5;
 
-    color: $clrTx2;
+    color: $codeTextPriSec;
 }
 
 .achievementMetric
 {
-    font-size: $font-size-sm;
+    font-size: $fs14;
     font-weight: 600;
 
     color: $clr1;
@@ -593,7 +593,7 @@
     text-align: center;
 
     color: $clr0W;
-    border-radius: $border-radius-lg;
+    border-radius: $bR3;
     background: linear-gradient(135deg, $clr1, $clr1D);
 
     @media (min-width: $md)
@@ -606,7 +606,7 @@
 {
     font-size: $h3;
     font-weight: 700;
-    line-height: $line-height-tight;
+    line-height: $tightH;
 
     margin-bottom: $space1;
 }
@@ -614,7 +614,7 @@
 .ctaDescription
 {
     font-size: $h6;
-    line-height: $line-height-base;
+    line-height: $baseH;
 
     max-width: 600px;
     margin-right: auto;
@@ -657,16 +657,16 @@
     text-decoration: none;
 
     color: $clr1;
-    border-radius: $border-radius-lg;
+    border-radius: $bR3;
     background-color: $clr0W;
-    box-shadow: $shadow-md;
+    box-shadow: $shadMd;
 
     &:hover
     {
         transform: translateY(-2px);
 
         background-color: $gray-100;
-        box-shadow: $shadow-lg;
+        box-shadow: $shadLg;
     }
 
     &:focus
@@ -693,7 +693,7 @@
 
     color: $clr0W;
     border: 2px solid $clr0W;
-    border-radius: $border-radius-lg;
+    border-radius: $bR3;
     background-color: transparent;
 
     &:hover
@@ -702,7 +702,7 @@
 
         color: $clr1;
         background-color: $clr0W;
-        box-shadow: $shadow-lg;
+        box-shadow: $shadLg;
     }
 
     &:focus
@@ -799,7 +799,7 @@
 
     .subtitle
     {
-        font-size: $font-size-base;
+        font-size: $fs16;
     }
 
     .sectionTitle
@@ -837,7 +837,7 @@
 
     .toolTag
     {
-        font-size: $font-size-sm;
+        font-size: $fs14;
 
         padding: $space0n5 $space1;
     }
@@ -854,7 +854,7 @@
 
     .ctaDescription
     {
-        font-size: $font-size-base;
+        font-size: $fs16;
     }
 }
 
@@ -909,7 +909,7 @@
     .processCard,
     .achievementCard
     {
-        border: 2px solid $clrTx1;
+        border: 2px solid $codeTextPri;
     }
 
     .toolTag
@@ -924,7 +924,7 @@
 
     .skillProgress
     {
-        background: $clrTx1;
+        background: $codeTextPri;
     }
 }
 

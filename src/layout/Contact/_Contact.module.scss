@@ -4,11 +4,16 @@
 
 .contact
 {
-    min-height: 100vh;
+    display: flex;
+
+    width: $space100;
+    height: $space100;
     padding-top: $space4;
     padding-bottom: $space5;
 
     background: linear-gradient(135deg, $clrBg2 0%, $clrBg1 100%);
+
+    gap: $space3;
 }
 
 // =============================================================================
@@ -23,27 +28,33 @@
 
 .mainGrid
 {
-    display: flex;
+    display: grid;
     flex-direction: column;
 
     margin-bottom: $space5;
 
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     grid-template-rows: auto;
-    gap: $space2;
+    grid-auto-flow: dense;
+    gap: $space1;
 
+    @media (min-width: $sm)
+    {
+        gap: $space2;
+    }
     @media (min-width: $md)
     {
         display: grid;
 
-        grid-template-columns: 1fr 1fr;
-        gap: $space5;
+        grid-template-columns: 1fr;
+        gap: $space2;
     }
 
     @media (min-width: $lg)
     {
         grid-template-columns: 1fr 1fr;
-        gap: $space5;
+        grid-auto-flow: dense;
+        gap: $space2;
     }
 }
 
@@ -52,28 +63,6 @@
 // =============================================================================
 
 
-.formWrapper
-{
-    height: $spaceFit;
-    padding: $space3;
-
-    border: 1px solid $gray-200;
-    border-radius: $bR1;
-    background: $clr0W;
-    box-shadow: $shadow-lg;
-
-    @media (min-width: $md)
-    {
-        padding: $space4;
-    }
-
-    // Override ContactForm styles for better integration
-    :global(.contactForm)
-    {
-        width: 100%;
-        padding: 0;
-    }
-}
 
 // =============================================================================
 // INFO SECTION
@@ -99,7 +88,7 @@
     border: 1px solid $gray-200;
     border-radius: $bR1;
     background: $clr0W;
-    box-shadow: $shadow-md;
+    box-shadow: $shadMd;
 
     @media (min-width: $md)
     {
@@ -116,7 +105,7 @@
 
     margin-bottom: $space1;
 
-    color: $clrTx1;
+    color: $codeTextPri;
 
     &::after
     {
@@ -137,11 +126,11 @@
 .infoDescription
 {
     font-size: $p;
-    line-height: $line-height-base;
+    line-height: $baseH;
 
     margin-bottom: $space2;
 
-    color: $clrTx2;
+    color: $codeTextPriSec;
 }
 
 // =============================================================================
@@ -185,7 +174,7 @@
         transform: translateY(-2px);
 
         background: $clr0W;
-        box-shadow: $shadow-md;
+        box-shadow: $shadMd;
     }
 }
 
@@ -217,19 +206,19 @@
 
     margin-bottom: $space0n25;
 
-    color: $clrTx1;
+    color: $codeTextPri;
 }
 
 .cardLink,
 .cardText
 {
     font-size: $p;
-    line-height: $line-height-base;
+    line-height: $baseH;
 
     display: flex;
     flex-direction: column;
 
-    color: $clrTx2;
+    color: $codeTextPriSec;
 
     gap: $space0n25;
 
@@ -287,15 +276,15 @@
 
     margin-bottom: $space0n25;
 
-    color: $clrTx1;
+    color: $codeTextPri;
 }
 
 .responseText
 {
     font-size: $p;
-    line-height: $line-height-base;
+    line-height: $baseH;
 
-    color: $clrTx2;
+    color: $codeTextPriSec;
 }
 
 // =============================================================================
@@ -311,7 +300,7 @@
     border: 1px solid $gray-200;
     border-radius: $bR1;
     background: $clr0W;
-    box-shadow: $shadow-sm;
+    box-shadow: $shadSm;
 }
 
 .socialTitle
@@ -321,7 +310,7 @@
 
     margin-bottom: $space1n5;
 
-    color: $clrTx1;
+    color: $codeTextPri;
 }
 
 .socialLinks
@@ -343,7 +332,7 @@
 
     transition: all .3s ease;
 
-    color: $clrTx2;
+    color: $codeTextPriSec;
     border-radius: $bR1;
     background: $clrBg1;
 
@@ -353,7 +342,7 @@
 
         color: $clr0W;
         background: $clr1;
-        box-shadow: $shadow-md;
+        box-shadow: $shadMd;
     }
 
     svg
@@ -374,7 +363,7 @@
     border: 1px solid $gray-200;
     border-radius: $bR1;
     background: $clr0W;
-    box-shadow: $shadow-sm;
+    box-shadow: $shadSm;
 }
 
 .additionalTitle
@@ -384,17 +373,17 @@
 
     margin-bottom: $space1;
 
-    color: $clrTx1;
+    color: $codeTextPri;
 }
 
 .additionalText
 {
     font-size: $p;
-    line-height: $line-height-base;
+    line-height: $baseH;
 
     margin-bottom: $space1n5;
 
-    color: $clrTx2;
+    color: $codeTextPriSec;
 }
 
 .availability
@@ -461,7 +450,7 @@
     border: 1px solid $gray-200;
     border-radius: $bR1;
     background: $clr0W;
-    box-shadow: $shadow-sm;
+    box-shadow: $shadSm;
 
     grid-row: 2;
     @media (min-width: $md)
@@ -481,7 +470,7 @@
 
     text-align: center;
 
-    color: $clrTx1;
+    color: $codeTextPri;
 
     &::after
     {
@@ -507,48 +496,13 @@
     width: 100%;
 
     grid-template-columns: 1fr;
-    gap: $space2;
+    gap: $space1;
 
     @media (min-width: $md)
     {
         grid-template-columns: repeat(2, 1fr);
-        gap: $space3;
+        gap: $space1;
     }
-}
-
-.faqItem
-{
-    padding: $space2;
-
-    transition: all .3s ease;
-
-    border-radius: $bR1;
-    background: $clrBg1;
-
-    &:hover
-    {
-        transform: translateY(-2px);
-
-        box-shadow: $shadow-md;
-    }
-}
-
-.faqQuestion
-{
-    font-size: $h6;
-    font-weight: 600;
-
-    margin-bottom: $space0n75;
-
-    color: $clrTx1;
-}
-
-.faqAnswer
-{
-    font-size: $p;
-    line-height: $line-height-base;
-
-    color: $clrTx2;
 }
 
 // =============================================================================

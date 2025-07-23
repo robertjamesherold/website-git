@@ -277,22 +277,7 @@ export function Skills() {
           </div>
         </div>
 
-        {/* CTA Section */}
-        <div className={styles.ctaSection}>
-          <h2 className={styles.ctaTitle}>Bereit für eine Zusammenarbeit?</h2>
-          <p className={styles.ctaDescription}>
-            Lassen Sie uns gemeinsam an Ihrem nächsten Projekt arbeiten. 
-            Meine Skills und Ihre Vision - das perfekte Team!
-          </p>
-          <div className={styles.ctaButtons}>
-            <a href="#contact" className={styles.ctaButton}>
-              Projekt starten
-            </a>
-            <a href="#cv" className={styles.ctaButtonSecondary}>
-              Lebenslauf ansehen
-            </a>
-          </div>
-        </div>
+
       </div>
     </section>
   )

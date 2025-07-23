@@ -1,5 +1,16 @@
 @use '@scss/_reset.scss' as *;
 @use '@scss/_variables.scss' as *;
+@use '@scss/_animations.scss' as *;
+
+body
+{
+    font-family: $fontFamily;
+    font-size: $p;
+    line-height: 1.5;
+
+    color: $clr0B;
+    background-color: $codeBgPri;;
+}
 
 h1
 {

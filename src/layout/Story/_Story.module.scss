@@ -5,10 +5,10 @@
 .story
 {
     padding-top: $space3;
-    padding-bottom: $space4;
+    padding-bottom: $space2;
 
-    color: $clrTx1;
-    background-color: $clrBg2;
+    color: $codeTextPri;
+    background-color: $codeBgPri;
 }
 
 .container
@@ -24,15 +24,22 @@
     height: $spaceAuto;
 
     margin-inline: auto;
-    padding-inline: $space4;
+    padding-inline: $space8;
+
+    @media (min-width: $xs)
+    {
+        padding-inline: $space4;
+    }
 }
+
+
 
 @media (max-width: $xl)
 {
     .container
     {
         padding-inline: $space3;
-        padding-block: $space4;
+        padding-block: $space4 $space2;
     }
 }
 
@@ -68,7 +75,7 @@
     .container
     {
         padding-inline: $space1;
-        padding-block: $space2;
+        padding-block: $space1 $space2;
     }
 }
 
@@ -109,11 +116,11 @@
 {
     font-size: $h1;
     font-weight: 700;
-    line-height: $line-height-tight;
+    line-height: $tightH;
 
     margin-bottom: $space1;
 
-    color: $clrTx1;
+    color: $codeTextPri;
 
     @media (min-width: $md)
     {
@@ -124,12 +131,12 @@
 .heroSubtitle
 {
     font-size: $h6;
-    line-height: $line-height-base;
+    line-height: $baseH;
 
     max-width: 600px;
     margin: 0 auto;
 
-    color: $clrTx2;
+    color: $codeTextPriSec;
 
     @media (min-width: $lg)
     {
@@ -157,7 +164,7 @@
 
     border: 4px solid $clr1;
     border-radius: $bR3;
-    box-shadow: $shadow-lg;
+    box-shadow: $shadLg;
 
     object-fit: cover;
 
@@ -187,13 +194,13 @@
 {
     font-size: $h2;
     font-weight: 700;
-    line-height: $line-height-tight;
+    line-height: $tightH;
 
     margin-bottom: $space3;
 
     text-align: center;
 
-    color: $clrTx1;
+    color: $codeTextPri;
 }
 
 .timelineItem
@@ -262,11 +269,11 @@
 {
     font-size: $h5;
     font-weight: 600;
-    line-height: $line-height-tight;
+    line-height: $tightH;
 
     margin-bottom: $space0n5;
 
-    color: $clrTx1;
+    color: $codeTextPri;
 }
 
 .timelineDate
@@ -287,11 +294,11 @@
 .timelineText
 {
     font-size: $p;
-    line-height: $line-height-base;
+    line-height: $baseH;
 
     margin: 0;
 
-    color: $clrTx2;
+    color: $codeTextPriSec;
 }
 
 // =============================================================================
@@ -308,13 +315,13 @@
 {
     font-size: $h2;
     font-weight: 700;
-    line-height: $line-height-tight;
+    line-height: $tightH;
 
     margin-bottom: $space3;
 
     text-align: center;
 
-    color: $clrTx1;
+    color: $codeTextPri;
 }
 
 .valuesGrid
@@ -352,7 +359,7 @@
         transform: translateY(-4px);
 
         border-color: $clr1;
-        box-shadow: $shadow-lg;
+        box-shadow: $shadLg;
     }
 }
 
@@ -369,21 +376,21 @@
 {
     font-size: $h6;
     font-weight: 600;
-    line-height: $line-height-tight;
+    line-height: $tightH;
 
     margin-bottom: $space0n75;
 
-    color: $clrTx1;
+    color: $codeTextPri;
 }
 
 .valueText
 {
     font-size: $p;
-    line-height: $line-height-base;
+    line-height: $baseH;
 
     margin: 0;
 
-    color: $clrTx2;
+    color: $codeTextPriSec;
 }
 
 // =============================================================================
@@ -414,11 +421,11 @@
 {
     font-size: $h3;
     font-weight: 700;
-    line-height: $line-height-tight;
+    line-height: $tightH;
 
     margin-bottom: $space2;
 
-    color: $clrTx1;
+    color: $codeTextPri;
 }
 
 .personalGrid
@@ -441,14 +448,14 @@
     p
     {
         font-size: $p;
-        line-height: $line-height-base;
+        line-height: $baseH;
 
         width: $space100;
         margin-bottom: $space1n5;
 
         text-wrap: wrap;
 
-        color: $clrTx2;
+        color: $codeTextPriSec;
 
         &:last-child
         {
@@ -499,7 +506,7 @@
 {
     font-size: $h3;
     font-weight: 700;
-    line-height: $line-height-tight;
+    line-height: $tightH;
 
     color: $clr1;
 }
@@ -511,7 +518,7 @@
 
     margin-top: $space0n25;
 
-    color: $clrTx2;
+    color: $codeTextPriSec;
 }
 
 // =============================================================================
@@ -539,7 +546,7 @@
 {
     font-size: $h3;
     font-weight: 700;
-    line-height: $line-height-tight;
+    line-height: $tightH;
 
     margin-bottom: $space1;
 }
@@ -547,7 +554,7 @@
 .ctaText
 {
     font-size: $h6;
-    line-height: $line-height-base;
+    line-height: $baseH;
 
     max-width: 600px;
     margin-right: auto;
@@ -598,7 +605,7 @@
         transform: translateY(-2px);
 
         background-color: $gray-100;
-        box-shadow: $shadow-lg;
+        box-shadow: $shadLg;
     }
 
     &:focus
@@ -634,7 +641,7 @@
 
         color: $clr1;
         background-color: $clr0W;
-        box-shadow: $shadow-lg;
+        box-shadow: $shadLg;
     }
 
     &:focus

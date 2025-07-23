@@ -25,13 +25,13 @@ $secondary: #6b7280;
 $success: #10b981;
 
 // Spacing
-$spacing-xs: 0.25rem;
-$spacing-sm: 0.5rem;
-$spacing-md: 1rem;
+$space0n25: 0.25rem;
+$space0n5: 0.5rem;
+$space1: 1rem;
 
 // Typography
 $font-family-sans: 'Inter', sans-serif;
-$font-size-base: 1rem;
+$fs16: 1rem;
 
 // Breakpoints
 $breakpoint-sm: 640px;
@@ -48,8 +48,8 @@ $breakpoint-lg: 1024px;
   // Variables automatisch verfügbar! 🎉
   background-color: $primary;
   color: $white;
-  padding: $spacing-sm $spacing-md;
-  border-radius: $border-radius-md;
+  padding: $space0n5 $space1;
+  border-radius: $bR2;
   font-family: $font-family-sans;
   border: none;
   cursor: pointer;
@@ -58,7 +58,7 @@ $breakpoint-lg: 1024px;
   &:hover {
     background-color: $primary-dark;
     transform: translateY(-1px);
-    box-shadow: $shadow-md;
+    box-shadow: $shadMd;
   }
   
   &:active {
@@ -67,8 +67,8 @@ $breakpoint-lg: 1024px;
   
   // Responsive Design
   @media (min-width: $breakpoint-md) {
-    padding: $spacing-md $spacing-lg;
-    font-size: $font-size-lg;
+    padding: $space1 $space2;
+    font-size: $fs2;
   }
   
   // Variants
@@ -81,25 +81,25 @@ $breakpoint-lg: 1024px;
   }
   
   &--large {
-    padding: $spacing-lg $spacing-xl;
-    font-size: $font-size-xl;
+    padding: $space2 $space3;
+    font-size: $fs3;
   }
 }
 
 .card {
   background-color: $white;
-  border-radius: $border-radius-lg;
-  box-shadow: $shadow-sm;
-  padding: $spacing-lg;
+  border-radius: $bR3;
+  box-shadow: $shadSm;
+  padding: $space2;
   border: 1px solid $gray-200;
   
   &__header {
     border-bottom: 1px solid $gray-200;
-    padding-bottom: $spacing-md;
-    margin-bottom: $spacing-md;
+    padding-bottom: $space1;
+    margin-bottom: $space1;
     
     .title {
-      font-size: $font-size-xl;
+      font-size: $fs3;
       font-weight: 600;
       color: $gray-900;
       margin: 0;
@@ -113,11 +113,11 @@ $breakpoint-lg: 1024px;
   
   &__footer {
     border-top: 1px solid $gray-200;
-    padding-top: $spacing-md;
-    margin-top: $spacing-md;
+    padding-top: $space1;
+    margin-top: $space1;
     display: flex;
     justify-content: flex-end;
-    gap: $spacing-sm;
+    gap: $space0n5;
   }
 }
 ```
@@ -144,8 +144,8 @@ $breakpoint-lg: 1024px;
   background-color: $bg-color;
   color: $text-color;
   border: none;
-  padding: $spacing-sm $spacing-md;
-  border-radius: $border-radius-md;
+  padding: $space0n5 $space1;
+  border-radius: $bR2;
   cursor: pointer;
   transition: all 0.2s ease;
   
@@ -238,11 +238,11 @@ $breakpoint-lg: 1024px;
 
 // Spacing utilities
 @each $name, $size in (
-  'xs': $spacing-xs,
-  'sm': $spacing-sm,
-  'md': $spacing-md,
-  'lg': $spacing-lg,
-  'xl': $spacing-xl
+  'xs': $space0n25,
+  'sm': $space0n5,
+  'md': $space1,
+  'lg': $space2,
+  'xl': $space3
 ) {
   .m-#{$name} { margin: $size; }
   .mt-#{$name} { margin-top: $size; }
@@ -267,12 +267,12 @@ $breakpoint-lg: 1024px;
 .text-gradient { @include gradient-text; }
 
 @each $name, $size in (
-  'xs': $font-size-xs,
-  'sm': $font-size-sm,
-  'base': $font-size-base,
-  'lg': $font-size-lg,
-  'xl': $font-size-xl,
-  '2xl': $font-size-2xl
+  'xs': $fs12,
+  'sm': $fs14,
+  'base': $fs16,
+  'lg': $fs2,
+  'xl': $fs3,
+  '2xl': $fs4
 ) {
   .text-#{$name} { font-size: $size; }
 }
@@ -350,18 +350,18 @@ function CustomButton({ variant = 'primary', size = 'md', children, ...props }) 
   
   // Sizes
   &--sm {
-    padding: $spacing-xs $spacing-sm;
-    font-size: $font-size-sm;
+    padding: $space0n25 $space0n5;
+    font-size: $fs14;
   }
   
   &--md {
-    padding: $spacing-sm $spacing-md;
-    font-size: $font-size-base;
+    padding: $space0n5 $space1;
+    font-size: $fs16;
   }
   
   &--lg {
-    padding: $spacing-md $spacing-lg;
-    font-size: $font-size-lg;
+    padding: $space1 $space2;
+    font-size: $fs2;
   }
   
   // States
@@ -376,8 +376,8 @@ function CustomButton({ variant = 'primary', size = 'md', children, ...props }) 
   
   // Responsive
   @include respond-to(mobile) {
-    font-size: $font-size-sm;
-    padding: $spacing-xs $spacing-sm;
+    font-size: $fs14;
+    padding: $space0n25 $space0n5;
   }
 }
 ```

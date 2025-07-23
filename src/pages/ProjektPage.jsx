@@ -1,4 +1,5 @@
-import { Projekte } from '@ly/Projekte/Projekte.jsx'
+import { Projekte } from '@cm/projects/Projekte.jsx'
+
 
 export function ProjektPage() {
     return (
