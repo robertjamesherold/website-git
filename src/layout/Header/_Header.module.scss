@@ -1,0 +1,67 @@
+.header
+{
+    margin-bottom: $space5;
+
+    text-align: center;
+
+    @media (min-width: $lg)
+    {
+        margin-bottom: $space6;
+    }
+}
+
+.title
+{
+    font-size: $h1;
+    font-weight: 700;
+    line-height: $tightH;
+
+    display: inline-block;
+
+    margin-bottom: $space1;
+
+    animation: gradientMove 5s linear infinite ;
+
+    color: $codeTextPri;
+    background: linear-gradient(90deg, $codePink, $codePurple, $codeOrange, $codeBlueBright, $codePink, $codePurple);
+    background-repeat: repeat;
+    background-clip: text;
+    background-size: 700% 400%;
+
+    animation-fill-mode: forwards;
+    -webkit-text-fill-color: transparent;
+
+    @media (min-width: $md)
+    {
+        font-size: 3rem;
+    }
+}
+
+.subtitle
+{
+    font-size: $h6;
+    line-height: $baseH;
+
+    max-width: 600px;
+    margin: 0 auto;
+
+    color: $codeTextPriSec;
+
+    @media (min-width: $md)
+    {
+        font-size: $h5;
+    }
+}
+
+@keyframes gradientMove
+{
+    0%
+    {
+        background-attachment: scroll;
+        background-position: 0 ;
+    }
+    100%
+    {
+        background-position: 100% ;
+    }
+}

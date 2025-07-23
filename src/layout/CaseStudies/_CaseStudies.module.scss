@@ -31,11 +31,11 @@
 {
     font-size: $h1;
     font-weight: 700;
-    line-height: $line-height-tight;
+    line-height: $tightH;
 
     margin-bottom: $space1;
 
-    color: $clrTx1;
+    color: $codeTextPri;
 
     @media (min-width: $md)
     {
@@ -46,12 +46,12 @@
 .subtitle
 {
     font-size: $h6;
-    line-height: $line-height-base;
+    line-height: $baseH;
 
     max-width: 700px;
     margin: 0 auto;
 
-    color: $clrTx2;
+    color: $codeTextPriSec;
 
     @media (min-width: $md)
     {
@@ -85,7 +85,7 @@
 
     border-radius: $bR1;
     background: $clr0W;
-    box-shadow: $shadow-sm;
+    box-shadow: $shadSm;
 
     gap: $space1;
 
@@ -110,7 +110,7 @@
     cursor: pointer;
     transition: all .3s ease;
 
-    color: $clrTx2;
+    color: $codeTextPriSec;
     border: none;
     border-radius: $bR1;
     background: transparent;
@@ -119,7 +119,7 @@
 
     &:hover
     {
-        color: $clrTx1;
+        color: $codeTextPri;
         background: $clrBg1;
     }
 
@@ -127,7 +127,7 @@
     {
         color: $clr0W;
         background: $clr1;
-        box-shadow: $shadow-md;
+        box-shadow: $shadMd;
 
         .filterCount
         {
@@ -145,12 +145,12 @@
 
 .filterCount
 {
-    font-size: $font-size-sm;
+    font-size: $fs14;
     font-weight: 600;
 
     padding: $space0n25 $space0n5;
 
-    color: $clrTx2;
+    color: $codeTextPriSec;
     border-radius: $bR1;
     background: $clrBg1;
 }
@@ -190,13 +190,13 @@
     border: 1px solid $gray-200;
     border-radius: $bR1;
     background-color: $clr0W;
-    box-shadow: $shadow-sm;
+    box-shadow: $shadSm;
 
     &:hover
     {
         transform: translateY(-4px);
 
-        box-shadow: $shadow-lg;
+        box-shadow: $shadLg;
     }
 }
 

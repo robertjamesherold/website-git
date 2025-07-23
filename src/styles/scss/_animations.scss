@@ -1,0 +1,95 @@
+@keyframes fadeInUp
+{
+    from
+    {
+        transform: translateY(30px);
+
+        opacity: 0;
+    }
+    to
+    {
+        transform: translateY(0);
+
+        opacity: 1;
+    }
+}
+
+@keyframes routerOut
+{
+    0%
+    {
+        transform: translateX(0) ;
+
+        opacity: 1 ;
+    }
+
+    90%
+    {
+        transform: translateX(100vw) ;
+
+        opacity: 1 ;
+    }
+    100%
+    {
+        transform: translateX(100vw) ;
+
+        opacity: 0 ;
+    }
+}
+
+@keyframes routerIn
+{
+    0%
+    {
+        transform: translateX(-100vw) ;
+
+        opacity: 0;
+    }
+    10%
+    {
+        transform: translateX(-100vw) ;
+
+        opacity: 1;
+    }
+    100%
+    {
+        transform: translateX(0) ;
+
+        opacity: 1;
+    }
+}
+
+.pageTransition
+{
+    animation-duration: 2s;
+    //  ANIMATION-FILL-MODE: CREATE;
+
+    animation-fill-mode: crossfade;
+}
+
+.fadeOut
+{
+    animation-name: routerOut 2s forwards;
+}
+
+.fadeIn
+{
+    animation: routerIn 2s forwards;
+}
+
+
+@keyframes gradientMove
+{
+    0%
+    {
+        background-position: 0 50%;
+    }
+    50%
+    {
+        background-position: 100% 50%;
+    }
+    100%
+    {
+        background-position: 0 50%;
+    }
+}

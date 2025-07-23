@@ -1,0 +1,117 @@
+// components/casestudy/components/CaseStudyRelated/CaseStudyRelated.module.scss
+.related
+{
+    margin-top: $space5;
+    padding: $space4 0;
+
+    background-color: $clrBg2;
+}
+
+.container
+{
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 $space4;
+
+    @media (max-width: $md)
+    {
+        padding: 0 $space2;
+    }
+}
+
+.title
+{
+    font-size: $h3;
+    font-weight: 700;
+
+    margin-bottom: $space3;
+
+    text-align: center;
+
+    color: $codeTextPri;
+
+    @media (max-width: $md)
+    {
+        font-size: $h4;
+    }
+}
+
+.grid
+{
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: $space2;
+
+    @media (max-width: $sm)
+    {
+        grid-template-columns: 1fr;
+    }
+}
+
+.card
+{
+    display: block;
+    overflow: hidden;
+
+    transition: all .3s ease;
+    text-decoration: none;
+
+    border-radius: $bR1;
+    background-color: $clr0W;
+    box-shadow: $shadSm;
+
+    &:hover
+    {
+        transform: translateY(-8px);
+
+        box-shadow: $shadLg;
+
+        .imageWrapper img
+        {
+            transform: scale(1.1);
+        }
+    }
+}
+
+.imageWrapper
+{
+    position: relative;
+
+    overflow: hidden;
+
+    height: 200px;
+
+    img
+    {
+        width: 100%;
+        height: 100%;
+
+        transition: transform .3s ease;
+
+        object-fit: cover;
+    }
+}
+
+.content
+{
+    padding: $space2;
+}
+
+.studyTitle
+{
+    font-size: $h5;
+    font-weight: 600;
+    line-height: $tightH;
+
+    margin-bottom: $space0n5;
+
+    color: $codeTextPri;
+}
+
+.studyClient
+{
+    font-size: $p;
+
+    color: $codeGray;
+}

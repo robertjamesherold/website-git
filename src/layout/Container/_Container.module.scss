@@ -12,8 +12,7 @@
     width: $spaceFull;
     max-width: 1200px;
     height: $spaceAuto;
-
-    margin-inline: auto;
+    margin-top: $space2; margin-inline: auto;
     padding-inline: $space4;
 }
 
@@ -21,7 +20,7 @@
 {
     .container
     {
-        margin-inline: $space0;
+        margin-inline: $spaceAuto;
         padding-inline: $space3;
         padding-block: $space4;
     }

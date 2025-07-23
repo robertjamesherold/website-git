@@ -36,17 +36,17 @@ export function Footer() {
             <h3 className={styles.sectionTitle}>Portfolio</h3>
             <ul className={styles.linkList}>
               <li>
-                <a href="#projects" className={styles.link}>
+                <Link to='/projekte' className={styles.link}>
                   Projekte
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#case-studies" className={styles.link}>
+                <Link to="/casestudies" className={styles.link}>
                   Case Studies
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/github" className={styles.link}>
+                <a href="https://github.com/robertjamesherold" className={styles.link}>
                   GitHub
                 </a>
               </li>
@@ -58,12 +58,12 @@ export function Footer() {
             <h3 className={styles.sectionTitle}>Kontakt</h3>
             <ul className={styles.linkList}>
               <li>
-                <a href="#contact" className={styles.link}>
+                <Link to="/kontakt" className={styles.link}>
                   Kontakt aufnehmen
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="mailto:hello@yourname.com" className={styles.link}>
+                <a href="mailto:robertjamesherold@icloud.com" className={styles.link}>
                   E-Mail schreiben
                 </a>
               </li>
@@ -84,7 +84,7 @@ export function Footer() {
               <span className={styles.socialTitle}>Folgen Sie mir:</span>
               <div className={styles.socialLinks}>
                 <a 
-                  href="https://github.com/yourusername" 
+                  href="https://github.com/robertjamesherold" 
                   className={styles.socialLink}
                   aria-label="GitHub"
                   target="_blank"
@@ -125,7 +125,7 @@ export function Footer() {
 
           {/* Copyright */}
           <div className={styles.copyright}>
-            <p>© {currentYear} Robert James Herold. Entwickelt mit ❤️ und React.</p>
+            <p>© {currentYear} Robert James Herold. Entwickelt mit React.</p>
           </div>
         </div>
       </div>

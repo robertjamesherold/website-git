@@ -1,5 +1,6 @@
 @use '@scss/_variables.scss' as *;
 
+
 // 1. Basis-Styling für alle Buttons
 @mixin button-base
 {
@@ -95,11 +96,4 @@
             }
         }
     }
-}
-
-
-
-@function rgba-hex($color, $alpha)
-{
-    @return rgba(red($color), green($color), blue($color), $alpha);
 }

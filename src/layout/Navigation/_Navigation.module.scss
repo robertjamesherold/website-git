@@ -5,7 +5,7 @@
 {
     position: sticky;
     z-index: 1200;
-    top: - $space5;
+    top: 0;
 
     display: flex;
     align-items: center;
@@ -430,12 +430,19 @@
 
 .mobileNavList
 {
+    display: flex;
+    flex-direction: column;
+
     width: 100%;
     min-height: calc(100vh - 64px);
     margin: 0;
+    padding-bottom: $space3;
 
     list-style: none;
     list-style-position: inside;
+
+    gap: $space1;
+
 
     .open &
     {
@@ -485,7 +492,7 @@
 
     width: $space100;
     height: $space5;
-    padding: $space0;
+    padding: $space2 $space0;
 
     cursor: pointer;
     transition: all .2s ease-out;
@@ -497,6 +504,7 @@
     border-radius: $bR2;
     background: transparent;
 
+    padding-inline: $space2;
 
     &:hover,
     &:focus
@@ -532,13 +540,13 @@
 {
     overflow: hidden;
 
-    max-height: 0;
+    height: $space0;
 
-    transition: max-height .4s ease-out;
+    transition: height .4s ease-out;
 
     &.open
     {
-        max-height: 800px;
+        height: $space6 * 3;
     }
 }
 
@@ -564,12 +572,30 @@
     margin-bottom: $space2;
 
     color: $gray-800;
+
+    padding-inline: $space2;
 }
 
 .mobileAccordionItems
 {
     display: flex;
     flex-direction: column;
+
+    margin-block: $space1;
+    margin-inline: $space3;
+    &:before
+    {
+        position: absolute;
+        top: 0;
+        left: $space2;
+
+        width: $spacepx * 2;
+        height: $space5 + $space1;
+
+        content: '';
+
+        background: linear-gradient(to right, transparent, rgba($gray-300, .5), transparent);
+    }
 }
 
 .mobileAccordionItem
@@ -577,6 +603,7 @@
     display: flex;
     justify-content: center;
 
+    height: $space5;
     padding: $space0 $space0;
 
     transition: all .2s ease-out;
@@ -603,11 +630,11 @@
     font-size: .95rem;
     font-weight: 500;
 
-    display: block;
-
-    margin-bottom: $space1;
+    display: flex;
 
     color: $gray-700;
+
+    padding-inline: $space0;
 }
 
 .mobileAccordionItemDescription

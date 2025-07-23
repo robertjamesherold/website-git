@@ -1,0 +1,224 @@
+
+.hero
+{
+    display: grid;
+    align-items: center;
+
+    width: $space100;
+    height: $spaceFit;
+
+    padding-inline: 0;
+    margin-block: $space3;
+    gap: $space1;
+    grid-template-columns: 1fr;
+
+    @media (min-width: $lg)
+    {
+        width: $space100;
+
+        gap: $space2;
+        grid-template-columns: 1fr 1fr;
+        padding-inline: 0;
+        margin-inline: 0;
+        margin-block: $space6;
+    }
+}
+
+
+
+
+
+.heroContent
+{
+    order: 1;
+
+    width: $space100;
+
+    text-align: center;
+
+    @media (min-width: $lg)
+    {
+        text-align: left;
+    }
+}
+
+.heroTitle
+{
+    font-size: $fs5;
+    font-weight: $fw7;
+    line-height: $tightH;
+
+    margin-bottom: $space1;
+
+    color: $codeBg;
+
+    @media (min-width: $sm)
+    {
+        font-size: $fs6;
+    }
+}
+
+.heroName
+{
+    display: inline-block;
+
+    background: linear-gradient(135deg, $codePink, $codePurple, $codeGreen, $codeBlueBright);
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+}
+
+//  .HEROSUBTITLE
+
+.heroSubtitle
+{
+    font-size: $fs16;
+    line-height: $baseH;
+
+    margin-bottom: $space1n5;
+
+    color: $codeTextPriSec;
+
+
+    // Alles über 480px
+    @media (min-width: $xs)
+    {
+        font-size: $fs1;
+    }
+
+
+
+    // Alles über 640px
+    @media (min-width: $sm)
+    {
+        font-size: $fs2;
+    }
+
+
+
+    // Alles über 768px
+    @media (min-width: $md)
+    {
+    }
+
+
+    // Alles über 1024px
+    @media (min-width: $lg)
+    {
+    }
+
+
+
+    // Alles über 1280px
+    @media (min-width: $xl)
+    {
+    }
+}
+
+
+.heroButtons
+{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    width: $space100;
+    margin-bottom: $space2;
+
+    gap: $space1;
+
+
+    @media (min-width: $sm)
+    {
+        flex-direction: row;
+
+        gap: $space1;
+    }
+    @media (min-width: $md)
+    {
+        flex-direction: row;
+
+        gap: $space1;
+    }
+
+    @media (min-width: $lg)
+    {
+        flex-direction: row;
+
+        gap: $space0n5;
+    }
+}
+
+
+.ctaButton
+{
+    font-size: $fs16;
+    font-weight: $fw5;
+
+    align-items: center;
+    justify-content: center;
+
+    width: $space100;
+    min-width: $space10;
+    padding: $space1 $space1;
+
+    transition: all .3s ease-in-out;
+    text-align: center;
+    text-decoration: none;
+
+    color: $codeWhite;
+    border-radius: $bR1;
+    background: linear-gradient(135deg, $codePink, $codeOrange);
+    box-shadow: $shadSm;
+
+    &:hover
+    {
+        transform: translateY(-2px);
+
+        box-shadow: $shadMd;
+    }
+
+    &:focus
+    {
+        outline: none;
+        box-shadow: 0 0 0 3px rgba($clr1, .3);
+    }
+}
+
+.ctaButtonSecondary
+{
+    font-size: $fs16;
+    font-weight: $fw5;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: $space100;
+    min-width: $space10;
+    padding: $space1 $space1;
+
+    transition: all .3s ease-in-out;
+    text-decoration: none;
+
+    color: $clr1;
+    border: $border2;
+    border-radius: $bR1;
+    background-color: $no;
+
+    &:hover
+    {
+        transform: translateY(-2px);
+
+        color: $codeWhite;
+        background-color: rgba-hex($codePurple, 1);
+        box-shadow: $shadSm;
+    }
+
+    &:focus
+    {
+        outline: $no;
+        box-shadow: $shadLg;
+    }
+}

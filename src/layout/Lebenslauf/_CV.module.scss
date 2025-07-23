@@ -8,7 +8,7 @@
     padding-top: $space3;
     padding-bottom: $space4;
 
-    color: $clrTx1;
+    color: $codeTextPri;
     background-color: $clrBg2;
 }
 
@@ -106,21 +106,21 @@
 {
     font-size: $h1;
     font-weight: 700;
-    line-height: $line-height-tight;
+    line-height: $tightH;
 
     margin-bottom: $space0n5;
 
-    color: $clrTx1;
+    color: $codeTextPri;
 }
 
 .subtitle
 {
     font-size: $h6;
-    line-height: $line-height-base;
+    line-height: $baseH;
 
     margin: 0;
 
-    color: $clrTx2;
+    color: $codeTextPriSec;
 }
 
 .headerActions
@@ -146,7 +146,7 @@
     color: $clr0W;
     border-radius: $bR1;
     background-color: $clr1;
-    box-shadow: $shadow-md;
+    box-shadow: $shadMd;
 
     gap: $space0n5;
 
@@ -155,7 +155,7 @@
         transform: translateY(-2px);
 
         background-color: $clr1D;
-        box-shadow: $shadow-lg;
+        box-shadow: $shadLg;
     }
 
     &:focus
@@ -200,7 +200,7 @@
 
         border: 4px solid $clr1;
         border-radius: $bR2;
-        box-shadow: $shadow-lg;
+        box-shadow: $shadLg;
 
         object-fit: cover;
 
@@ -269,17 +269,17 @@
 
         margin-bottom: $space0n25;
 
-        color: $clrTx1;
+        color: $codeTextPri;
     }
 
     p
     {
         font-size: $p;
-        line-height: $line-height-base;
+        line-height: $baseH;
 
         margin: 0;
 
-        color: $clrTx2;
+        color: $codeTextPriSec;
     }
 }
 
@@ -331,7 +331,7 @@
     border: 1px solid $gray-200;
     border-radius: $bR1;
     background-color: $clr0W;
-    box-shadow: $shadow-sm;
+    box-shadow: $shadSm;
 
     @media (min-width: $md)
     {
@@ -343,13 +343,13 @@
 {
     font-size: $h4;
     font-weight: 700;
-    line-height: $line-height-tight;
+    line-height: $tightH;
 
     position: relative;
 
     margin-bottom: $space2;
 
-    color: $clrTx1;
+    color: $codeTextPri;
 
     &::after
     {
@@ -446,11 +446,11 @@
 {
     font-size: $h6;
     font-weight: 600;
-    line-height: $line-height-tight;
+    line-height: $tightH;
 
     margin-bottom: $space0n5;
 
-    color: $clrTx1;
+    color: $codeTextPri;
 }
 
 .timelineInstitution
@@ -466,11 +466,11 @@
 .timelineDescription
 {
     font-size: $p;
-    line-height: $line-height-base;
+    line-height: $baseH;
 
     margin-bottom: $space1;
 
-    color: $clrTx2;
+    color: $codeTextPriSec;
 }
 
 .timelineMetrics
@@ -504,14 +504,14 @@
     li
     {
         font-size: $p;
-        line-height: $line-height-base;
+        line-height: $baseH;
 
         position: relative;
 
         margin-bottom: $space0n5;
         padding-left: $space1n5;
 
-        color: $clrTx2;
+        color: $codeTextPriSec;
 
         &::before
         {
@@ -553,7 +553,7 @@
 
     margin-bottom: $space1;
 
-    color: $clrTx1;
+    color: $codeTextPri;
 }
 
 .skillGrid
@@ -580,7 +580,7 @@
 
     min-width: 100px;
 
-    color: $clrTx1;
+    color: $codeTextPri;
 }
 
 .skillLevel
@@ -650,7 +650,7 @@
 
         margin-bottom: $space0n75;
 
-        color: $clrTx1;
+        color: $codeTextPri;
     }
 
     ul
@@ -669,7 +669,7 @@
             margin-bottom: $space0n5;
             padding-left: $space1n5;
 
-            color: $clrTx2;
+            color: $codeTextPriSec;
 
             &::before
             {
@@ -714,14 +714,14 @@
 {
     font-weight: 600;
 
-    color: $clrTx1;
+    color: $codeTextPri;
 }
 
 .languageLevel
 {
     font-size: $p;
 
-    color: $clrTx2;
+    color: $codeTextPriSec;
 }
 
 // =============================================================================
@@ -749,7 +749,7 @@
 {
     font-size: $h3;
     font-weight: 700;
-    line-height: $line-height-tight;
+    line-height: $tightH;
 
     margin-bottom: $space1;
 }
@@ -757,7 +757,7 @@
 .ctaDescription
 {
     font-size: $h6;
-    line-height: $line-height-base;
+    line-height: $baseH;
 
     max-width: 600px;
     margin-right: auto;
@@ -802,14 +802,14 @@
     color: $clr1;
     border-radius: $bR1;
     background-color: $clr0W;
-    box-shadow: $shadow-md;
+    box-shadow: $shadMd;
 
     &:hover
     {
         transform: translateY(-2px);
 
         background-color: $gray-100;
-        box-shadow: $shadow-lg;
+        box-shadow: $shadLg;
     }
 
     &:focus

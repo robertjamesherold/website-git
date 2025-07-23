@@ -1,9 +1,9 @@
-import { Home } from '@ly/Home/Home';
+import { Home } from '@ly/Home/HomeTwo';
 import { Story } from '@ly/Story/Story'
 import { Skills } from '@ly/Skills/Skills'
 import { CV } from '@ly/Lebenslauf/Lebenslauf'
-import { Projekte } from '@ly/Projekte/Projekte.jsx'
-import { Contact } from '@ly/Contact/Contact.jsx'
+import { Projekte } from '@cm/projects/Projekte.jsx'
+import { Contact } from '@cm/contacts/Contact.jsx'
 
 export function Startseite() {
     return (
@@ -37,6 +37,7 @@ export function Projektseite() {
     
     )
 }  
+
 
 
 export function Kontaktseite() {

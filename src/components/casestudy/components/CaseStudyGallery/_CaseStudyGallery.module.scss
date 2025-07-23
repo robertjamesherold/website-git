@@ -1,0 +1,142 @@
+// components/casestudy/components/CaseStudyGallery/CaseStudyGallery.module.scss
+.gallery
+{
+    margin-top: $space4;
+    padding-top: $space3;
+
+    border-top: 2px solid $gray-200;
+}
+
+.galleryTitle
+{
+    font-size: $h4;
+    font-weight: 700;
+
+    margin-bottom: $space2;
+
+    color: $codeTextPri;
+}
+
+.imageGrid
+{
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: $space2;
+
+    @media (max-width: $sm)
+    {
+        grid-template-columns: 1fr;
+    }
+}
+
+.imageItem
+{
+    position: relative;
+
+    overflow: hidden;
+
+    cursor: pointer;
+    transition: transform .3s ease;
+
+    border-radius: $bR1;
+    background-color: $gray-100;
+
+    &:hover
+    {
+        transform: translateY(-4px);
+
+        box-shadow: $shadMd;
+
+        img
+        {
+            transform: scale(1.05);
+        }
+    }
+
+    img
+    {
+        width: 100%;
+        height: 250px;
+
+        transition: transform .3s ease;
+
+        object-fit: cover;
+    }
+}
+
+.caption
+{
+    font-size: $fs14;
+
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    padding: $space1;
+
+    transition: transform .3s ease;
+    transform: translateY(100%);
+
+    color: $clr0W;
+    background: linear-gradient(to top, rgba($clr0B, .8), transparent);
+
+    .imageItem:hover &
+    {
+        transform: translateY(0);
+    }
+}
+
+.lightbox
+{
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+    cursor: pointer;
+    animation: fadeIn .3s ease;
+
+    background-color: rgba($clr0B, .95);
+
+    img
+    {
+        max-width: 90%;
+        max-height: 80vh;
+
+        box-shadow: $shadMd;
+
+        object-fit: contain;
+    }
+}
+
+.lightboxCaption
+{
+    font-size: $h6;
+
+    margin-top: $space2;
+
+    text-align: center;
+
+    color: $clr0W;
+}
+
+@keyframes fadeIn
+{
+    from
+    {
+        opacity: 0;
+    }
+    to
+    {
+        opacity: 1;
+    }
+}

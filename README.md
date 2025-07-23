@@ -115,15 +115,15 @@ npm run update          # Dependencies updaten
 .custom-button {
   // SCSS Variables automatisch verfügbar!
   background-color: $primary;
-  padding: $spacing-md;
-  border-radius: $border-radius-lg;
+  padding: $space1;
+  border-radius: $bR3;
   
   &:hover {
     background-color: $primary-dark;
   }
   
   @include respond-to(mobile) {
-    padding: $spacing-sm;
+    padding: $space0n5;
   }
 }
 ```
@@ -136,15 +136,15 @@ $secondary: #6b7280;
 $success: #10b981;
 
 // Spacing
-$spacing-xs: 0.25rem;
-$spacing-sm: 0.5rem;
-$spacing-md: 1rem;
-$spacing-lg: 1.5rem;
+$space0n25: 0.25rem;
+$space0n5: 0.5rem;
+$space1: 1rem;
+$space2: 1.5rem;
 
 // Typography
 $font-family-sans: 'Inter', sans-serif;
-$font-size-base: 1rem;
-$font-size-lg: 1.125rem;
+$fs16: 1rem;
+$fs2: 1.125rem;
 
 // Breakpoints
 $breakpoint-sm: 640px;
