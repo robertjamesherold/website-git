@@ -8,9 +8,9 @@
     padding-top: $space3;
     padding-bottom: $space2;
 
-    color: $gray-300;
-    border-top: 1px solid $gray-800;
-    background-color: $gray-900;
+    color: rgb($codeTextSec);
+    border-top: 1px solid rgb($codeTextTer);
+    background-color: rgb($codeBgTer);
 }
 
 .container
@@ -112,13 +112,13 @@
 
 .sectionTitle
 {
-    font-size: $h6;
-    font-weight: 700;
+    font-size: $fs1;
+    font-weight: $fw7;
     line-height: $tightH;
 
     margin-bottom: $space1;
 
-    color: $clr0W;
+    color: rgb($codeTextPri);
 }
 
 .linkList
@@ -136,18 +136,18 @@
 
 .link
 {
-    font-size: $p;
+    font-size: $fs16;
     line-height: $baseH;
 
     transition: color .2s ease-in-out;
     text-decoration: none;
 
-    color: $gray-400;
+    color: rgb($codeTextTer);
 
     &:hover,
     &:focus
     {
-        color: $clr1L;
+        color: rgb($codeBlue);
         outline: none;
     }
 
@@ -172,7 +172,7 @@
     width: $space100;
     padding-top: $space2;
 
-    border-top: 1px solid $gray-800;
+    border-top: 1px solid rgb($codeTextTer);
 }
 
 .bottomContent
@@ -216,10 +216,10 @@
 
 .socialTitle
 {
-    font-size: $p;
-    font-weight: 500;
+    font-size: $fs16;
+    font-weight: $fw5;
 
-    color: $gray-400;
+    color: rgb($codeTextPri);
 }
 
 .socialLinks
@@ -241,22 +241,22 @@
     transition: all .2s ease-in-out;
     text-decoration: none;
 
-    color: $gray-400;
+    color: rgb($codeBg);
     border-radius: $bR1;
-    background-color: $gray-800;
+    background-color: rgba($codePink, .3);
 
     &:hover
     {
         transform: translateY(-2px);
 
-        color: $clr0W;
-        background-color: $clr1;
+        color: rgb($codeTextPri);
+        background-color: rgb($codeBlue);
     }
 
     &:focus
     {
         outline: none;
-        box-shadow: 0 0 0 3px rgba($clr1, .3);
+        box-shadow: 0 0 0 3px rgba($codeBlue, .3);
     }
 
     svg
@@ -298,18 +298,18 @@
 
 .legalLink
 {
-    font-size: $p;
+    font-size: $fs16;
 
     transition: color .2s ease-in-out;
     white-space: nowrap;
     text-decoration: none;
 
-    color: $gray-500;
+    color: rgb($codeTextSec);
 
     &:hover,
     &:focus
     {
-        color: $clr1L;
+        color: rgb($codeBlue);
         outline: none;
     }
 
@@ -329,15 +329,15 @@
 
     text-align: center;
 
-    border-top: 1px solid $gray-800;
+    border-top: 1px solid rgb($codeTextTer);
 
     p
     {
-        font-size: $p;
+        font-size: $fs16;
 
         margin: 0;
 
-        color: $gray-500;
+        color: rgb($codeTextSec);
     }
 
     @media (min-width: $md)
@@ -410,16 +410,90 @@
 {
     .footer
     {
-        border-top: 2px solid $clr0W;
+        border-top: 2px solid rgb($codeBgPri);
     }
 
     .bottom
     {
-        border-top: 2px solid $gray-700;
+        border-top: 2px solid rgb($codeTextTer);
     }
 
     .copyright
     {
-        border-top: 2px solid $gray-700;
+        border-top: 2px solid rgb($codeTextTer);
+    }
+}
+
+@media (prefers-color-scheme: dark)
+{
+    .footer
+    {
+        border-bottom-color: rgba(229, 231, 235, .1);
+        background-color: rgba(17, 24, 39, .95);
+    }
+
+    .navLink
+    {
+        color: #d1d5db;
+
+        &:hover
+        {
+            color: #60a5fa;
+            background-color: rgba(96, 165, 250, .1);
+        }
+
+        &.active
+        {
+            color: #60a5fa;
+            background-color: rgba(96, 165, 250, .2);
+        }
+    }
+
+    .toggleIcon
+    {
+        background-color: #d1d5db;
+    }
+
+    .overlayContent
+    {
+        color: #f9fafb;
+        background-color: #1f2937;
+    }
+
+    .overlayNavLink
+    {
+        color: #f9fafb;
+
+        &:hover
+        {
+            color: #60a5fa;
+        }
+    }
+
+    .overlaySubNavLink
+    {
+        color: #9ca3af;
+
+        &:hover
+        {
+            color: #60a5fa;
+        }
+    }
+
+    .overlayContactTitle
+    {
+        color: #f9fafb;
+    }
+
+    .closeButton
+    {
+        color: #9ca3af;
+        background-color: rgba(156, 163, 175, .1);
+
+        &:hover
+        {
+            color: #f87171;
+            background-color: rgba(239, 68, 68, .2);
+        }
     }
 }

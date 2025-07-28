@@ -24,23 +24,23 @@
     transition: all .3s ease-in-out;
     text-decoration: none;
 
-    color: $codeTextPriSec;
-    border: 1px solid $gray-300;
+    color: rgb($codeTextPri);
+    border: 1px solid rgb($codeTextSec);
     border-radius: $bR1;
-    background-color: $clrBg1;
+    background-color: rgb($codeBgPri);
 
     &:hover
     {
         transform: translateY(-2px);
 
-        color: $clr0W;
-        background-color: $clr1;
+        color: rgb($codeBgPri);
+        background-color: rgb($codeBlue);
         box-shadow: $shadMd;
     }
 
     &:focus
     {
         outline: none;
-        box-shadow: 0 0 0 3px rgba($clr1, .3);
+        box-shadow: 0 0 0 3px rgba($codeBlue, .3);
     }
 }

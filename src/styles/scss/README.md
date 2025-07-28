@@ -31,7 +31,7 @@ $space1: 1rem;
 
 // Typography
 $font-family-sans: 'Inter', sans-serif;
-$fs16: 1rem;
+$p: 1rem;
 
 // Breakpoints
 $breakpoint-sm: 640px;
@@ -101,7 +101,7 @@ $breakpoint-lg: 1024px;
     .title {
       font-size: $fs3;
       font-weight: 600;
-      color: $gray-900;
+      color: $codeTextTer;
       margin: 0;
     }
   }
@@ -269,7 +269,7 @@ $breakpoint-lg: 1024px;
 @each $name, $size in (
   'xs': $fs12,
   'sm': $fs14,
-  'base': $fs16,
+  'base': $p,
   'lg': $fs2,
   'xl': $fs3,
   '2xl': $fs4
@@ -285,16 +285,16 @@ $breakpoint-lg: 1024px;
 // Light theme (default)
 :root {
   --color-bg: #{$white};
-  --color-text: #{$gray-900};
+  --color-text: #{$codeTextTer};
   --color-border: #{$gray-200};
   --color-shadow: #{rgba($black, 0.1)};
 }
 
 // Dark theme
 [data-theme="dark"] {
-  --color-bg: #{$gray-900};
+  --color-bg: #{$codeTextTer};
   --color-text: #{$gray-100};
-  --color-border: #{$gray-700};
+  --color-border: #{$codeTextTer};
   --color-shadow: #{rgba($black, 0.3)};
 }
 
@@ -356,7 +356,7 @@ function CustomButton({ variant = 'primary', size = 'md', children, ...props }) 
   
   &--md {
     padding: $space0n5 $space1;
-    font-size: $fs16;
+    font-size: $p;
   }
   
   &--lg {

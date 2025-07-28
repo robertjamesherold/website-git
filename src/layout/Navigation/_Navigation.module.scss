@@ -1,85 +1,110 @@
 // =============================================================================
-// NAVIGATION COMPONENT - Mega Menu Design
+// NAVIGATION WITH FULLSCREEN OVERLAY
 // =============================================================================
-.bar
+
+.navigation
 {
     position: sticky;
     z-index: 1200;
     top: 0;
+    right: 0;
+    left: 0;
 
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
 
     width: 100%;
     height: $space5;
-    margin-right: auto;
-    margin-left: auto;
+    padding: 0 $space2;
 
-    border-bottom: 1px solid $gray-200;
-    background-color: rgba($clr0W, .95);
+    transition: transform .3s ease-in-out;
+    transform: translateY(0);
 
-    backdrop-filter: blur(10px);
-}
+    border-bottom: $border1;
+    background-color: rgba(255, 255, 255, .95);
 
+    backdrop-filter: blur(20px);
 
-.navigation
-{
-    position: absolute;
-    z-index: 1100;
-    top: 0;
-
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    justify-content: center;
-
-    width: 100%;
-    height: $space5;
-    margin-right: auto;
-    margin-left: auto;
-
-    transition: all .2s ease-in-out;
-
-    border-bottom: 1px solid $gray-200;
-    background-color: rgba($clr0W, .95);
-
-    backdrop-filter: blur(10px);
-
-    .brand .logo
+    &.hidden
     {
-        font-size: 1.5rem;
-        font-weight: 800;
-        line-height: 1;
-
-        display: flex;
-        flex-direction: column;
-
-        text-decoration: none;
-
-        color: #111827;
+        transform: translateY(-100%);
     }
 
-    .logoText
+    &.visible
     {
-        font-size: 1.5rem;
-    }
-
-    .logoSubtext
-    {
-        font-size: .9rem;
-
-        color: #6b7280;
-    }
-
-    @media (max-width: $md - 1px)
-    {
-        justify-content: space-between;
+        transform: translateY(0);
     }
 }
 
 // =============================================================================
-// MENU TOGGLE (Hamburger)
+// MAIN NAVIGATION
+// =============================================================================
+
+.mainNav
+{
+    display: flex;
+    flex: 1;
+}
+
+.navList
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    margin: 0;
+    padding: 0;
+
+    list-style: $no;
+
+    gap: $space2;
+
+    @media (max-width: $lg)
+    {
+        display: $no;
+    }
+}
+
+.navItem
+{
+    position: relative;
+}
+
+.navLink
+{
+    font-family: $fontFamily;
+    font-size: $fs16;
+    font-weight: $fw5;
+
+    width: 100%;
+    padding: $space0n75 $space1n5;
+
+    transition: $all0n3;
+    text-align: center;
+    text-decoration: $no;
+
+    color: #374151;
+    border-radius: $space0n5;
+
+    &:hover
+    {
+        color: #3b82f6;
+        background-color: rgba(59, 130, 246, .05);
+    }
+
+    &.active
+    {
+        font-weight: $fw6;
+
+        color: #3b82f6;
+        background-color: rgba(59, 130, 246, .1);
+    }
+}
+
+// =============================================================================
+// TOGGLE BUTTON
 // =============================================================================
 
 .menuToggle
@@ -92,469 +117,188 @@
     flex-direction: column;
     justify-content: center;
 
-    width: 40px;
-    height: 40px;
-    padding: $space1;
+    width: 44px;
+    height: 44px;
 
     cursor: pointer;
+    transition: $all0n3;
 
-    border: none;
+    border: $no;
+    border-radius: $space0n5;
     background: transparent;
 
-    @media (min-width: $md)
+    &:hover
     {
-        display: none;
+        background-color: rgba(17, 24, 39, .05);
     }
 
     &:focus
     {
         outline: 2px solid transparent;
         outline-offset: 2px;
-        box-shadow: 0 0 0 2px $clr1;
+        box-shadow: 0 0 0 2px #3b82f6;
+    }
+
+    @media (min-width: $lg + 1px)
+    {
+        display: $no;
     }
 }
 
-.menuIcon
+.toggleIcon
 {
-    position: absolute;
-    left: 50%;
+    width: 28px;
+    height: 3px;
+    margin: 3px 0;
 
-    width: 24px;
-    height: 2px;
-
-    transition: all .2s ease-in-out;
-    transform: translateX(-50%);
+    transition: $all0n3;
     transform-origin: center;
 
-    border-radius: 9999px;
-    background-color: $gray-900;
+    opacity: 1;
+    border-radius: 2px;
+    background-color: #111827;
 
     &:first-child
     {
-        top: calc(50% - 4px);
+        &.open
+        {
+            transform: rotate(45deg) translate(3px, 3px) ;
+        }
     }
 
     &:last-child
     {
-        top: calc(50% + 4px);
-    }
-
-    &.open
-    {
-        &:nth-child(1)
+        &.open
         {
-            top: 50%;
-
-            transform: translateX(-50%) rotate(45deg);
-        }
-
-        &:nth-child(2)
-        {
-            top: 50%;
-
-            transform: translateX(-50%) rotate(-45deg);
+            transform: rotate(-45deg) translate(3px, -3px) ;
         }
     }
 }
 
 // =============================================================================
-// DESKTOP NAVIGATION
+// FULLSCREEN OVERLAY
 // =============================================================================
 
-.navList
-{
-    display: none;
-    overflow: hidden;
-    align-items: center;
-
-    height: $space5;
-    margin: 0;
-    padding: 0;
-
-    list-style: none;
-
-
-    @media (min-width: $md)
-    {
-        display: flex;
-    }
-}
-
-.navItem
-{
-    position: relative;
-
-    display: flex;
-    flex-direction: column;
-}
-
-.navLink
-{
-    font-weight: $fw4;
-
-    position: relative;
-
-    display: flex;
-    align-items: center;
-
-    height: 100%;
-    padding: $space2;
-
-    cursor: pointer;
-    transition: all .2s ease-in-out;
-    text-decoration: none;
-
-    color: $gray-600;
-
-    gap: $space1;;
-
-    &:hover,
-    &:focus
-    {
-        color: $clr1;
-        background-color: rgba($clr1L, .1);
-    }
-
-    &.active
-    {
-        color: $clr1;
-
-        &::after
-        {
-            position: absolute;
-            bottom: -2px;
-            left: 50%;
-
-            width: 80%;
-            height: 2px;
-
-            content: '';
-            transform: translateX(-50%);
-
-            border-radius: 9999px;
-            background-color: $clr1;
-        }
-    }
-}
-
-// =============================================================================
-// MEGA MENU STYLES
-// =============================================================================
-
-.hasMegaMenu .megaMenuIcon
-{
-    transition: transform .3s ease;
-}
-
-.hasMegaMenu .megaMenuIcon.open
-{
-    transform: rotate(180deg);
-}
-
-.megaMenu
+.fullscreenOverlay
 {
     position: fixed;
-    z-index: 999;
-    top: $space5;
-    left: 50%;
-
-    overflow: hidden;
-
-    width: 100vw;
-    max-height: 0;
-
-    transition: all .3s ease-out;
-    transform: translateX(-50%);
-
-    opacity: 0;
-    background-color: white;
-    box-shadow: 0 20px 50px rgba(0, 0, 0, .08);
-
-    &.open
-    {
-        max-height: 100vh;
-
-        transition-delay: .0s;
-
-        opacity: 1;
-    }
-}
-
-.megaMenuContent
-{
-    width: $space100;
-    padding: $space6 0;
-    // Smooth content transition when switching between mega menus
-
-    transition: transform .15s ease-out, opacity .15s ease-out;
-
-    .megaMenu:not(.open) &
-    {
-        transform: translateY(-10px);
-
-        opacity: 0;
-    }
-
-    .megaMenu.open &
-    {
-        transform: translateY(0);
-
-        opacity: 1;
-    }
-}
-
-.megaMenuGrid
-{
-    display: grid;
-    overflow: hidden;
-
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: $space6;
-
-    @media (min-width: $lg)
-    {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-.megaMenuSection
-{
-    display: flex;
-}
-
-.megaMenuSectionTitle
-{
-    font-size: 1.125rem;
-    font-weight: 600;
-
-    margin-bottom: $space3;
-
-    color: $gray-900;
-}
-
-.megaMenuItems
-{
-    margin: 0;
-    padding: 0;
-
-    list-style: none;
-}
-
-.megaMenuItem
-{
-    margin-bottom: $space1;
-}
-
-.megaMenuLink
-{
-    display: block;
-
-    padding: $space2;
-
-    transition: all .2s ease-out;
-    text-decoration: none;
-
-    border-radius: $bR2;
-
-    &:hover,
-    &:focus
-    {
-        background-color: rgba($clr1, .03);
-    }
-}
-
-.megaMenuLinkTitle
-{
-    font-size: 1rem;
-    font-weight: 500;
-
-    display: block;
-
-    margin-bottom: $space1;
-
-    color: $gray-900;
-}
-
-.megaMenuLinkDescription
-{
-    font-size: .875rem;
-    line-height: 1.4;
-
-    display: block;
-
-    color: $gray-600;
-}
-
-// =============================================================================
-// MOBILE FULLSCREEN MENU
-// =============================================================================
-
-.mobileMenu
-{
-    position: fixed;
-    z-index: 1000;
-    top: 64px;
+    z-index: 1300;
+    top: 0;
+    right: 0;
+    bottom: 0;
     left: 0;
 
     display: flex;
-    overflow-x: hidden;
-    align-items: flex-start;
-    justify-content: flex-start;
+    visibility: hidden;
+    align-items: center;
+    justify-content: center;
 
-    width: 100vw;
-    height: 100vh;
-
-    transition: all .2s ease-in-out;
-    transform: translateY(-100%);
+    transition: all .4s cubic-bezier(.25, .46, .45, .94);
 
     opacity: 0;
-    background-color: $clr0W;
+    background-color: rgba(17, 24, 39, .95);
 
-    padding-block: $space0;
-    -webkit-overflow-scrolling: touch;
+    backdrop-filter: blur(10px);
 
     &.open
     {
         visibility: visible;
 
-        transform: translateY(0);
-
         opacity: 1;
     }
-
-    @media (min-width: $md)
-    {
-        display: none;
-    }
 }
 
-.mobileNavList
+.overlayContent
 {
-    display: flex;
-    flex-direction: column;
-
-    width: 100%;
-    min-height: calc(100vh - 64px);
-    margin: 0;
-    padding-bottom: $space3;
-
-    list-style: none;
-    list-style-position: inside;
-
-    gap: $space1;
-
-
-    .open &
-    {
-        .mobileNavSection
-        {
-            &:nth-child(1)
-            {
-                animation: slideInUp .3s ease-out 0ms both;
-            }
-            &:nth-child(2)
-            {
-                animation: slideInUp .3s ease-out 100ms both;
-            }
-            &:nth-child(3)
-            {
-                animation: slideInUp .3s ease-out 200ms both;
-            }
-            &:nth-child(4)
-            {
-                animation: slideInUp .3s ease-out 300ms both;
-            }
-            &:nth-child(5)
-            {
-                animation: slideInUp .3s ease-out 400ms both;
-            }
-        }
-    }
-}
-
-.mobileNavSection
-{
-    transform: translate(30px);
-
-    opacity: 0;
-}
-
-.mobileNavLink
-{
-    font-size: 1.1rem;
-    font-weight: 400;
-
     position: relative;
+
+    overflow-y: auto;
+
+    width: 90%;
+    max-width: 600px;
+    max-height: 90vh;
+
+    transition: all .4s cubic-bezier(.25, .46, .45, .94);
+    transform: scale(.8) translateY(20px);
+
+    border-radius: $space1;
+    background-color: white;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, .25);
+
+    .fullscreenOverlay.open &
+    {
+        transform: scale(1) translateY(0);
+    }
+}
+
+// =============================================================================
+// CLOSE BUTTON
+// =============================================================================
+
+.closeButton
+{
+    position: absolute;
+    z-index: 10;
+    top: $space1;
+    right: $space1;
 
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
 
-    width: $space100;
-    height: $space5;
-    padding: $space2 $space0;
+    width: 40px;
+    height: 40px;
 
     cursor: pointer;
-    transition: all .2s ease-out;
-    transform: translate(0px);
-    text-decoration: none;
+    transition: $all0n3;
 
-    color: $gray-900;
-    border: none;
-    border-radius: $bR2;
-    background: transparent;
+    color: #6b7280;
+    border: $no;
+    border-radius: 50%;
+    background-color: rgba(107, 114, 128, .1);
 
-    padding-inline: $space2;
-
-    &:hover,
-    &:focus
+    &:hover
     {
-        color: $clr1;
-        background-color: rgba($clr1, .08);
+        transform: scale(1.1);
+
+        color: #ef4444;
+        background-color: rgba(239, 68, 68, .1);
     }
 
     &:focus
     {
-        outline: 2px solid $clr1;
+        outline: 2px solid transparent;
         outline-offset: 2px;
+        box-shadow: 0 0 0 2px #3b82f6;
+    }
+
+    svg
+    {
+        width: 20px;
+        height: 20px;
     }
 }
 
 // =============================================================================
-// MOBILE ACCORDION
+// OVERLAY NAVIGATION
 // =============================================================================
 
-.mobileAccordionIcon
+.overlayNav
 {
-    flex-shrink: 0;
-
-    transition: transform .3s ease;
-
-    &.open
-    {
-        transform: rotate(180deg);
-    }
+    padding: $space4 $space3 $space3;
 }
 
-.mobileAccordionContent
+.overlayNavList
 {
-    overflow: hidden;
+    margin: 0;
+    padding: 0;
 
-    height: $space0;
-
-    transition: height .4s ease-out;
-
-    &.open
-    {
-        height: $space6 * 3;
-    }
+    list-style: $no;
 }
 
-
-
-.mobileAccordionSection
+.overlayNavItem
 {
-    margin-bottom: $space4;
+    margin-bottom: $space1n5;
 
     &:last-child
     {
@@ -562,155 +306,195 @@
     }
 }
 
-.mobileAccordionSectionTitle
+.overlayNavLink
 {
-    font-size: 1rem;
-    font-weight: 600;
-
-    left: 0;
-
-    margin-bottom: $space2;
-
-    color: $gray-800;
-
-    padding-inline: $space2;
-}
-
-.mobileAccordionItems
-{
-    display: flex;
-    flex-direction: column;
-
-    margin-block: $space1;
-    margin-inline: $space3;
-    &:before
-    {
-        position: absolute;
-        top: 0;
-        left: $space2;
-
-        width: $spacepx * 2;
-        height: $space5 + $space1;
-
-        content: '';
-
-        background: linear-gradient(to right, transparent, rgba($gray-300, .5), transparent);
-    }
-}
-
-.mobileAccordionItem
-{
-    display: flex;
-    justify-content: center;
-
-    height: $space5;
-    padding: $space0 $space0;
-
-    transition: all .2s ease-out;
-    text-decoration: none;
-
-    border-radius: $bR2;
-    background-color: transparent;
-
-    &:hover,
-    &:focus
-    {
-        background-color: rgba($clr1, .05);
-    }
-
-    &:focus
-    {
-        outline: none;
-        outline-offset: 2px;
-    }
-}
-
-.mobileAccordionItemTitle
-{
-    font-size: .95rem;
-    font-weight: 500;
-
-    display: flex;
-
-    color: $gray-700;
-
-    padding-inline: $space0;
-}
-
-.mobileAccordionItemDescription
-{
-    font-size: .85rem;
-    line-height: 1.3;
+    font-family: $fontFamily;
+    font-size: $fs2;
+    font-weight: $fw6;
+    line-height: $tightH;
 
     display: block;
 
-    color: $gray-500;
-}
+    padding: $space1 0;
 
-// =============================================================================
-// ANIMATIONS
-// =============================================================================
+    transition: $all0n3;
+    text-decoration: $no;
 
-@keyframes slideInUp
-{
-    from
+    color: #111827;
+
+    &:hover
     {
-        transform: translateY(30px);
+        transform: translateX(8px);
 
-        opacity: 0;
-    }
-    to
-    {
-        transform: translateY(0);
-
-        opacity: 1;
+        color: #3b82f6;
     }
 }
 
 // =============================================================================
-// RESPONSIVE IMPROVEMENTS
+// OVERLAY SUB NAVIGATION
 // =============================================================================
 
-@media (hover: none) and (pointer: coarse)
+.overlaySubNav
 {
-    .mobileNavLink
-    {
-        min-height: $space5; // Apple's standard touch target
-        padding: $space4 $space2;
-    }
+    margin: $space1 0 0 $space2;
+    padding: 0;
 
-    .mobileAccordionItem
-    {
-        min-height: $space5; // Apple's standard touch target
-        padding: $space4 $space2;
-    }
+    list-style: $no;
+}
 
-    .menuToggle
+.overlaySubNavItem
+{
+    margin-bottom: $space0n5;
+}
+
+.overlaySubNavLink
+{
+    font-family: $fontFamily;
+    font-size: $fs1;
+    font-weight: $fw4;
+
+    display: block;
+
+    padding: $space0n5 0;
+
+    transition: $all0n3;
+    text-decoration: $no;
+
+    color: #6b7280;
+
+    &:hover
     {
-        min-width: 44px;
-        min-height: 44px;
+        transform: translateX(4px);
+
+        color: #3b82f6;
     }
 }
 
-@media (prefers-reduced-motion: reduce)
+// =============================================================================
+// OVERLAY FOOTER
+// =============================================================================
+
+.overlayFooter
 {
-    .mobileMenu,
-    .menuIcon,
-    .mobileNavLink,
-    .mobileAccordionContent,
-    .megaMenuIcon,
-    .mobileAccordionIcon
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    margin-top: $space4;
+    padding-top: $space3;
+
+    border-top: $border1;
+
+    @media (max-width: $sm - 1px)
     {
-        transition-duration: .01ms;
-        animation-duration: .01ms;
+        flex-direction: column;
+
+        gap: $space2;
+    }
+}
+
+.overlayContact
+{
+    flex: 1;
+}
+
+.overlayContactTitle
+{
+    font-family: $fontFamily;
+    font-size: $fs1;
+    font-weight: $fw6;
+
+    margin: 0 0 $space0n75 0;
+
+    color: #111827;
+}
+
+.overlayContactInfo
+{
+    margin: 0 0 $space0n5 0;
+
+    a
+    {
+        font-size: $fs14;
+        font-weight: $fw4;
+
+        transition: $all0n3;
+        text-decoration: $no;
+
+        color: #6b7280;
+
+        &:hover
+        {
+            color: #3b82f6;
+        }
+    }
+}
+
+// =============================================================================
+// OVERLAY SOCIAL LINKS
+// =============================================================================
+
+.overlaySocial
+{
+    display: flex;
+
+    gap: $space1;
+}
+
+.socialLink
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 44px;
+    height: 44px;
+
+    transition: $all0n3;
+
+    color: #6b7280;
+    border-radius: 50%;
+
+    &:hover
+    {
+        transform: translateY(-2px);
+
+        color: #3b82f6;
+        background-color: rgba(59, 130, 246, .1);
     }
 
-    .mobileNavSection
+    svg
     {
-        transform: none;
-        animation: none;
+        width: 20px;
+        height: 20px;
+    }
+}
 
-        opacity: 1;
+// =============================================================================
+// RESPONSIVE ADJUSTMENTS
+// =============================================================================
+
+@media (max-width: $sm - 1px)
+{
+    .overlayContent
+    {
+        width: 95%;
+        margin: $space2;
+    }
+
+    .overlayNav
+    {
+        padding: $space3 $space2 $space2;
+    }
+
+    .overlayNavLink
+    {
+        font-size: $fs1;
+    }
+
+    .overlaySubNavLink
+    {
+        font-size: $fs16;
     }
 }
 
@@ -722,87 +506,72 @@
 {
     .navigation
     {
-        border-bottom-color: $gray-700;
-        background-color: rgba($gray-900, .95);
+        border-bottom-color: rgba(229, 231, 235, .1);
+        background-color: rgba(17, 24, 39, .95);
     }
 
-    .menuIcon
+    .navLink
     {
-        background-color: $gray-100;
-    }
+        color: #d1d5db;
 
-    .navLink,
-    .megaMenuLink
-    {
-        color: $gray-300;
-
-        &:hover,
-        &:focus
+        &:hover
         {
-            color: $clr1L;
-            background-color: rgba($clr1L, .1);
+            color: #60a5fa;
+            background-color: rgba(96, 165, 250, .1);
+        }
+
+        &.active
+        {
+            color: #60a5fa;
+            background-color: rgba(96, 165, 250, .2);
         }
     }
 
-    .megaMenuContainer,
-    .megaMenu
+    .toggleIcon
     {
-        border-top-color: $gray-700;
-        background-color: $gray-800;
+        background-color: #d1d5db;
     }
 
-    .megaMenuSectionTitle
+    .overlayContent
     {
-        color: $gray-100;
+        color: #f9fafb;
+        background-color: #1f2937;
     }
 
-    .megaMenuLinkTitle
+    .overlayNavLink
     {
-        color: $gray-100;
-    }
+        color: #f9fafb;
 
-    .megaMenuLinkDescription
-    {
-        color: $gray-400;
-    }
-
-    .mobileMenu
-    {
-        background-color: #1d1d1f; // Apple's dark background
-    }
-
-    .mobileNavLink
-    {
-        color: #f5f5f7; // Apple's light text
-        background-color: transparent;
-
-        &:hover,
-        &:focus
+        &:hover
         {
-            color: #2997ff; // Apple's dark mode blue
-            background-color: transparent;
+            color: #60a5fa;
         }
     }
 
-    .mobileAccordionSections
+    .overlaySubNavLink
     {
-        background-color: rgba(29, 29, 31, .8); // Dark translucent
-    }
+        color: #9ca3af;
 
-    .mobileAccordionSectionTitle
-    {
-        color: #86868b; // Apple's dark mode secondary
-    }
-
-    .mobileAccordionItem
-    {
-        color: #a1a1a6; // Apple's dark mode text
-
-        &:hover,
-        &:focus
+        &:hover
         {
-            color: #2997ff; // Apple's dark mode blue
-            background-color: rgba(41, 151, 255, .04);
+            color: #60a5fa;
+        }
+    }
+
+    .overlayContactTitle
+    {
+        color: #f9fafb;
+    }
+
+    .closeButton
+    {
+        color: #9ca3af;
+        background-color: rgba(156, 163, 175, .1);
+
+        &:hover
+        {
+            color: #f87171;
+            background-color: rgba(239, 68, 68, .2);
         }
     }
 }

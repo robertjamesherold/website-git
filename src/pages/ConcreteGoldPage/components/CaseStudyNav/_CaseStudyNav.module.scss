@@ -1,0 +1,71 @@
+// components/casestudy/components/CaseStudyNav/CaseStudyNav.module.scss
+.nav
+{
+    margin-bottom: $space2;
+    padding: $space2;
+
+    border-radius: $bR1;
+    background-color: rgb($codeBgPri);
+    box-shadow: $shadSm;
+
+    @media (max-width: $md)
+    {
+        display: none; // Hide on mobile
+    }
+}
+
+.navTitle
+{
+    font-size: $fs1;
+    font-weight: $fw7;
+
+    margin-bottom: $space1n5;
+    padding-bottom: $space1;
+
+    color: rgb($codeTextPri);
+    border-bottom: 2px solid rgb($codeWhite);
+}
+
+.navList
+{
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.navItem
+{
+    font-size: $fs16;
+
+    display: block;
+
+    width: 100%;
+    margin-bottom: $space0n5;
+    padding: $space0n75 $space1;
+
+    cursor: pointer;
+    transition: all .2s ease;
+    text-align: left;
+
+    color: rgb($codeTextPri);
+    border: none;
+    border-radius: $bR1;
+    background: none;
+
+    &:hover
+    {
+        transform: translateX(4px);
+
+        color: rgb($codeBlue);
+        background-color: rgba($codeBlue, .05);
+    }
+
+    &.active
+    {
+        font-weight: $fw6;
+
+        color: rgb($codeBlue);
+        background-color: rgba($codeBlue, .1);
+    }
+}

@@ -1,0 +1,88 @@
+
+.services
+{
+    width: $space100;
+    margin-bottom: $space5;
+}
+
+.servicesTitle
+{
+    font-size: $fs5;
+    font-weight: $fw7;
+    line-height: $tightH;
+
+    margin-bottom: $space3;
+
+    text-align: center;
+
+    color: rgb($codeTextPri);
+}
+
+.servicesGrid
+{
+    display: grid;
+
+    grid-template-columns: 1fr;
+    gap: $space2;
+
+    @media (min-width: $sm)
+    {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (min-width: $lg)
+    {
+        grid-template-columns: repeat(4, 1fr);
+        gap: $space1n5;
+    }
+}
+
+.serviceCard
+{
+    padding: $space2;
+
+    transition: all .3s ease-in-out;
+    text-align: center;
+
+    border: 1px solid rgb($codeWhite);
+    border-radius: $bR1;
+    background-color: rgb($codeBgPri);
+
+    &:hover
+    {
+        transform: translateY(-6px);
+
+        border-color: rgb($codeBlue);
+        box-shadow: $shadLg;
+    }
+}
+
+.serviceIcon
+{
+    font-size: $fs6;
+
+    display: block;
+
+    margin-bottom: $space1;
+}
+
+.serviceTitle
+{
+    font-size: $fs1;
+    font-weight: $fw6;
+    line-height: $tightH;
+
+    margin-bottom: $space0n75;
+
+    color: rgb($codeTextPri);
+}
+
+.serviceDescription
+{
+    font-size: $fs16;
+    line-height: $baseH;
+
+    margin: 0;
+
+    color: rgb($codeTextPri);
+}

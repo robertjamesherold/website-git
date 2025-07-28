@@ -1,0 +1,141 @@
+.ctaSection
+{
+    width: $space100;
+    padding: $space3;
+
+    text-align: center;
+
+    color: rgb($codeBgPri);
+    border-radius: $bR1;
+    background: linear-gradient(135deg, rgb($codePink), rgb($codeBlue));
+
+    @media (min-width: $md)
+    {
+        padding: $space4;
+    }
+
+    @media (max-width: $sm - 1px)
+    {
+        padding: $space2;
+    }
+}
+
+.ctaTitle
+{
+    font-size: $fs4;
+    font-weight: $fw7;
+    line-height: $tightH;
+
+    margin-bottom: $space1;
+
+    @media (max-width: $sm - 1px)
+    {
+        font-size: $fs2;
+    }
+}
+
+.ctaDescription
+{
+    font-size: $fs1;
+    line-height: $baseH;
+
+    max-width: 600px;
+    margin-right: auto;
+    margin-bottom: $space2n5;
+    margin-left: auto;
+
+    opacity: .95;
+
+    @media (max-width: $sm - 1px)
+    {
+        font-size: $fs16;
+    }
+}
+
+.ctaButtons
+{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    gap: $space1;
+
+    @media (min-width: $sm)
+    {
+        flex-direction: row;
+        justify-content: center;
+
+        gap: $space1n5;
+    }
+}
+
+.ctaButton
+{
+    font-size: $fs1;
+    font-weight: $fw6;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 160px;
+    padding: $space1 $space2;
+
+    transition: all .3s ease-in-out;
+    text-decoration: none;
+
+    color: rgb($codeBlue);
+    border-radius: $bR1;
+    background-color: rgb($codeBgPri);
+    box-shadow: $shadMd;
+
+    &:hover
+    {
+        transform: translateY(-2px);
+
+        background-color: rgb($codeWhite);
+        box-shadow: $shadLg;
+    }
+
+    &:focus
+    {
+        outline: none;
+        box-shadow: 0 0 0 3px rgba($codeBgPri, .3);
+    }
+}
+
+.ctaButtonSecondary
+{
+    font-size: $fs1;
+    font-weight: $fw6;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 160px;
+    padding: $space1 $space2;
+
+    transition: all .3s ease-in-out;
+    text-decoration: none;
+
+    color: rgb($codeBgPri);
+    border: 2px solid rgb($codeBgPri);
+    border-radius: $bR1;
+    background-color: transparent;
+
+    &:hover
+    {
+        transform: translateY(-2px);
+
+        color: rgb($codeBlue);
+        background-color: rgb($codeBgPri);
+        box-shadow: $shadLg;
+    }
+
+    &:focus
+    {
+        outline: none;
+        box-shadow: 0 0 0 3px rgba($codeBgPri, .3);
+    }
+}
