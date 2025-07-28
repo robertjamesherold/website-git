@@ -289,7 +289,7 @@ export function CvPage() {
 
         {/* CTA Section */}
         <div className={styles.ctaSection}>
-          <h2 className={styles.ctaTitle}>Interessiert an einer Zusammenarbeit?</h2>
+          <h2 className={styles.ctaTitle}>Interessiert an einem gemeinsamen Projekt?</h2>
           <p className={styles.ctaDescription}>
             Ich freue mich darauf, neue Projekte und Herausforderungen anzunehmen. 
             Lassen Sie uns über Ihre Ideen sprechen!

@@ -2,6 +2,14 @@
 // MAIN GRID
 // =============================================================================
 
+.contact
+{
+    padding-top: $space3;
+    padding-bottom: $space2;
+
+    color: rgb($codeTextPri);
+    background-color: rgb($codeBgPri);
+}
 .container
 {
     display: flex;

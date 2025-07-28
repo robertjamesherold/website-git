@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from 'react'
 import styles from './_Skills.module.scss'
+import { Header } from '@cm/Header/Header'
 
 export function SkillPage() {
   const [isVisible, setIsVisible] = useState({})
@@ -121,14 +122,10 @@ export function SkillPage() {
     <section id="skills" className={styles.skills}>
       <div className={styles.container}>
         {/* Header */}
-        <div className={styles.header}>
-          <h1 className={styles.title}>Skills & Technologien</h1>
-          <p className={styles.subtitle}>
-            Meine Expertise in Design, Development und kreativen Workflows - 
-            von der ersten Idee bis zur finalen Umsetzung.
-          </p>
-        </div>
-
+          <Header 
+          title="Skills & Technologien"
+          text="Meine Expertise in Design, Development und kreativen Workflows - von der ersten Idee bis zur finalen Umsetzung."
+        ></Header>
         {/* Design Skills */}
         <div 
           className={styles.section}
