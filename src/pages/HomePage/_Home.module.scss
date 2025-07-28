@@ -1,0 +1,453 @@
+// =============================================================================
+// HOME COMPONENT - Portfolio Homepage
+// =============================================================================
+
+.home
+{
+    min-height: 100vh;
+    padding-top: $space2;
+    padding-bottom: $space4;
+
+    color: rgb($codeTextPri);
+    background: rgb($codeBgTer, .95);
+}
+
+.container
+{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+    box-sizing: border-box;
+    width: $spaceFull;
+    max-width: 1200px;
+    height: $spaceAuto;
+
+    margin-inline: auto;
+    padding-inline: $space0n75;
+
+    @media (min-width: $xs)
+    {
+        padding-inline: $space1;
+        padding-block: $space2;
+    }
+    @media (min-width: $sm)
+    {
+        padding-inline: $space1n5;
+        padding-block: $space2n5;
+    }
+    @media (min-width: $md)
+    {
+        padding-inline: $space2;
+        padding-block: $space3;
+    }
+    @media (min-width: $lg)
+    {
+        padding-inline: $space2n5;
+        padding-block: $space3n5;
+    }
+    @media (min-width: $xl)
+    {
+        padding-inline: $space3;
+        padding-block: $space4;
+    }
+}
+// =============================================================================
+// HERO SECTION
+// =============================================================================
+
+.hero
+{
+    display: grid;
+    align-items: center;
+
+    width: $space100;
+    min-height: 80vh;
+    margin-bottom: $space5;
+
+    grid-template-columns: 1fr;
+    gap: $space3;
+
+    @media (min-width: $lg)
+    {
+        grid-template-columns: 1.5fr 1fr;
+        gap: $space4;
+    }
+}
+
+.heroContent
+{
+    text-align: center;
+
+    @media (min-width: $lg)
+    {
+        text-align: left;
+    }
+}
+
+.heroTitle
+{
+    font-size: $fs6;
+    font-weight: $fw7;
+    line-height: $tightH;
+
+    margin-bottom: $space1;
+
+    color: rgb($codeTextPri);
+
+    @media (min-width: $md)
+    {
+        font-size: $fs6;
+    }
+}
+
+.heroName
+{
+    display: inline-block;
+
+    background: linear-gradient(135deg, rgb($codeBlue), rgb($codeLila));
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+}
+
+.heroSubtitle
+{
+    font-size: $fs2;
+    line-height: $baseH;
+
+    margin-bottom: $space1n5;
+
+    color: rgb($codeTextPri);
+
+    @media (min-width: $md)
+    {
+        font-size: $fs3;
+    }
+}
+
+.techRotator
+{
+    font-weight: $fw6;
+
+    display: inline-block;
+
+    min-width: 120px;
+
+    animation: fadeInUp .5s ease-in-out;
+    text-align: left;
+
+    background: linear-gradient(135deg, rgb($codeBlue), rgb($codeLila));
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+
+    @keyframes fadeInUp
+    {
+        from
+        {
+            transform: translateY(10px);
+
+            opacity: 0;
+        }
+        to
+        {
+            transform: translateY(0);
+
+            opacity: 1;
+        }
+    }
+}
+
+.heroDescription
+{
+    font-size: $fs1;
+    line-height: $baseH;
+
+    max-width: 600px;
+    margin-right: auto;
+    margin-bottom: $space2n5;
+    margin-left: auto;
+
+    color: rgb($codeTextPri);
+
+    @media (min-width: $lg)
+    {
+        margin-right: 0;
+        margin-left: 0;
+    }
+}
+
+.heroButtons
+{
+    display: flex;
+    flex-direction: column;
+
+    margin-bottom: $space2;
+
+    gap: $space1;
+
+    @media (min-width: $sm)
+    {
+        flex-direction: row;
+        justify-content: center;
+
+        gap: $space1n5;
+    }
+
+    @media (min-width: $lg)
+    {
+        justify-content: flex-start;
+    }
+}
+
+// =============================================================================
+// STATS SECTION
+// =============================================================================
+
+
+
+
+// =============================================================================
+// SERVICES SECTION
+// =============================================================================
+
+// =============================================================================
+// PROJECTS SECTION
+// =============================================================================
+
+// =============================================================================
+// CONTACT CTA SECTION
+// =============================================================================
+
+.contactCta
+{
+    width: $space100;
+    padding: $space3;
+
+    text-align: center;
+
+    color: rgb($codeBgPri);
+    border-radius: $bR1;
+    background: linear-gradient(135deg, rgb($codeBlue), rgb($codeLila));
+
+    @media (min-width: $md)
+    {
+        padding: $space4;
+    }
+}
+
+.ctaContent
+{
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.ctaTitle
+{
+    font-size: $fs4;
+    font-weight: $fw7;
+    line-height: $tightH;
+
+    margin-bottom: $space1;
+}
+
+.ctaDescription
+{
+    font-size: $fs1;
+    line-height: $baseH;
+
+    margin-bottom: $space2n5;
+
+    opacity: .95;
+}
+
+.contactButton
+{
+    font-size: $fs1;
+    font-weight: $fw6;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: $space1 $space2n5;
+
+    transition: all .3s ease-in-out;
+    text-decoration: none;
+
+    color: rgb($codeBlue);
+    border-radius: $bR1;
+    background-color: rgb($codeBgPri);
+    box-shadow: $shadMd;
+
+    &:hover
+    {
+        transform: translateY(-2px);
+
+        background-color: rgb($codeWhite);
+        box-shadow: $shadLg;
+    }
+
+    &:focus
+    {
+        outline: none;
+        box-shadow: 0 0 0 3px rgba($codeBgPri, .3);
+    }
+}
+
+// =============================================================================
+// RESPONSIVE IMPROVEMENTS
+// =============================================================================
+
+@media (max-width: $sm)
+{
+    .home
+    {
+        padding-top: $space1;
+        padding-bottom: $space3;
+    }
+
+    .hero
+    {
+        min-height: 60vh;
+        margin-bottom: $space3;
+
+        text-align: center;
+    }
+
+    .heroTitle
+    {
+        font-size: $fs4;
+    }
+
+    .heroSubtitle
+    {
+        font-size: $fs1;
+    }
+
+    .heroDescription
+    {
+        font-size: $fs16;
+    }
+
+    .heroButtons
+    {
+        gap: $space0n75;
+    }
+
+    .ctaButton,
+    .ctaButtonSecondary
+    {
+        font-size: $fs16;
+
+        min-width: 160px;
+        padding: $space0n75 $space1n5;
+    }
+
+    .codeAnimation
+    {
+        max-width: 300px;
+        padding: $space1n5;
+    }
+
+    .statsGrid
+    {
+        gap: $space1;
+    }
+
+    .statItem
+    {
+        padding: $space1n5;
+    }
+
+    .statNumber
+    {
+        font-size: $fs3;
+    }
+
+    .servicesTitle,
+    .projectsTitle
+    {
+        font-size: $fs3;
+    }
+
+    .servicesGrid
+    {
+        gap: $space1n5;
+    }
+
+    .serviceCard
+    {
+        padding: $space1n5;
+    }
+
+    .projectsGrid
+    {
+        gap: $space1n5;
+    }
+
+    .contactCta
+    {
+        padding: $space2;
+    }
+
+    .ctaTitle
+    {
+        font-size: $fs2;
+    }
+
+    .ctaDescription
+    {
+        font-size: $fs16;
+    }
+}
+
+// =============================================================================
+// ACCESSIBILITY IMPROVEMENTS
+// =============================================================================
+
+@media (prefers-reduced-motion: reduce)
+{
+    .techRotator
+    {
+        animation: none;
+    }
+
+    .codeLine
+    {
+        animation: none;
+    }
+
+    .ctaButton,
+    .ctaButtonSecondary,
+    .socialLink,
+    .statItem,
+    .serviceCard,
+    .projectCard,
+    .viewAllButton,
+    .contactButton
+    {
+        transition: none;
+    }
+
+    .ctaButton:hover,
+    .ctaButtonSecondary:hover,
+    .socialLink:hover,
+    .statItem:hover,
+    .serviceCard:hover,
+    .projectCard:hover,
+    .viewAllButton:hover,
+    .contactButton:hover
+    {
+        transform: none;
+    }
+
+    .projectImage:hover img
+    {
+        transform: none;
+    }
+}

@@ -1,0 +1,200 @@
+.projectCard
+{
+    overflow: hidden;
+
+    transition: all .3s ease-in-out, opacity .5s ease-in-out, transform .5s ease-in-out;
+    animation: fadeInUp .6s ease-out;
+
+    border: 1px solid rgb($codeWhite);
+    border-radius: $bR1;
+    background-color: rgb($codeBgPri);
+    box-shadow: $shadSm;
+
+    &:hover
+    {
+        transform: translateY(-4px);
+
+        box-shadow: $shadLg;
+    }
+}
+
+.projectImage
+{
+    position: relative;
+
+    overflow: hidden;
+
+    height: 200px;
+
+    img
+    {
+        width: $space100;
+        height: $space100;
+
+        transition: transform .3s ease-in-out;
+
+        object-fit: cover;
+    }
+
+    &:hover img
+    {
+        transform: scale(1.05);
+    }
+
+    @media (max-width: $sm - 1px)
+    {
+        height: 180px;
+    }
+}
+
+.projectOverlay
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: opacity .3s ease-in-out;
+
+    opacity: 0;
+    background: rgba($codeBlue, .9);
+
+    .projectCard:hover &
+    {
+        opacity: 1;
+    }
+}
+
+.projectActions
+{
+    display: flex;
+
+    gap: $space1;
+}
+
+.viewButton,
+.detailsButton
+{
+    font-size: $fs16;
+    font-weight: $fw6;
+
+    display: inline-flex;
+    align-items: center;
+
+    padding: $space0n5 $space1;
+
+    transition: all .3s ease-in-out;
+    text-decoration: none;
+
+    color: rgb($codeBlue);
+    border-radius: $bR1;
+    background-color: rgb($codeBgPri);
+
+    gap: $space0n5;
+
+    &:hover
+    {
+        transform: translateY(-1px);
+
+        background-color: rgb($codeWhite);
+    }
+}
+
+.projectContent
+{
+    display: flex;
+    flex-direction: column;
+
+    width: $space100;
+    padding: $space2;
+
+    @media (min-width: $md)
+    {
+        padding: $space2n5;
+    }
+}
+
+.projectMeta
+{
+    margin-bottom: $space0n75;
+}
+
+.projectCategory
+{
+    font-size: $fs16;
+    font-weight: $fw6;
+
+    display: inline-block;
+
+    padding: $space0n25 $space0n75;
+
+    letter-spacing: .5px;
+    text-transform: uppercase;
+
+    color: rgb($codeBlue);
+    border-radius: $bR1;
+    background-color: rgba($codeBlue, .1);
+}
+
+.projectTitle
+{
+    font-size: $fs1;
+    font-weight: $fw6;
+    line-height: $tightH;
+
+    margin-bottom: $space0n75;
+
+    color: rgb($codeTextPri);
+}
+
+.projectDescription
+{
+    font-size: $fs16;
+    line-height: $baseH;
+
+    margin-bottom: $space1n5;
+
+    color: rgb($codeTextPri);
+}
+
+.projectTech
+{
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: $space0n5;
+}
+
+.techTag
+{
+    font-size: $fs16;
+    font-weight: $fw5;
+
+    display: inline-block;
+
+    padding: $space0n25 $space0n5;
+
+    color: rgb($codeTextPri);
+    border: 1px solid rgb($codeTextSec);
+    border-radius: $bR1;
+    background-color: rgb($codeBgPri);
+}
+
+// High contrast mode support
+@media (prefers-contrast: high)
+{
+    .projectCard
+    {
+        border: 2px solid rgb($codeTextPri);
+    }
+
+    .techTag
+    {
+        border: 2px solid rgb($codeTextPri);
+    }
+}

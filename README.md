@@ -143,7 +143,7 @@ $space2: 1.5rem;
 
 // Typography
 $font-family-sans: 'Inter', sans-serif;
-$fs16: 1rem;
+$p: 1rem;
 $fs2: 1.125rem;
 
 // Breakpoints

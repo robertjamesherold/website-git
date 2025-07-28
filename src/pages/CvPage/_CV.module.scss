@@ -1,0 +1,835 @@
+// =============================================================================
+// CV COMPONENT - Lebenslauf Seite
+// =============================================================================
+
+.cv
+{
+    min-height: 100vh;
+    padding-top: $space3;
+    padding-bottom: $space4;
+
+    color: rgb($codeTextPri);
+    background-color: rgb($codeBgSec);
+}
+
+.container
+{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+    box-sizing: border-box;
+    width: $spaceFull;
+    max-width: 1200px;
+    height: $spaceAuto;
+
+    margin-inline: auto;
+    padding-inline: $space4;
+}
+
+@media (max-width: $xl)
+{
+    .container
+    {
+        padding-inline: $space3;
+        padding-block: $space4;
+    }
+}
+
+@media (max-width: $lg)
+{
+    .container
+    {
+        padding-inline: $space2n5;
+        padding-block: $space3n5;
+    }
+}
+
+@media (max-width: $md)
+{
+    .container
+    {
+        padding-inline: $space2;
+        padding-block: $space3;
+    }
+}
+
+@media (max-width: $sm)
+{
+    .container
+    {
+        padding-inline: $space1n5;
+        padding-block: $space2n5;
+    }
+}
+
+@media (max-width: $xs)
+{
+    .container
+    {
+        padding-inline: $space1;
+        padding-block: $space2;
+    }
+}
+
+// =============================================================================
+// HEADER SECTION
+// =============================================================================
+
+.header
+{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    width: $space100;
+    margin-bottom: $space3;
+
+    gap: $space2;
+
+    @media (max-width: $md)
+    {
+        flex-direction: column;
+
+        text-align: center;
+    }
+}
+
+.headerContent
+{
+    flex: 1;
+}
+
+.title
+{
+    font-size: $fs6;
+    font-weight: $fw7;
+    line-height: $tightH;
+
+    margin-bottom: $space0n5;
+
+    color: rgb($codeTextPri);
+}
+
+.subtitle
+{
+    font-size: $fs1;
+    line-height: $baseH;
+
+    margin: 0;
+
+    color: rgb($codeTextPri);
+}
+
+.headerActions
+{
+    display: flex;
+
+    gap: $space1;
+}
+
+.downloadButton
+{
+    font-size: $fs16;
+    font-weight: $fw6;
+
+    display: inline-flex;
+    align-items: center;
+
+    padding: $space0n75 $space1n5;
+
+    transition: all .3s ease-in-out;
+    text-decoration: none;
+
+    color: rgb($codeBgPri);
+    border-radius: $bR1;
+    background-color: rgb($codeBlue);
+    box-shadow: $shadMd;
+
+    gap: $space0n5;
+
+    &:hover
+    {
+        transform: translateY(-2px);
+
+        background-color: rgb($codeLila);
+        box-shadow: $shadLg;
+    }
+
+    &:focus
+    {
+        outline: none;
+        box-shadow: 0 0 0 3px rgba($codeBlue, .3);
+    }
+}
+
+// =============================================================================
+// PERSONAL INFO SECTION
+// =============================================================================
+
+.personalInfo
+{
+    display: grid;
+
+    width: $space100;
+    margin-bottom: $space4;
+
+    grid-template-columns: 1fr;
+    gap: $space3;
+
+    @media (min-width: $lg)
+    {
+        align-items: start;
+
+        grid-template-columns: auto 1fr;
+        gap: $space4;
+    }
+}
+
+.profileImage
+{
+    display: flex;
+    justify-content: center;
+
+    img
+    {
+        width: 200px;
+        height: 200px;
+
+        border: 4px solid rgb($codeBlue);
+        border-radius: $bR2;
+        box-shadow: $shadLg;
+
+        object-fit: cover;
+
+        @media (min-width: $md)
+        {
+            width: 250px;
+            height: 250px;
+        }
+    }
+
+    @media (min-width: $lg)
+    {
+        justify-content: flex-start;
+    }
+}
+
+.contactInfo
+{
+    padding: $space2n5;
+
+    border: 1px solid rgb($codeWhite);
+    border-radius: $bR1;
+    background-color: rgb($codeBgPri);
+
+    @media (min-width: $md)
+    {
+        padding: $space3;
+    }
+}
+
+.contactGrid
+{
+    display: grid;
+
+    grid-template-columns: 1fr;
+    gap: $space1n5;
+
+    @media (min-width: $sm)
+    {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (min-width: $lg)
+    {
+        grid-template-columns: 1fr;
+    }
+
+    @media (min-width: $xl)
+    {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.contactItem
+{
+    display: flex;
+    align-items: flex-start;
+
+    gap: $space0n75;
+
+    strong
+    {
+        font-weight: $fw6;
+
+        display: block;
+
+        margin-bottom: $space0n25;
+
+        color: rgb($codeTextPri);
+    }
+
+    p
+    {
+        font-size: $fs16;
+        line-height: $baseH;
+
+        margin: 0;
+
+        color: rgb($codeTextPri);
+    }
+}
+
+.contactIcon
+{
+    font-size: $fs1;
+
+    margin-top: $space0n25;
+}
+
+// =============================================================================
+// MAIN CONTENT GRID
+// =============================================================================
+
+.mainContent
+{
+    display: grid;
+
+    width: $space100;
+    margin-bottom: $space4;
+
+    grid-template-columns: 1fr;
+    gap: $space4;
+
+    @media (min-width: $lg)
+    {
+        grid-template-columns: 2fr 1fr;
+        gap: $space5;
+    }
+}
+
+.leftColumn,
+.rightColumn
+{
+    display: flex;
+    flex-direction: column;
+
+    gap: $space3;
+}
+
+// =============================================================================
+// SECTION STYLES
+// =============================================================================
+
+.section
+{
+    padding: $space2n5;
+
+    border: 1px solid rgb($codeWhite);
+    border-radius: $bR1;
+    background-color: rgb($codeBgPri);
+    box-shadow: $shadSm;
+
+    @media (min-width: $md)
+    {
+        padding: $space3;
+    }
+}
+
+.sectionTitle
+{
+    font-size: $fs3;
+    font-weight: $fw7;
+    line-height: $tightH;
+
+    position: relative;
+
+    margin-bottom: $space2;
+
+    color: rgb($codeTextPri);
+
+    &::after
+    {
+        position: absolute;
+        bottom: -$space0n5;
+        left: 0;
+
+        width: 40px;
+        height: 3px;
+
+        content: '';
+
+        border-radius: $bR1;
+        background-color: rgb($codeBlue);
+    }
+}
+
+// =============================================================================
+// TIMELINE STYLES
+// =============================================================================
+
+.timelineList
+{
+    display: flex;
+    flex-direction: column;
+
+    gap: $space2n5;
+}
+
+.timelineItem
+{
+    position: relative;
+
+    display: grid;
+
+    grid-template-columns: auto 1fr;
+    gap: $space1n5;
+
+    &:not(:last-child)::after
+    {
+        position: absolute;
+        top: 40px;
+        bottom: -$space2n5;
+        left: 60px;
+
+        width: 2px;
+
+        content: '';
+
+        background-color: rgb($codeTextSec);
+
+        @media (max-width: $sm)
+        {
+            display: none;
+        }
+    }
+
+    @media (max-width: $sm)
+    {
+        grid-template-columns: 1fr;
+        gap: $space0n75;
+    }
+}
+
+.timelinePeriod
+{
+    font-size: $fs16;
+    font-weight: $fw6;
+
+    min-width: 120px;
+    height: fit-content;
+    padding: $space0n5 $space1;
+
+    text-align: center;
+    white-space: nowrap;
+
+    color: rgb($codeBgPri);
+    border-radius: $bR1;
+    background-color: rgb($codeBlue);
+
+    @media (max-width: $sm)
+    {
+        width: fit-content;
+        min-width: auto;
+    }
+}
+
+.timelineContent
+{
+    padding-top: $space0n25;
+}
+
+.timelineTitle
+{
+    font-size: $fs1;
+    font-weight: $fw6;
+    line-height: $tightH;
+
+    margin-bottom: $space0n5;
+
+    color: rgb($codeTextPri);
+}
+
+.timelineInstitution
+{
+    font-size: $fs16;
+    font-weight: $fw6;
+
+    margin-bottom: $space0n75;
+
+    color: rgb($codeBlue);
+}
+
+.timelineDescription
+{
+    font-size: $fs16;
+    line-height: $baseH;
+
+    margin-bottom: $space1;
+
+    color: rgb($codeTextPri);
+}
+
+.timelineMetrics
+{
+    display: flex;
+
+    margin-bottom: $space1;
+
+    gap: $space1;
+}
+
+.metric
+{
+    font-size: $fs16;
+    font-weight: $fw6;
+
+    padding: $space0n25 $space0n75;
+
+    color: rgb($codeBlue);
+    border-radius: $bR1;
+    background-color: rgba($codeBlue, .1);
+}
+
+.taskList
+{
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+
+    li
+    {
+        font-size: $fs16;
+        line-height: $baseH;
+
+        position: relative;
+
+        margin-bottom: $space0n5;
+        padding-left: $space1n5;
+
+        color: rgb($codeTextPri);
+
+        &::before
+        {
+            font-weight: bold;
+
+            position: absolute;
+            left: 0;
+
+            content: '▸';
+
+            color: rgb($codeBlue);
+        }
+
+        &:last-child
+        {
+            margin-bottom: 0;
+        }
+    }
+}
+
+// =============================================================================
+// SKILLS SECTION
+// =============================================================================
+
+.skillCategory
+{
+    margin-bottom: $space2;
+
+    &:last-child
+    {
+        margin-bottom: 0;
+    }
+}
+
+.skillCategoryTitle
+{
+    font-size: $fs1;
+    font-weight: $fw6;
+
+    margin-bottom: $space1;
+
+    color: rgb($codeTextPri);
+}
+
+.skillGrid
+{
+    display: flex;
+    flex-direction: column;
+
+    gap: $space1;
+}
+
+.skillItem
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: $space1;
+}
+
+.skillName
+{
+    font-size: $fs16;
+    font-weight: $fw5;
+
+    min-width: 100px;
+
+    color: rgb($codeTextPri);
+}
+
+.skillLevel
+{
+    overflow: hidden;
+    flex: 1;
+
+    height: 8px;
+
+    border-radius: $bR1;
+    background-color: rgb($codeWhite);
+}
+
+.skillBar
+{
+    height: 100%;
+
+    transition: width .5s ease-in-out;
+
+    border-radius: $bR1;
+    background: linear-gradient(90deg, rgb($codeBlue), rgb($codeLila));
+
+    &[data-level='95']
+    {
+        width: 95%;
+    }
+    &[data-level='90']
+    {
+        width: 90%;
+    }
+    &[data-level='85']
+    {
+        width: 85%;
+    }
+    &[data-level='80']
+    {
+        width: 80%;
+    }
+    &[data-level='75']
+    {
+        width: 75%;
+    }
+    &[data-level='70']
+    {
+        width: 70%;
+    }
+}
+
+// =============================================================================
+// ACHIEVEMENTS & LANGUAGES
+// =============================================================================
+
+.achievementsList
+{
+    display: flex;
+    flex-direction: column;
+
+    gap: $space1n5;
+}
+
+.achievement
+{
+    h4
+    {
+        font-size: $fs1;
+        font-weight: $fw6;
+
+        margin-bottom: $space0n75;
+
+        color: rgb($codeTextPri);
+    }
+
+    ul
+    {
+        margin: 0;
+        padding: 0;
+
+        list-style: none;
+
+        li
+        {
+            font-size: $fs16;
+
+            position: relative;
+
+            margin-bottom: $space0n5;
+            padding-left: $space1n5;
+
+            color: rgb($codeTextPri);
+
+            &::before
+            {
+                position: absolute;
+                left: 0;
+
+                content: '★';
+
+                color: rgb($codeBlue);
+            }
+
+            &:last-child
+            {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+.languageList
+{
+    display: flex;
+    flex-direction: column;
+
+    gap: $space1;
+}
+
+.languageItem
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: $space0n75 $space1;
+
+    border: 1px solid rgb($codeWhite);
+    border-radius: $bR1;
+    background-color: rgb($codeBgPri);
+}
+
+.language
+{
+    font-weight: $fw6;
+
+    color: rgb($codeTextPri);
+}
+
+.languageLevel
+{
+    font-size: $fs16;
+
+    color: rgb($codeTextPri);
+}
+
+// =============================================================================
+// CTA SECTION
+// =============================================================================
+
+.ctaSection
+{
+    width: $space100;
+    padding: $space3;
+
+    text-align: center;
+
+    color: rgb($codeBgPri);
+    border-radius: $bR1;
+    background: linear-gradient(135deg, rgb($codeBlue), rgb($codeLila));
+
+    @media (min-width: $md)
+    {
+        padding: $space4;
+    }
+}
+
+.ctaTitle
+{
+    font-size: $fs4;
+    font-weight: $fw7;
+    line-height: $tightH;
+
+    margin-bottom: $space1;
+}
+
+.ctaDescription
+{
+    font-size: $fs1;
+    line-height: $baseH;
+
+    max-width: 600px;
+    margin-right: auto;
+    margin-bottom: $space2n5;
+    margin-left: auto;
+
+    opacity: .95;
+}
+
+.ctaButtons
+{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    gap: $space1;
+
+    @media (min-width: $sm)
+    {
+        flex-direction: row;
+        justify-content: center;
+
+        gap: $space1n5;
+    }
+}
+
+.ctaButton
+{
+    font-size: $fs1;
+    font-weight: $fw6;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 160px;
+    padding: $space1 $space2;
+
+    transition: all .3s ease-in-out;
+    text-decoration: none;
+
+    color: rgb($codeBlue);
+    border-radius: $bR1;
+    background-color: rgb($codeBgPri);
+    box-shadow: $shadMd;
+
+    &:hover
+    {
+        transform: translateY(-2px);
+
+        background-color: rgb($codeWhite);
+        box-shadow: $shadLg;
+    }
+
+    &:focus
+    {
+        outline: none;
+        box-shadow: 0 0 0 3px rgba($codeBgPri, .3);
+    }
+}
+
+.ctaButtonSecondary
+{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: $space1 $space2;
+
+    text-decoration: none;
+
+    color: rgb($codeBgPri);
+    border: 2px solid rgb($codeBgPri);
+    background-color: transparent;;
+}

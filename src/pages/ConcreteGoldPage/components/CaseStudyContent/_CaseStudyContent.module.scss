@@ -1,0 +1,204 @@
+// components/casestudy/components/CaseStudyContent/CaseStudyContent.module.scss
+.content
+{
+    padding: $space2;
+
+    border-radius: $bR1;
+    background-color: rgb($codeBgPri);
+    box-shadow: $shadSm;
+
+    @media (min-width: $sm)
+    {
+        padding: $space2;
+    }
+
+    @media (min-width: $md)
+    {
+        padding: $space4;
+
+        border-radius: $bR1;
+    }
+}
+
+.section
+{
+    scroll-margin-top: $space2;
+    padding-block: $space1;
+
+    &:last-child
+    {
+        margin-bottom: 0;
+    }
+
+    @media (min-width: $md)
+    {
+        margin-bottom: $space3;
+
+        padding-block: $space3;
+    }
+}
+.section > button
+{
+    font-size: $fs1;
+
+    width: $space100;
+
+    text-align: left;
+
+    @media (min-width: $xs)
+    {
+        font-size: $fs2;
+    }
+    @media (min-width: $md)
+    {
+        font-size: $fs3;
+    }
+    @media (min-width: $lg)
+    {
+        font-size: $fs4;
+    }
+}
+.sectionTitle,
+{
+    font-size: $fs2;
+    font-weight: $fw7;
+    line-height: $tightH;
+
+    margin-bottom: $space2;
+    padding-bottom: $space1;
+
+    color: rgb($codeTextPri);
+    border-bottom: 2px solid rgb($codeWhite);
+
+    @media (min-width: $sm)
+    {
+        font-size: $fs3;
+    }
+
+    @media (min-width: $md)
+    {
+        font-size: $fs4;
+    }
+}
+
+.sectionContent
+{
+    font-size: $fs12;
+    line-height: $looseH;
+
+    margin: 0;
+
+    color: rgb($codeTextPri);
+
+    @media (min-width: $xs)
+    {
+        font-size: $fs16;
+    }
+
+
+    // Typography styles for content
+    p
+    {
+        margin-bottom: $space1n5;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6
+    {
+        line-height: $tightH;
+
+        margin-top: $space2n5;
+        margin-bottom: $space1;
+
+        color: rgb($codeTextPri);
+    }
+
+    h3
+    {
+        font-size: $fs14;
+
+        margin: 0;
+        @media (min-width: $md)
+        {
+            font-size: $fs3;
+        }
+    }
+
+    h4
+    {
+        font-size: $fs14;
+
+        margin-top: $space2;;
+        @media (min-width: $xs)
+        {
+            font-size: $fs2;
+        }
+    }
+    h5
+    {
+        font-size: $fs16;
+
+        text-decoration: underline;
+    }
+
+    ul,
+    ol
+    {
+        margin-bottom: $space1n5;
+        padding-left: $space2;
+    }
+
+    li
+    {
+        margin-bottom: $space0n5;
+    }
+
+    blockquote
+    {
+        font-style: italic;
+
+        margin: $space2 0;
+        padding: $space1 $space2;
+
+        border-left: 4px solid rgb($codeBlue);
+        background-color: rgba($codeBlue, .05);
+    }
+
+    img
+    {
+        max-width: 100%;
+        height: auto;
+        margin: $space2 0;
+
+        border-radius: $bR1;
+    }
+
+    table
+    {
+        width: 100%;
+        margin: $space2 0;
+
+        border-collapse: collapse;
+
+        th,
+        td
+        {
+            padding: $space1;
+
+            text-align: left;
+
+            border-bottom: 1px solid rgb($codeWhite);
+        }
+
+        th
+        {
+            font-weight: $fw6;
+
+            background-color: rgb($codeWhite);
+        }
+    }
+}

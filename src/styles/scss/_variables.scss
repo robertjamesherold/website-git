@@ -1,43 +1,60 @@
 
-// Colors
-$clr1: #3b82f6;
-$primary: $clr1;
-$clr1D: #2563eb;
-$clr1D0: rgba(29, 79, 216, 0);
-$clr1D1: rgba(29, 79, 216, 1);
-$clr1L: #60a5fa;
-$primary-light: $clr1L;
-$clr2: #ff6a00ff;
-$clr2D: #ea580c;
-$clr2L: #fb923c;
-$clr3: #22c55e;
-$clr3D: #16a34a;
-$clr3L: #4ade80;
-$clr4: #f59e0b;
-$clr4D: #d97706;
-$clr4L: #fcd34d;
-$clr5: #ef4444;
-$clr5D: #dc2626;
-$clr5L: #f87171;
-$codeTextPri: rgb(31, 41, 55);
-$codeTextPriSec: #6b7280;
-$clrBg1: #f3f4f6;
-$clrBg2: #fff;
-$clr0W: #fff;
-$white: $clr0W;
-$clr0B: #000;
 
-// Gray Scale
-$gray-50: #f9fafb;
-$gray-100: #f3f4f6;
-$gray-200: #e5e7eb;
-$gray-300: #d1d5db;
-$gray-400: #9ca3af;
-$gray-500: #6b7280;
-$gray-600: #4b5563;
-$gray-700: #374151;
-$gray-800: #1f2937;
-$gray-900: #111827;
+:root
+{
+    --code-bg: 30, 30, 30; // rgb(30,30,30)
+    --code-white: 255, 255, 255; // rgb(248,248,242)
+    --code-red: 215, 58, 73; // rgba(225, 93, 106, 1)
+    --code-red-bright: 250, 131, 115; // rgba(250, 131, 115, 1)
+    --code-red-dark: 212, 0, 0; // rgba(212, 0, 0, 1)
+    --code-blue-bright: 97, 175, 239; // rgb(97,175,239)
+    --code-blue-dark: 86, 95, 194; // rgb(86,95,194)
+    --code-blue: 137, 221, 255; // rgb(137,221,255)
+    --code-green: 195, 232, 141; // rgb(195,232,141)
+    --code-lila: 130, 170, 255; // rgb(130,170,255)
+    --code-yellow: 255, 203, 107; // rgb(255,203,107)
+    --code-orange: 255, 106, 0; // rgb(255,106,0)
+    --code-purple: 198, 120, 221; // rgb(198,120,221)
+    --code-gray: 171, 178, 191; // rgb(171,178,191)
+    --code-pink: 255, 121, 198; // rgb(255,121,198)
+    --code-none: transparent; // transparent
+    --code-text-pri: 17, 17, 17; // rgb(17,17,17)
+    --code-text-sec: 170, 170, 170; // rgb(170,170,170)
+    --code-text-ter: 125, 125, 125; // rgb(85,85,85)
+    --code-background-pri: 247, 247, 247; // rgb(247,247,247)
+    --code-background-sec: 255, 255, 255; // rgb(255,255,255)
+    --code-background-ter: 246, 247, 248; // rgb(246,247,248)
+}
+@media (prefers-color-scheme: dark)
+{
+    :root
+    {
+        --code-bg: 229, 234, 244; // rgb(229,234,244) 
+        --code-white: 255, 255, 255
+        --code-red: 215, 58, 73; // rgba(225, 93, 106, 1)
+        --code-red-bright: 212, 0, 0; // rgba(250, 131, 115, 1)
+        --code-red-dark: 250, 131, 115; // rgba(212, 0, 0, 1)
+        --code-blue-bright: 86, 95, 194;// rgb(97,175,239)
+        --code-blue-dark: 97, 175, 239;  // rgb(86,95,194)
+        --code-blue: 97, 175, 239;  // rgb(97,175,239)
+        --code-green: 46, 87, 16   ; //rgba(0, 3, 4, 1)6, 1)
+        --code-lila: 198, 120, 221; // rgb(198,120,221)
+        --code-yellow: 229, 192, 123; // rgb(229,192,123)
+        --code-text: 238, 238, 238; // rgb(238,238,238)
+        --code-orange: 209, 154, 102; // rgb(209,154,102)
+        --code-purple: 198, 120, 221; // rgb(198,120,221)
+        --code-gray: 92, 99, 112; // rgb(92,99,112)
+        --code-pink: 255, 121, 198; // rgb(255,121,198)
+        --code-none: transparent; // transparent
+        --code-text-pri: 242, 242, 242; // rgb(242,242,242)
+        --code-text-sec: 239, 239, 239; // rgb(239,239,239)
+        --code-text-ter: 214, 214, 214; // rgb(214,214,214)
+        --code-background-pri: 50, 50, 50; // rgb(30,30,30)
+        --code-background-sec: 20, 10, 20; // rgb(42,42,42)
+        --code-background-ter: 30, 30, 30; // rgb(30,30,30)
+    }
+}
+
 
 
 // Spacing
@@ -78,16 +95,10 @@ $spaceMax: max-content;
 $spaceFit: fit-content;
 
 // Typography
-$fontFamily: 'Inter','system-ui', sans-serif;
+$fontFamily: 'Fira Sans','system-ui', sans-serif;
 
 // Font Sizes for Headings
-$p: 1rem;
-$h6: 1.25rem;
-$h5: 1.5rem;
-$h4: 1.75rem;
-$h3: 2rem;
-$h2: 2.25rem;
-$h1: 2.5rem;
+
 
 // Font Weights 
 $fw1: 100;
@@ -139,21 +150,18 @@ $tightH: 1.3;
 $baseH: 1.6;
 $looseH: 2;
 
-// Borders
-$border0: 0;
-$border1: 1px solid rgba(229, 231, 235, 1);
-$border2: 2px solid rgba(229, 231, 235, 1);
-$border3: 3px solid rgba(229, 231, 235, 1);
 
 // Code Colors
 $codeBg: var(--code-bg);
 $codeWhite: var(--code-white);
 $codeRed: var(--code-red);
+$codeRedBright: var(--code-red-bright);
+$codeRedDark: var(--code-red-dark);
 $codeBlueBright: var(--code-blue-bright);
 $codeBlueDark: var(--code-blue-dark);
+$codeLila: var(--code-blue-dark);
 $codeBlue: var(--code-blue);
 $codeGreen: var(--code-green);
-$codeTextPri: var(--code-text);
 $codeLila: var(--code-lila);
 $codeYellow: var(--code-yellow);
 $codeOrange: var(--code-orange);
@@ -161,7 +169,6 @@ $codePurple: var(--code-purple);
 $codeGray: var(--code-gray);
 $codePink: var(--code-pink);
 $codeNone: var(--code-none);
-$codeBgPri: var(--code-background);
 $codeTextPri: var(--code-text-pri);
 $codeTextSec: var(--code-text-sec);
 $codeTextTer: var(--code-text-ter);
@@ -171,6 +178,11 @@ $codeBgTer: var(--code-background-ter);
 
 
 
+// Borders
+$border0: 0;
+$border1: 1px solid rgba($codeTextTer);
+$border2: 2px solid rgba($codeTextTer);
+$border3: 3px solid rgba($codeTextTer);
 
 
 
@@ -184,60 +196,8 @@ $all0n3: all .3s ease-in-out;
 
 
 // Code Font
-$codeFont: 'Fira Code', monospace;
+$FontMono: 'Fira Code', monospace;
 
 
 // None
 $no: none;
-
-
-:root
-{
-    --code-bg: #1e1e1e;
-    --code-white: #f8f8f2;
-    --code-red: #d73a49;
-    --code-blue-bright: #61afef;
-    --code-blue-dark: #565fc2ff;
-    --code-blue: #89ddff;
-    --code-green: #c3e88d;
-    --code-lila: #82aaff;
-    --code-yellow: #ffcb6b;
-    --code-orange: #ff6a00;
-    --code-purple: #c678dd;
-    --code-gray: #abb2bf;
-    --code-pink: #ff79c6;
-    --code-none: transparent;
-    --code-text-pri: #111;
-    --code-text-sec: #aaa;
-    --code-text-ter: #555;
-    --code-background-pri: #f7f7f7ff;
-    --code-background-sec: #fff;
-    --code-background-ter: #f6f7f8;
-}
-@media (prefers-color-scheme: dark)
-{
-    :root
-    {
-        --code-bg: #e5eaf474;
-        --code-white: #abb2bf;
-        --code-red: #e06c75;
-        --code-blue-bright: #61afef;
-        --code-blue-dark: #56b6c2ff;
-        --code-blue: #61afef;
-        --code-green: #98c379;
-        --code-lila: #c678dd;
-        --code-yellow: #e5c07b;
-        --code-text: #eee;
-        --code-orange: #d19a66;
-        --code-purple: #c678dd;
-        --code-gray: #5c6370;
-        --code-pink: #ff79c6;
-        --code-none: transparent;
-        --code-text-pri: #f2f2f2;
-        --code-text-sec: #efefef;
-        --code-text-ter: #d6d6d6;
-        --code-background-pri: #1e1e1e;
-        --code-background-sec: #2a2a2a;
-        --code-background-ter: #1e1e1e;
-    }
-}

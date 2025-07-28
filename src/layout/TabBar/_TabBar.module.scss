@@ -1,0 +1,244 @@
+// =============================================================================
+// TABBAR COMPONENT - Mobile-First Navigation
+// =============================================================================
+
+.tabBar
+{
+    position: sticky;
+    right: $space0;
+    bottom: 0;
+    left: $space0;
+    // Safe area for devices with notch/home indicator
+
+    padding-bottom: env(safe-area-inset-bottom);
+
+    border-top: $border1;
+    background-color: rgba(255, 255, 255, 1);
+
+    backdrop-filter: blur(20px);;
+
+    @media (min-width: $md)
+    {
+        position: sticky;
+        right: auto;
+        bottom: 0;
+        left: auto;
+
+        width: $space100;
+        padding-bottom: $space0;
+
+        border-top: $no;
+        border-bottom: $border1;
+        background-color: rgba(255, 255, 255, 1);
+
+        backdrop-filter: $no;;
+    }
+}
+
+.container
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    max-width: 400px;
+    margin: $space0 $spaceAuto;
+    padding: $space0n75 $space1;
+
+    @media (min-width: $md)
+    {
+        justify-content: center;
+
+        max-width: 600px;
+        padding: $space1 $space2;
+
+        gap: $space3;
+    }
+}
+
+.tabItem
+{
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: $space0n5 $space0n75;
+
+    transition: $all0n3;
+    text-decoration: $no;
+
+    color: $codeGray;
+    border-radius: $space0n75;
+
+    // Hover state
+    &:hover
+    {
+        color: $codeBlue;
+        background-color: rgba(59, 130, 246, .05);
+    }
+
+    // Active state
+    &.active
+    {
+        color: $codeBlue;
+        background-color: rgba(59, 130, 246, .1);
+
+        .tabIcon
+        {
+            transform: translateY(-2px);
+        }
+    }
+
+    @media (min-width: $md)
+    {
+        flex: $no;
+        flex-direction: row;
+
+        padding: $space0n75 $space1n5;
+
+        &.active .tabIcon
+        {
+            transform: translateY($space0);
+        }
+    }
+}
+
+.tabIcon
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 24px;
+    height: 24px;
+    margin-bottom: $space0n25;
+
+    transition: $all0n3;
+
+    svg
+    {
+        width: 20px;
+        height: 20px;
+    }
+
+    @media (min-width: $md)
+    {
+        margin-right: $space0n5;
+        margin-bottom: $space0;
+    }
+}
+
+.tabLabel
+{
+    font-family: $fontFamily;
+    font-size: $fs12;
+    font-weight: $fw5;
+    line-height: $tightH;
+
+    text-align: center;
+
+    @media (min-width: $md)
+    {
+        font-size: $fs14;
+
+        text-align: left;
+    }
+}
+
+.activeIndicator
+{
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+
+    width: $space1n5;
+    height: 3px;
+
+    transform: translateX(-50%);
+
+    border-radius: 2px;
+    background-color: $codeBlue;
+
+    @media (min-width: $md)
+    {
+        top: $space0;
+        bottom: $space0;
+        left: $space0;
+
+        width: 3px;
+        height: $space100;
+
+        transform: translateX($space0);
+    }
+}
+
+// Animation for tab switching
+.tabItem
+{
+    &:active
+    {
+        transform: scale(.95);
+    }
+}
+
+// Dark mode support
+@media (prefers-color-scheme: dark)
+{
+    .tabBar
+    {
+        border-top-color: rgba(229, 231, 235, .2);
+        background-color: rgba(30, 30, 30, .95);
+
+        @media (min-width: $md)
+        {
+            border-bottom-color: rgba(229, 231, 235, .2);
+            background-color: transparent;
+        }
+    }
+
+    .tabItem
+    {
+        color: #9ca3af;
+
+        &:hover
+        {
+            color: #60a5fa;
+            background-color: rgba(96, 165, 250, .1);
+        }
+
+        &.active
+        {
+            color: #60a5fa;
+            background-color: rgba(96, 165, 250, .15);
+        }
+    }
+
+    .activeIndicator
+    {
+        background-color: #60a5fa;
+    }
+}
+
+// Accessibility improvements
+@media (hover: none)
+{
+    .tabItem:hover
+    {
+        background-color: transparent;
+    }
+}
+
+// Reduce motion for users who prefer it
+@media (prefers-reduced-motion: reduce)
+{
+    .tabItem,
+    .tabIcon,
+    .activeIndicator
+    {
+        transition: $no;
+    }
+}

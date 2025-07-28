@@ -1,0 +1,141 @@
+.filterSection
+{
+    width: $space100;
+    margin-bottom: $space3;
+
+    text-align: center;
+
+    @media (min-width: $lg)
+    {
+        text-align: left;
+    }
+}
+
+.sectionTitle
+{
+    font-size: $fs5;
+    font-weight: $fw7;
+    line-height: $tightH;
+
+    position: relative;
+
+    margin-bottom: $space3;
+
+    color: rgb($codeTextPri);
+
+    &::after
+    {
+        position: absolute;
+        bottom: -$space0n5;
+        left: 50%;
+
+        width: 60px;
+        height: 4px;
+
+        content: '';
+        transform: translateX(-50%);
+
+        border-radius: $bR1;
+        background: linear-gradient(90deg, rgb($codeBlue), rgb($codeLila));
+    }
+
+    @media (min-width: $lg)
+    {
+        &::after
+        {
+            left: 0;
+
+            transform: none;
+        }
+    }
+
+    @media (max-width: $sm - 1px)
+    {
+        font-size: $fs3;
+
+        text-align: center;
+
+        &::after
+        {
+            left: 50%;
+
+            transform: translateX(-50%);
+        }
+    }
+}
+
+.filterNav
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    gap: $space1;
+
+    @media (min-width: $lg)
+    {
+        justify-content: flex-start;
+    }
+
+    @media (max-width: $sm - 1px)
+    {
+        gap: $space0n75;
+    }
+}
+
+.filterButton
+{
+    font-size: $fs16;
+    font-weight: $fw5;
+
+    padding: $space0n75 $space1n5;
+
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+
+    color: rgb($codeTextPri);
+    border: 1px solid rgb($codeTextSec);
+    border-radius: $bR1;
+    background-color: rgb($codeBgPri);
+
+    &:hover
+    {
+        color: rgb($codeBlue);
+        border-color: rgb($codeBlue);
+        background-color: rgba($codeBlue, .1);
+    }
+
+    &.active
+    {
+        color: rgb($codeBgPri);
+        border-color: rgb($codeBlue);
+        background-color: rgb($codeBlue);
+    }
+
+    &:focus
+    {
+        outline: none;
+        box-shadow: 0 0 0 3px rgba($codeBlue, .3);
+    }
+
+    @media (max-width: $sm - 1px)
+    {
+        font-size: $fs16;
+
+        padding: $space0n5 $space1;
+    }
+}
+
+// High contrast mode support
+@media (prefers-contrast: high)
+{
+    .filterButton
+    {
+        border: 2px solid rgb($codeTextPri);
+
+        &.active
+        {
+            border: 2px solid rgb($codeBgPri);
+        }
+    }
+}

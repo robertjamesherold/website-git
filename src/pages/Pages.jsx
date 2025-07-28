@@ -1,49 +1,10 @@
-import { Home } from '@ly/Home/HomeTwo';
-import { Story } from '@ly/Story/Story'
-import { Skills } from '@ly/Skills/Skills'
-import { CV } from '@ly/Lebenslauf/Lebenslauf'
-import { Projekte } from '@cm/projects/Projekte.jsx'
-import { Contact } from '@cm/contacts/Contact.jsx'
+import { ConcreteGoldPage } from './ConcreteGoldPage/ConcreteGoldPage';
+import { ContactPage } from './ContactPage/ContactPage';
+import { CvPage } from './CvPage/CvPage';
+import { HomePage } from './HomePage/HomePage';
+import { ProjectPage } from './ProjectPage/ProjectPage';
+import { SkillPage } from './SkillPage/SkillPage';
+import { StoryPage } from './StoryPage/StoryPage';
+import { StudyPage } from './StudyPage/StudyPage';
 
-export function Startseite() {
-    return (
- 
-        <Home/>
-    )
-}  
-
-export function Storyseite() {
-    return (
-        <Story/>
-    )
-}  
-
-export function Skillseite() {
-    return (
-        <Skills/>
-    )
-}  
-export function Lebenslaufseite() {
-    return (
-        <CV/>
-    )
-}  
-
-
-export function Projektseite() {
-    return (
-
-        <Projekte/>
-    
-    )
-}  
-
-
-
-export function Kontaktseite() {
-    return (
-
-        <Contact/>
-    
-    )
-}  
+export { ConcreteGoldPage, ContactPage, CvPage, HomePage, ProjectPage, SkillPage, StoryPage, StudyPage }

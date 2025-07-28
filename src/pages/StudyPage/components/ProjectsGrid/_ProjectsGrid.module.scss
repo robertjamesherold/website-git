@@ -1,0 +1,27 @@
+.projectsGrid
+{
+    display: grid;
+
+    width: $space100;
+    margin-bottom: $space4;
+
+    grid-template-columns: 1fr;
+    gap: $space2n5;
+
+    @media (min-width: $sm)
+    {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (min-width: $lg)
+    {
+        grid-template-columns: repeat(3, 1fr);
+        gap: $space2;
+    }
+
+    @media (max-width: $sm - 1px)
+    {
+        grid-template-columns: 1fr;
+        gap: $space2;
+    }
+}

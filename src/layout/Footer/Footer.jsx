@@ -14,17 +14,17 @@ export function Footer() {
             <h3 className={styles.sectionTitle}>Über mich</h3>
             <ul className={styles.linkList}>
               <li>
-                <Link to="/story" className={styles.link}>
+                <Link to="/about/story" className={styles.link}>
                   Meine Story
                 </Link>
               </li>
               <li>
-                <Link to="/skills" className={styles.link}>
+                <Link to="/about/skills" className={styles.link}>
                   Skills & Technologien
                 </Link>
               </li>
               <li>
-                <Link to="/lebenslauf" className={styles.link}>
+                <Link to="/about/lebenslauf" className={styles.link}>
                   Lebenslauf
                 </Link>
               </li>
@@ -41,8 +41,8 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link to="/casestudies" className={styles.link}>
-                  Case Studies
+                <Link to="/fallstudien" className={styles.link}>
+                  Fallstudien
                 </Link>
               </li>
               <li>
@@ -95,7 +95,7 @@ export function Footer() {
                   </svg>
                 </a>
                 <a 
-                  href="https://linkedin.com/in/yourusername" 
+                  href="https://www.linkedin.com/in/robert-james-herold-b274a1205/" 
                   className={styles.socialLink}
                   aria-label="LinkedIn"
                   target="_blank"

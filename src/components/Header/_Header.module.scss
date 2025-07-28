@@ -1,0 +1,67 @@
+.header
+{
+    margin-bottom: $space5;
+
+    text-align: center;
+
+    @media (min-width: $lg)
+    {
+        margin-bottom: $space6;
+    }
+}
+
+.title
+{
+    font-size: $fs6;
+    font-weight: $fw7;
+    line-height: $tightH;
+
+    display: inline-block;
+
+    margin-bottom: $space1;
+
+    animation: gradientMove 5s linear infinite ;
+
+    color: rgb($codeTextPri);
+    background: linear-gradient(90deg, rgb($codePink), rgb($codePurple), rgb($codeOrange), rgb($codeBlue), rgb($codePink), rgb($codePurple));
+    background-repeat: repeat;
+    background-clip: text;
+    background-size: 700% 400%;
+
+    animation-fill-mode: forwards;
+    -webkit-text-fill-color: transparent;
+
+    @media (min-width: $md)
+    {
+        font-size: 3rem;
+    }
+}
+
+.subtitle
+{
+    font-size: $fs1;
+    line-height: $baseH;
+
+    max-width: 600px;
+    margin: 0 auto;
+
+    color: rgb($codeTextPri);
+
+    @media (min-width: $md)
+    {
+        font-size: $fs2;
+    }
+}
+
+@keyframes gradientMove
+{
+    0%
+    {
+        background-attachment: scroll;
+        background-position: 0 ;
+    }
+    100%
+    {
+        background-position: 100% ;
+    }
+}
