@@ -1,0 +1,70 @@
+.featuredSection
+{
+    width: $space100;
+    margin-bottom: $space5;
+
+    text-align: center;
+
+    @media (min-width: $lg)
+    {
+        text-align: left;
+    }
+}
+
+.sectionTitle
+{
+    font-size: $fs5;
+    font-weight: $fw7;
+    line-height: $tightH;
+
+    position: relative;
+
+    margin-bottom: $space3;
+
+    color: rgb($codeTextPri);
+
+    &::after
+    {
+        position: absolute;
+        bottom: -$space0n5;
+        left: 50%;
+
+        width: 60px;
+        height: 4px;
+
+        content: '';
+        transform: translateX(-50%);
+
+        border-radius: $bR1;
+        background: linear-gradient(90deg, rgb($codeBlue), rgb($codeLila));
+    }
+
+    @media (min-width: $lg)
+    {
+        &::after
+        {
+            left: 0;
+
+            transform: none;
+        }
+    }
+
+    @media (max-width: $sm - 1px)
+    {
+        font-size: $fs3;
+
+        text-align: center;
+
+        &::after
+        {
+            left: 50%;
+
+            transform: translateX(-50%);
+        }
+    }
+}
+
+.featuredGrid
+{
+    @include grid;
+}

@@ -9,8 +9,9 @@
     --code-red-dark: 212, 0, 0; // rgba(212, 0, 0, 1)
     --code-blue-bright: 97, 175, 239; // rgb(97,175,239)
     --code-blue-dark: 86, 95, 194; // rgb(86,95,194)
-    --code-blue: 137, 221, 255; // rgb(137,221,255)
-    --code-green: 195, 232, 141; // rgb(195,232,141)
+    --code-blue: 86, 95, 194; // rgb(137,221,255)
+    --code-green: 195, 232, 141; // rgba(51, 82, 4, 1)
+    --code-green-dark: 51, 82, 4 ;
     --code-lila: 130, 170, 255; // rgb(130,170,255)
     --code-yellow: 255, 203, 107; // rgb(255,203,107)
     --code-orange: 255, 106, 0; // rgb(255,106,0)
@@ -30,18 +31,19 @@
     :root
     {
         --code-bg: 229, 234, 244; // rgb(229,234,244) 
-        --code-white: 255, 255, 255
+        --code-white: 255, 255, 255;
+        --code-green-dark: 153, 255, 0 ;
         --code-red: 215, 58, 73; // rgba(225, 93, 106, 1)
         --code-red-bright: 212, 0, 0; // rgba(250, 131, 115, 1)
         --code-red-dark: 250, 131, 115; // rgba(212, 0, 0, 1)
         --code-blue-bright: 86, 95, 194;// rgb(97,175,239)
         --code-blue-dark: 97, 175, 239;  // rgb(86,95,194)
-        --code-blue: 97, 175, 239;  // rgb(97,175,239)
+        --code-blue: 86, 95, 194;  // rgb(97,175,239)
         --code-green: 46, 87, 16   ; //rgba(0, 3, 4, 1)6, 1)
         --code-lila: 198, 120, 221; // rgb(198,120,221)
         --code-yellow: 229, 192, 123; // rgb(229,192,123)
         --code-text: 238, 238, 238; // rgb(238,238,238)
-        --code-orange: 209, 154, 102; // rgb(209,154,102)
+        --code-orange: 255, 106, 0; // rgb(209,154,102)
         --code-purple: 198, 120, 221; // rgb(198,120,221)
         --code-gray: 92, 99, 112; // rgb(92,99,112)
         --code-pink: 255, 121, 198; // rgb(255,121,198)
@@ -51,7 +53,7 @@
         --code-text-ter: 214, 214, 214; // rgb(214,214,214)
         --code-background-pri: 50, 50, 50; // rgb(30,30,30)
         --code-background-sec: 20, 10, 20; // rgb(42,42,42)
-        --code-background-ter: 30, 30, 30; // rgb(30,30,30)
+        --code-background-ter: 30, 30, 30; // rgb(30,30,30);
     }
 }
 
@@ -155,6 +157,7 @@ $looseH: 2;
 $codeBg: var(--code-bg);
 $codeWhite: var(--code-white);
 $codeRed: var(--code-red);
+$codeGreenDark: var(--code-green-dark);
 $codeRedBright: var(--code-red-bright);
 $codeRedDark: var(--code-red-dark);
 $codeBlueBright: var(--code-blue-bright);

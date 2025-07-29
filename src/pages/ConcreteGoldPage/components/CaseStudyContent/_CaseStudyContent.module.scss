@@ -1,204 +1,550 @@
-// components/casestudy/components/CaseStudyContent/CaseStudyContent.module.scss
 .content
 {
-    padding: $space2;
+    font-family: $fontFamily;
+    line-height: $baseH;
 
-    border-radius: $bR1;
-    background-color: rgb($codeBgPri);
-    box-shadow: $shadSm;
+    max-width: 100%;
 
-    @media (min-width: $sm)
-    {
-        padding: $space2;
-    }
-
-    @media (min-width: $md)
-    {
-        padding: $space4;
-
-        border-radius: $bR1;
-    }
+    color: rgb($codeTextPri);
 }
 
 .section
 {
-    scroll-margin-top: $space2;
-    padding-block: $space1;
-
-    &:last-child
-    {
-        margin-bottom: 0;
-    }
-
-    @media (min-width: $md)
-    {
-        margin-bottom: $space3;
-
-        padding-block: $space3;
-    }
-}
-.section > button
-{
-    font-size: $fs1;
-
-    width: $space100;
-
-    text-align: left;
-
-    @media (min-width: $xs)
-    {
-        font-size: $fs2;
-    }
-    @media (min-width: $md)
-    {
-        font-size: $fs3;
-    }
-    @media (min-width: $lg)
-    {
-        font-size: $fs4;
-    }
-}
-.sectionTitle,
-{
-    font-size: $fs2;
-    font-weight: $fw7;
-    line-height: $tightH;
+    overflow: hidden;
 
     margin-bottom: $space2;
-    padding-bottom: $space1;
 
-    color: rgb($codeTextPri);
-    border-bottom: 2px solid rgb($codeWhite);
+    transition: all .3s ease;
+    transform: translateY(20px);
+    animation: fadeInUp .6s ease forwards;
+    // Animation beim Laden
 
-    @media (min-width: $sm)
+    opacity: 0;
+    border: $border1;
+    border-radius: $bR1;
+    background: rgb($codeBgSec);
+    box-shadow: $shadXs;
+
+    &:hover
     {
-        font-size: $fs3;
+        transform: translateY(-2px);
+
+        box-shadow: $shadSm;
     }
 
-    @media (min-width: $md)
+    @for $i from 1 through 10
     {
-        font-size: $fs4;
+        &:nth-child(#{$i})
+        {
+            animation-delay: #{$i * .1}s;
+        }
+    }
+}
+
+.sectionHeader
+{
+    font-size: $fs3;
+    font-weight: $fw6;
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+    padding: $space2;
+
+    cursor: pointer;
+    transition: all .3s ease;
+    text-align: left;
+
+    color: rgb($codeTextPri);
+    border: none;
+    background: rgb($codeBgTer);
+
+    &:hover
+    {
+        color: rgb($codeBlue);
+        background: rgba($codeBlue, .1);
+    }
+
+    &:focus
+    {
+        outline: 2px solid rgb($codeBlue);
+        outline-offset: -2px;
+    }
+
+    // Pfeil Icon
+    &::after
+    {
+        font-size: $fs16;
+
+        margin-left: auto;
+
+        content: '▶';
+        transition: transform .3s ease;
+
+        color: rgb($codeBlue);
+    }
+
+    // Wenn Section offen ist
+    &[aria-expanded='true']::after
+    {
+        transform: rotate(90deg);
+    }
+
+    // Hover Effekt für Pfeil
+    &:hover::after
+    {
+        transform: scale(1.1);
+
+        color: rgb($codeBlueBright);
+    }
+
+    // Aktiver Zustand
+    &:active
+    {
+        background: rgba($codeBlue, .2);
     }
 }
 
 .sectionContent
 {
-    font-size: $fs12;
-    line-height: $looseH;
+    padding: $space2;
+    // Slide-in Animation
 
-    margin: 0;
+    animation: slideDown .4s ease;
 
+    border-top: 1px solid rgba($codeTextTer, .2);
+    background: rgb($codeBgSec);
+}
+
+.sectionMainText
+{
+    font-size: $fs16;
+    line-height: $baseH;
+
+    margin-bottom: $space2;
+
+    text-align: justify;
+    word-wrap: break-word;
+    -webkit-hyphens: auto;
+    // Automatische Silbentrennung
+    hyphens: auto;
+
+    color: rgb($codeTextSec);
+
+    -ms-hyphens: auto;
+    overflow-wrap: break-word;
+
+    &:first-letter
+    {
+        font-size: 1.2em;
+        font-weight: $fw6;
+
+        color: rgb($codeBlue);
+    }
+}
+
+.subsections
+{
+    display: flex;
+    flex-direction: column;
+
+    gap: $space2;
+}
+
+.subsection
+{
+    position: relative;
+
+    padding: $space2;
+
+    transition: all .3s ease;
+    transform: translateX(-20px);
+    animation: slideInLeft .5s ease forwards;
+    // Staggered Animation für Subsections
+
+    opacity: 0;
+    border-left: 4px solid rgb($codeBlue);
+    border-radius: $bR1;
+    background: rgb($codeBgTer);
+
+    &:hover
+    {
+        border-left-color: rgb($codeBlueBright);
+        background: rgba($codeBlue, .05);
+    }
+
+    @for $i from 1 through 10
+    {
+        &:nth-child(#{$i})
+        {
+            animation-delay: #{.2 + $i * .1}s;
+        }
+    }
+}
+
+.subtitle
+{
+    font-size: $fs2;
+    font-weight: $fw6;
+
+    display: flex;
+    align-items: center;
+
+    margin-bottom: $space1;
+
+    color: rgb($codeBlue);
+
+    &::before
+    {
+        font-size: $fs14;
+
+        margin-right: $space0n5;
+
+        content: '●';
+
+        color: rgb($codeBlue);
+    }
+
+    &:hover
+    {
+        color: rgb($codeBlueBright);
+
+        &::before
+        {
+            transition: all .2s ease;
+            transform: scale(1.2);
+
+            color: rgb($codeBlueBright);
+        }
+    }
+}
+
+.subSub
+{
+    font-size: $fs1;
+    font-weight: $fw5;
+
+    position: relative;
+
+    margin: $space1 0;
+
+    letter-spacing: .5px;
+    text-transform: uppercase;
+
+    color: rgb($codeGreen);
+
+    &::before
+    {
+        margin-right: $space0n5;
+
+        content: '▸';
+
+        color: rgb($codeGreen);
+    }
+}
+
+.subtext
+{
+    font-size: $fs16;
+    line-height: $baseH;
+
+    margin-bottom: $space1n5;
+
+    text-align: justify;
+    word-wrap: break-word;
+    -webkit-hyphens: auto;
+    // Bessere Lesbarkeit
+    hyphens: auto;
+
+    color: rgb($codeTextSec);
+
+    -ms-hyphens: auto;
+    overflow-wrap: break-word;
+}
+
+.subimage
+{
+    display: block;
+
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    margin: $space2 0 $space1 0;
+
+    transition: all .3s ease;
+
+    border-radius: $bR1;
+    box-shadow: $shadMd;
+
+    &:hover
+    {
+        transform: scale(1.02);
+
+        box-shadow: $shadLg;
+    }
+
+    // Lazy loading placeholder
+    &[src='']
+    {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        min-height: 200px;
+
+        background: rgb($codeBgTer);
+
+        &::before
+        {
+            font-size: $fs6;
+
+            content: '📷';
+
+            color: rgb($codeTextTer);
+        }
+    }
+}
+
+.subtech
+{
+    font-size: $fs14;
+    font-style: italic;
+
+    margin-top: $space0n5;
+    padding: $space0n5;
+
+    text-align: center;
+
+    color: rgb($codeTextTer);
+    border-radius: 4px;
+    background: rgba($codeTextTer, .1);
+
+    &::before
+    {
+        font-weight: $fw5;
+
+        content: 'Quelle: ';
+    }
+}
+
+// Responsive Design
+@media (max-width: $lg)
+{
+    .sectionHeader
+    {
+        font-size: $fs2;
+
+        padding: $space1n5;
+    }
+
+    .sectionContent
+    {
+        padding: $space1n5;
+    }
+
+    .subsection
+    {
+        padding: $space1n5;
+    }
+
+    .subtitle
+    {
+        font-size: $fs1;
+    }
+}
+
+@media (max-width: $md)
+{
+    .sectionHeader
+    {
+        font-size: $fs1;
+
+        padding: $space1;
+    }
+
+    .sectionContent
+    {
+        padding: $space1;
+    }
+
+    .subsection
+    {
+        padding: $space1;
+    }
+
+    .sectionMainText
+    {
+        font-size: $fs14;
+    }
+
+    .subtext
+    {
+        font-size: $fs14;
+    }
+}
+
+// Print Styles
+@media print
+{
+    .section
+    {
+        border: 1px solid #ccc;
+        box-shadow: none;
+
+        break-inside: avoid;
+    }
+
+    .sectionHeader
+    {
+        background: #f5f5f5 !important;
+
+        &::after
+        {
+            display: none;
+        }
+    }
+
+    .sectionContent
+    {
+        display: block !important; // Alle Sections beim Drucken öffnen
+    }
+
+    .subimage
+    {
+        max-width: 400px;
+
+        page-break-inside: avoid;
+    }
+}
+
+// Accessibility
+@media (prefers-reduced-motion: reduce)
+{
+    .section,
+    .subsection,
+    .sectionHeader,
+    .subimage
+    {
+        transition: none;
+        animation: none;
+    }
+}
+
+// Focus Management
+.sectionHeader:focus-visible
+{
+    outline: 2px solid rgb($codeBlue);
+    outline-offset: 2px;
+}
+
+// Dark Mode Specific
+@media (prefers-color-scheme: dark)
+{
+    .subimage
+    {
+        box-shadow: 0 4px 8px rgba(0,0,0,.4);
+    }
+
+    .subtech
+    {
+        background: rgba(255,255,255,.05);
+    }
+}
+
+// Animations
+@keyframes fadeInUp
+{
+    from
+    {
+        transform: translateY(20px);
+
+        opacity: 0;
+    }
+    to
+    {
+        transform: translateY(0);
+
+        opacity: 1;
+    }
+}
+
+@keyframes slideDown
+{
+    from
+    {
+        max-height: 0;
+
+        transform: translateY(-10px);
+
+        opacity: 0;
+    }
+    to
+    {
+        max-height: 2000px;
+
+        transform: translateY(0);
+
+        opacity: 1;
+    }
+}
+
+@keyframes slideInLeft
+{
+    from
+    {
+        transform: translateX(-20px);
+
+        opacity: 0;
+    }
+    to
+    {
+        transform: translateX(0);
+
+        opacity: 1;
+    }
+}
+
+// Interactive States
+.section
+{
+    // Bessere Performance für Animationen
+    will-change: transform;
+    backface-visibility: hidden;
+}
+
+// Selection Styles
+.content ::selection
+{
     color: rgb($codeTextPri);
+    background: rgba($codeBlue, .3);
+}
 
-    @media (min-width: $xs)
+// Scrollbar Styling (Webkit)
+.sectionContent
+{
+    &::-webkit-scrollbar
     {
-        font-size: $fs16;
+        width: 6px;
     }
 
-
-    // Typography styles for content
-    p
+    &::-webkit-scrollbar-track
     {
-        margin-bottom: $space1n5;
+        border-radius: 3px;
+        background: rgb($codeBgTer);
     }
 
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6
+    &::-webkit-scrollbar-thumb
     {
-        line-height: $tightH;
+        border-radius: 3px;
+        background: rgb($codeBlue);
 
-        margin-top: $space2n5;
-        margin-bottom: $space1;
-
-        color: rgb($codeTextPri);
-    }
-
-    h3
-    {
-        font-size: $fs14;
-
-        margin: 0;
-        @media (min-width: $md)
+        &:hover
         {
-            font-size: $fs3;
-        }
-    }
-
-    h4
-    {
-        font-size: $fs14;
-
-        margin-top: $space2;;
-        @media (min-width: $xs)
-        {
-            font-size: $fs2;
-        }
-    }
-    h5
-    {
-        font-size: $fs16;
-
-        text-decoration: underline;
-    }
-
-    ul,
-    ol
-    {
-        margin-bottom: $space1n5;
-        padding-left: $space2;
-    }
-
-    li
-    {
-        margin-bottom: $space0n5;
-    }
-
-    blockquote
-    {
-        font-style: italic;
-
-        margin: $space2 0;
-        padding: $space1 $space2;
-
-        border-left: 4px solid rgb($codeBlue);
-        background-color: rgba($codeBlue, .05);
-    }
-
-    img
-    {
-        max-width: 100%;
-        height: auto;
-        margin: $space2 0;
-
-        border-radius: $bR1;
-    }
-
-    table
-    {
-        width: 100%;
-        margin: $space2 0;
-
-        border-collapse: collapse;
-
-        th,
-        td
-        {
-            padding: $space1;
-
-            text-align: left;
-
-            border-bottom: 1px solid rgb($codeWhite);
-        }
-
-        th
-        {
-            font-weight: $fw6;
-
-            background-color: rgb($codeWhite);
+            background: rgb($codeBlueBright);
         }
     }
 }

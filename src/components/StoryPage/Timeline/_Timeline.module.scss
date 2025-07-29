@@ -1,0 +1,120 @@
+
+.timeline
+{
+    width: $space100;
+    margin-bottom: $space5;
+}
+
+.timelineTitle
+{
+    font-size: $fs5;
+    font-weight: $fw7;
+    line-height: $tightH;
+
+    margin-bottom: $space3;
+
+    text-align: center;
+
+    color: rgb($codeTextPri);
+}
+
+.timelineItem
+{
+    position: relative;
+
+    display: grid;
+
+    margin-bottom: $space3;
+
+    grid-template-columns: auto 1fr;
+    gap: $space1n5;
+
+    &:not(:last-child)::after
+    {
+        position: absolute;
+        top: 60px;
+        bottom: -$space3;
+        left: 24px;
+
+        width: 2px;
+
+        content: '';
+
+        background-color: rgb($codeTextSec);
+    }
+
+    @media (min-width: $md)
+    {
+        gap: $space2;
+    }
+}
+
+.timelineMarker
+{
+    display: flex;
+    align-items: flex-start;
+
+    padding-top: $space0n5;
+}
+
+.timelineIcon
+{
+    font-size: $fs1;
+
+    position: relative;
+    z-index: 1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 48px;
+    height: 48px;
+
+    border: $border1;
+    border-radius: $bR2;
+    background: rgb($codeBlue, 1);
+    background-repeat: repeat;
+    background-size: 700% 400%;
+}
+
+.timelineContent
+{
+    padding-bottom: $space1;
+}
+
+.timelineItemTitle
+{
+    font-size: $fs2;
+    font-weight: $fw6;
+    line-height: $tightH;
+
+    margin-bottom: $space0n5;
+
+    color: rgb($codeTextPri);
+}
+
+.timelineDate
+{
+    font-size: $fs16;
+    font-weight: $fw6;
+
+    display: inline-block;
+
+    margin-bottom: $space0n75;
+    padding: $space0n25 $space0n75;
+
+    color: rgb($codeBlue);
+    border-radius: $bR1;
+    background-color: rgba($codeBlue, .1);
+}
+
+.timelineText
+{
+    font-size: $fs16;
+    line-height: $baseH;
+
+    margin: 0;
+
+    color: rgb($codeTextPri);
+}

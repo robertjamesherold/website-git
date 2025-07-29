@@ -36,7 +36,7 @@
     margin-bottom: $space0n25;
     padding-left: $space0n25;
 
-    color: rgb($codeBg);
+    color: rgb($codeTextSec);
     border-radius: $bR1;
 }
 
@@ -64,10 +64,10 @@
     text-align: left;
     vertical-align: top;
 
-    color: rgb($codeBg);
+    color: rgb($codeTextPri);
     border: $border1;
     border-radius: $bR1;
-    background-color: rgba-hex($codeBgPri, .5);
+    background-color: rgb($codeBgPri);
 
     direction: ltr;
     // Für Safari und andere Browser
@@ -82,7 +82,7 @@
     {
         border-color: rgb($codePink);
         outline: none;
-        background-color: rgba-hex($codeBgPri, .25);
+        background-color: rgba($codeBgPri);
         box-shadow: $shadSm;
     }
 
@@ -94,7 +94,7 @@
 
         transition: opacity .1s ease;
 
-        color: rgb($codeGray);
+        color: rgb($codeTextTer);
     }
 
     &:focus::placeholder
@@ -236,7 +236,7 @@
         vertical-align: top;
         // iOS Safari Fix
 
-        -webkit-text-fill-color: rgb($codeTextPri);
+        -webkit-text-fill-color: rgb($codeTextSec);
         -webkit-opacity: 1;
     }
 }
@@ -258,32 +258,5 @@
         {
             transition: none;
         }
-    }
-}
-
-// Dark mode support (falls gewünscht)
-@media (prefers-color-scheme: dark)
-{
-    .textAreaField
-    {
-        color: rgb($codeBgPri);
-        border-color: rgb($codeTextSec);
-        background-color: rgb($codeTextTer);
-
-        &:focus
-        {
-            border-color: rgb($codeBlue);
-            background-color: rgb($codeTextTer);
-        }
-
-        &::placeholder
-        {
-            color: rgb($codeTextSec);
-        }
-    }
-
-    .textAreaLabel
-    {
-        color: rgb($codeBgPri);
     }
 }

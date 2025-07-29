@@ -1,0 +1,203 @@
+
+.section
+{
+    width: $space100;
+    margin-bottom: $space5;
+
+    &:last-of-type
+    {
+        margin-bottom: $space4;
+    }
+}
+
+.sectionTitle
+{
+    font-size: $fs5;
+    font-weight: $fw7;
+    line-height: $tightH;
+
+    position: relative;
+
+    margin-bottom: $space3;
+
+    text-align: center;
+
+    color: rgb($codeTextPri);
+
+    &::after
+    {
+        position: absolute;
+        bottom: -$space0n75;
+        left: 50%;
+
+        width: 80px;
+        height: 4px;
+
+        content: '';
+        transform: translateX(-50%);
+
+        border-radius: $bR1;
+        background: linear-gradient(90deg, rgb($codeBlue), rgb($codeLila));
+    }
+
+    @media (min-width: $lg)
+    {
+        text-align: left;
+
+        &::after
+        {
+            left: 0;
+
+            transform: none;
+        }
+    }
+}
+.skillsGrid
+{
+    @include gridthree;
+}
+
+.Card
+{
+    @include card;
+}
+
+.skillHeader
+{
+    display: flex;
+    align-items: flex-start;
+
+    margin-bottom: $space1n5;
+
+    gap: $space1;
+}
+
+.skillIcon
+{
+    width: 40px;
+    height: 40px;
+
+    @include cardicon;
+}
+
+.skillInfo
+{
+    flex: 1;
+}
+
+.skillName
+{
+    @include cardtitle;
+}
+
+.skillDescription
+{
+    @include carddescription;
+}
+
+.skillLevel
+{
+    display: flex;
+    align-items: center;
+
+    gap: $space1;
+}
+
+.skillBar
+{
+    overflow: hidden;
+    flex: 1;
+
+    height: 8px;
+
+    border-radius: $bR4;
+    background-color: rgb($codeWhite);
+}
+
+.skillProgress
+{
+    width: 0;
+    height: 100%;
+
+    transition: width 1s ease-out;
+
+    border-radius: $bR4;
+    background: linear-gradient(90deg, rgb($codeBlue), rgb($codeLila));
+}
+
+.skillPercent
+{
+    font-size: $fs14;
+    font-weight: $fw6;
+
+    min-width: 35px;
+
+    text-align: right;
+
+    color: rgb($codeBlue);
+}
+
+
+@keyframes slideInUp
+{
+    from
+    {
+        transform: translateY(40px);
+
+        opacity: 0;
+    }
+    to
+    {
+        transform: translateY(0);
+
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp
+{
+    from
+    {
+        transform: translateY(50px);
+
+        opacity: 0;
+    }
+    to
+    {
+        transform: translateY(0);
+
+        opacity: 1;
+    }
+}
+
+@keyframes slideInLeft
+{
+    from
+    {
+        transform: translateX(-40px);
+
+        opacity: 0;
+    }
+    to
+    {
+        transform: translateX(0);
+
+        opacity: 1;
+    }
+}
+
+@keyframes popIn
+{
+    from
+    {
+        transform: scale(.8);
+
+        opacity: 0;
+    }
+    to
+    {
+        transform: scale(1);
+
+        opacity: 1;
+    }
+}

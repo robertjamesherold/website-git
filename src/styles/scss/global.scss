@@ -2,10 +2,16 @@
 @use '@scss/_variables.scss' as *;
 @use '@scss/_animations.scss' as *;
 
+html
+{
+    background-color: rgb($codeBgTer);
+}
+
 body
 {
     font-family: $fontFamily;
     font-size: $fs16;
 
-    color: $codeTextPri;
+    color: rgb($codeTextPri);
+    background-color: rgb($codeBgTer);
 }

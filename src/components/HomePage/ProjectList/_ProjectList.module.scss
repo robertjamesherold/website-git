@@ -1,0 +1,84 @@
+
+.projects
+{
+    @include section;
+}
+
+.projectsTitle
+{
+    @include sectionTitle;
+}
+
+.projectsGrid
+{
+    display: grid;
+
+    margin-bottom: $space3;
+
+    grid-template-columns: 1fr;
+    gap: $space2;
+
+    @media (min-width: $md)
+    {
+        grid-template-columns: repeat(2, 1fr);
+        gap: $space3;
+    }
+}
+
+.viewAllButton
+{
+    @include ctaButtonPrimary;
+}
+
+.projectsCta
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Card
+{
+    @include bigCard;
+}
+
+.featuredImage
+{
+    @include bigCardImage;
+}
+
+
+.featuredOverlay
+{
+    @include bigCardOverlay;
+}
+
+.viewProject
+{
+    @include viewProject;
+}
+
+.featuredContent
+{
+    @include bigCardContent;
+}
+
+.featuredTitle
+{
+    @include cardtitle;
+}
+
+.featuredDescription
+{
+    @include carddescription;
+}
+
+.featuredTech
+{
+    @include bigCardTags;
+}
+
+.techTag
+{
+    @include tag;
+}

@@ -1,0 +1,39 @@
+
+.services
+{
+    @include section;
+}
+
+.servicesTitle
+{
+    @include sectionTitle;
+}
+
+.servicesGrid
+{
+    @include gridfour;
+}
+
+.serviceCard
+{
+    text-align: center;
+
+    @include card;
+}
+
+.serviceIcon
+{
+    font-size: $fs6;
+
+    @include cardicon;
+}
+
+.serviceTitle
+{
+    @include cardtitle;
+}
+
+.serviceDescription
+{
+    @include carddescription;
+}

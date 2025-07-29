@@ -28,6 +28,8 @@
 
     margin-bottom: $space1;
 
+    color: rgb($codeWhite);
+
     @media (max-width: $sm - 1px)
     {
         font-size: $fs2;
@@ -45,6 +47,7 @@
     margin-left: auto;
 
     opacity: .95;
+    color: rgb($codeWhite);
 
     @media (max-width: $sm - 1px)
     {
@@ -85,15 +88,17 @@
     text-decoration: none;
 
     color: rgb($codeBlue);
+    border: $border2;
     border-radius: $bR1;
-    background-color: rgb($codeBgPri);
+    background-color: rgb($codeWhite);
     box-shadow: $shadMd;
 
     &:hover
     {
         transform: translateY(-2px);
 
-        background-color: rgb($codeWhite);
+        color: rgb($codeWhite);
+        background-color: rgb($codeBlue);
         box-shadow: $shadLg;
     }
 

@@ -24,12 +24,14 @@ export default defineConfig({
       '@ut': resolve(__dirname, 'src/utils'),
       '@img': resolve(__dirname, 'src/assets/images'),
       '@svg': resolve(__dirname, 'src/assets/svg'),
+      '@icons': resolve(__dirname, 'src/assets/icons'),
       '@fonts': resolve(__dirname, 'src/assets/fonts'),
       '@css': resolve(__dirname, 'src/styles/css'),
       '@ho': resolve(__dirname, 'src/hooks'),
       '@ly': resolve(__dirname, 'src/layout'),
       '@pg': resolve(__dirname, 'src/pages'),
       '@scss': resolve(__dirname, 'src/styles/scss'),
+      '@data': resolve(__dirname, 'src/data')
     }
   },
 

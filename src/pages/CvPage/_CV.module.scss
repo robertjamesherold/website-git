@@ -219,11 +219,16 @@
 
 .contactInfo
 {
-    padding: $space2n5;
+    padding: $space1n5;
 
-    border: 1px solid rgb($codeWhite);
+    border: $border1;
     border-radius: $bR1;
     background-color: rgb($codeBgPri);
+
+    @media (min-width: $xs)
+    {
+        padding: $space2n5;
+    }
 
     @media (min-width: $md)
     {
@@ -258,9 +263,13 @@
 {
     display: flex;
     align-items: flex-start;
+    flex-direction: column;
 
     gap: $space0n75;
-
+    @media (min-width: $xs)
+    {
+        flex-direction: row;
+    }
     strong
     {
         font-weight: $fw6;
@@ -326,12 +335,17 @@
 
 .section
 {
-    padding: $space2n5;
+    padding: $space1n5;
 
-    border: 1px solid rgb($codeWhite);
+    border: $border1;
     border-radius: $bR1;
     background-color: rgb($codeBgPri);
     box-shadow: $shadSm;
+
+    @media (min-width: $xs)
+    {
+        padding: $space2n5;
+    }
 
     @media (min-width: $md)
     {
@@ -701,6 +715,7 @@
 {
     display: flex;
     align-items: center;
+    flex-direction: column;
     justify-content: space-between;
 
     padding: $space0n75 $space1;
@@ -708,6 +723,11 @@
     border: 1px solid rgb($codeWhite);
     border-radius: $bR1;
     background-color: rgb($codeBgPri);
+
+    @media (min-width: $xs)
+    {
+        flex-direction: row;
+    }
 }
 
 .language
@@ -831,5 +851,6 @@
 
     color: rgb($codeBgPri);
     border: 2px solid rgb($codeBgPri);
+    border-radius: $bR1;
     background-color: transparent;;
 }
