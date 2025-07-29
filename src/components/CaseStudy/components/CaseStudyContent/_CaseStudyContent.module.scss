@@ -25,8 +25,13 @@
     border-radius: $bR1;
     background-color: $codeBgPri;
 
-    margin-block: $space2;;
+
+    @media (min-width: $md)
+    {
+        margin-top: $space2;
+    }
 }
+
 
 .sectionHeader
 {
@@ -51,22 +56,6 @@
     padding: $space0 $space1;
 
     color: rgb($codeBlue);
-    &::before
-    {
-        position: absolute;
-        top: 50%;
-        left: -$space2;
-
-        width: 4px;
-        height: 60%;
-
-        content: '';
-        transition: all .3s ease;
-        transform: translateY(-50%);
-
-        border-radius: 2px;
-        background: rgba($codeBlue, .3);
-    }
 }
 
 // Aktive Section Styling
@@ -111,7 +100,7 @@
 {
     position: relative;
 
-    padding: 0;
+    padding-top: $space1;
 
     border: none;
     border-left: none;
@@ -129,7 +118,7 @@
     {
         padding-bottom: $space1;
 
-        border-bottom: 1px solid rgba($codeTextTer, .1);
+        border-bottom: 1px solid rgba($codeTextTer, .4);
     }
 }
 
@@ -139,9 +128,9 @@
     font-weight: $fw6;
     line-height: $tightH;
 
-    margin-bottom: $space1;
+    color: rgb($codeBlue);
 
-    color: rgb($codeTextPri);
+    margin-block: $space1;
 
     // Entferne das Icon
     &::before
@@ -186,7 +175,7 @@
     // Bessere Lesbarkeit
     hyphens: auto;
 
-    color: rgb($codeTextSec);
+    color: rgb($codeTextPri);
 
     -ms-hyphens: auto;
     overflow-wrap: break-word;
@@ -301,61 +290,6 @@
     }
 }
 
-// Responsive Design
-@media (max-width: $lg)
-{
-    .sectionHeader
-    {
-        font-size: $fs2;
-
-        padding: $space2;
-    }
-
-    .sectionContent
-    {
-        padding: $space2;
-    }
-
-    .subsection
-    {
-        padding: $space2;
-    }
-
-    .subtitle
-    {
-        font-size: $fs1;
-    }
-}
-
-@media (max-width: $md)
-{
-    .sectionHeader
-    {
-        font-size: $fs1;
-
-        padding: $space1;
-    }
-
-    .sectionContent
-    {
-        padding: $space1;
-    }
-
-    .subsection
-    {
-        padding: $space1;
-    }
-
-    .sectionMainText
-    {
-        font-size: $fs14;
-    }
-
-    .subtext
-    {
-        font-size: $fs14;
-    }
-}
 
 // Print Styles
 @media print
@@ -411,19 +345,6 @@
     outline-offset: 2px;
 }
 
-// Dark Mode Specific
-@media (prefers-color-scheme: dark)
-{
-    .subimage
-    {
-        box-shadow: 0 4px 8px rgba(0,0,0,.4);
-    }
-
-    .subtech
-    {
-        background: rgba(255,255,255,.05);
-    }
-}
 
 // Animations
 @keyframes fadeInUp
@@ -475,46 +396,5 @@
         transform: translateX(0);
 
         opacity: 1;
-    }
-}
-
-// Interactive States
-.section
-{
-    // Bessere Performance für Animationen
-    will-change: transform;
-    backface-visibility: hidden;
-}
-
-// Selection Styles
-.content ::selection
-{
-    color: rgb($codeTextPri);
-    background: rgba($codeBlue, .3);
-}
-
-// Scrollbar Styling (Webkit)
-.sectionContent
-{
-    &::-webkit-scrollbar
-    {
-        width: 6px;
-    }
-
-    &::-webkit-scrollbar-track
-    {
-        border-radius: 3px;
-        background: rgb($codeBgTer);
-    }
-
-    &::-webkit-scrollbar-thumb
-    {
-        border-radius: 3px;
-        background: rgb($codeBlue);
-
-        &:hover
-        {
-            background: rgb($codeBlueBright);
-        }
     }
 }

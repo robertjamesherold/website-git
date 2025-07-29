@@ -204,6 +204,8 @@
 {
     display: grid;
 
+    width: $space100;
+
     grid-template-columns: 1fr;
     gap: $space2;
 
@@ -217,6 +219,21 @@
     &.animated .Card
     {
         animation: fadeInUp .8s ease-out both;
+    }
+}
+
+@mixin halfgrid
+{
+    display: grid;
+
+    width: $space100;
+
+    grid-template-columns: 1fr;
+    gap: $space2;
+
+    @media (min-width: $sm)
+    {
+        width: $space50;
     }
 }
 
@@ -357,7 +374,7 @@
     &:hover
     {
         transform: translateY(-8px);border-color: rgb($codeBlue);
-        box-shadow: $shadLg;   
+        box-shadow: $shadLg;
         box-shadow: $shadLg;
     }
 
@@ -435,6 +452,7 @@
     transition: opacity .3s ease-in-out;
 
     opacity: 0;
+    color: rgb($codeBlue);
     background: linear-gradient(135deg, rgba($codeBlue, .4), rgba($codeLila, .4));
 
     .Card:hover &
@@ -457,7 +475,7 @@
     transition: all .3s ease-in-out;
     text-decoration: none;
 
-    color: rgb($codeWhite);
+    color: rgb($codeBlue);
     border-radius: $bR1;
     background-color: rgb($codeBgPri);
     box-shadow: $shadMd;

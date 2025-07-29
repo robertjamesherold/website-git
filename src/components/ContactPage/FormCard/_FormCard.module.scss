@@ -1,0 +1,41 @@
+.formCard
+{
+    width: $space100;
+
+    @include card;
+
+    .formcard:hover
+    {
+        box-shadow: $shadLg;
+    }
+}
+
+.formCardHeader
+{
+    font-size: $fs4;
+    font-weight: $fw7;
+
+    position: relative;
+
+    margin-bottom: $space2;
+
+    transition: $all0n3;
+
+    color: rgb($codeBg);
+
+    &::after
+    {
+        position: absolute;
+        bottom: -$space0n5;
+        left: $space0;
+
+        width: $space4;
+        height: $spacepx * 3;
+
+        content: '';
+        transition: $all0n3;
+
+        border-radius: $bR1;
+        background: linear-gradient(90deg, rgb($codePink), rgb($codeOrange));
+    }
+}

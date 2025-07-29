@@ -1,6 +1,8 @@
 // components/casestudy/components/CaseStudyMeta/CaseStudyMeta.module.scss
 .meta
 {
+    width: $space100;
+
     @include card;
 }
 
