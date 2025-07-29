@@ -1,9 +1,9 @@
 import Header from '@cm/Header/Header'
 import Section from '@ly/Section/Section'
-import SkillsGrid from '@cm/SkillPage/components/SkillGrid/SkillGrid'
-import ProcessGrid from '@cm/SkillPage/components/ProcessGrid/ProcessGrid'
-import ToolsCloud from '@cm/SkillPage/components/ToolsCloud/ToolsCloud'
-import AchievementsGrid from '@cm/SkillPage/components/AchievementsGrid/AchievementsGrid'
+import SkillsGrid from '@cm/SkillPage/components/SkillGrid/SkillGrid.jsx'
+import ProcessGrid from '@cm/SkillPage/components/ProcessGrid/ProcessGrid.jsx'
+import ToolsCloud from '@cm/SkillPage/components/ToolsCloud/ToolsCloud.jsx'
+import AchievementsGrid from '@cm/SkillPage/components/AchievementsGrid/AchievementsGrid.jsx'
 import { 
   designSkillsData, 
   webSkillsData, 
