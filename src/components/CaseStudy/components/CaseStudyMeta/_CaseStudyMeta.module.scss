@@ -1,0 +1,45 @@
+// components/casestudy/components/CaseStudyMeta/CaseStudyMeta.module.scss
+.meta
+{
+    @include card;
+}
+
+.metaTitle
+{
+    @include cardtitle;
+}
+
+.metaItem
+{
+    display: flex;
+    flex-direction: column;
+
+    margin-bottom: $space1n5;
+
+    &:last-child
+    {
+        margin-bottom: 0;
+    }
+}
+
+
+@include metaCardLabel;
+
+
+.metaValue
+{
+    font-size: $fs16;
+    font-weight: $fw5;
+
+    color: rgb($codeTextPri);
+}
+
+.tagList
+{
+    @include metaCardTags;
+}
+
+.tag
+{
+    @include tag;
+}

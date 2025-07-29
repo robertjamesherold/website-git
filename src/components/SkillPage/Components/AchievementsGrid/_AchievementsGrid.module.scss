@@ -1,0 +1,118 @@
+
+.section
+{
+    @include section;
+}
+
+.sectionTitle
+{
+    @include sectionTitle;
+}
+
+.achievementsGrid
+{
+    @include gridfour;
+}
+
+.Card
+{
+    text-align: center;
+
+    @include card;
+}
+
+.achievementIcon
+{
+    font-size: $fs6;
+
+    @include cardicon;
+}
+
+.achievementContent
+{
+    flex: 1;
+}
+
+.achievementTitle
+{
+    @include cardtitle;
+}
+
+.achievementDescription
+{
+    @include carddescription;
+}
+
+.achievementTags
+{
+    @include tags;
+}
+
+.achievementMetric
+{
+    @include tag;
+}
+
+@keyframes slideInUp
+{
+    from
+    {
+        transform: translateY(40px);
+
+        opacity: 0;
+    }
+    to
+    {
+        transform: translateY(0);
+
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp
+{
+    from
+    {
+        transform: translateY(50px);
+
+        opacity: 0;
+    }
+    to
+    {
+        transform: translateY(0);
+
+        opacity: 1;
+    }
+}
+
+@keyframes slideInLeft
+{
+    from
+    {
+        transform: translateX(-40px);
+
+        opacity: 0;
+    }
+    to
+    {
+        transform: translateX(0);
+
+        opacity: 1;
+    }
+}
+
+@keyframes popIn
+{
+    from
+    {
+        transform: scale(.8);
+
+        opacity: 0;
+    }
+    to
+    {
+        transform: scale(1);
+
+        opacity: 1;
+    }
+}

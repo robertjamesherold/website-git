@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import styles from './_Footer.module.scss'
 
-export function Footer() {
+export default function Footer() {
   const currentYear = new Date().getFullYear()
 
   return (
@@ -14,17 +14,17 @@ export function Footer() {
             <h3 className={styles.sectionTitle}>Über mich</h3>
             <ul className={styles.linkList}>
               <li>
-                <Link to="/about/story" className={styles.link}>
+                <Link to="/story" className={styles.link}>
                   Meine Story
                 </Link>
               </li>
               <li>
-                <Link to="/about/skills" className={styles.link}>
+                <Link to="/skills" className={styles.link}>
                   Skills & Technologien
                 </Link>
               </li>
               <li>
-                <Link to="/about/lebenslauf" className={styles.link}>
+                <Link to="/lebenslauf" className={styles.link}>
                   Lebenslauf
                 </Link>
               </li>

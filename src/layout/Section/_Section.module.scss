@@ -1,0 +1,51 @@
+.section
+{
+    padding: $space0;
+
+    color: rgb($codeTextPri);
+    background: rgb($codeBgTer);
+
+    &:first-of-type
+    {
+        padding-top: $space2;
+
+        @media (min-width: $sm)
+        {
+            padding-top: $space2n5;
+        }
+        @media (min-width: $md)
+        {
+            padding-top: $space3;
+        }
+        @media (min-width: $lg)
+        {
+            padding-top: $space3n5;
+        }
+        @media (min-width: $xl)
+        {
+            padding-top: $space4;
+        }
+    }
+
+
+    &:last-of-type
+    {
+        padding-bottom: $space2;
+        @media (min-width: $sm)
+        {
+            padding-bottom: $space2n5;
+        }
+        @media (min-width: $md)
+        {
+            padding-bottom: $space3;
+        }
+        @media (min-width: $lg)
+        {
+            padding-bottom: $space3n5;
+        }
+        @media (min-width: $xl)
+        {
+            padding-bottom: $space4;
+        }
+    }
+}

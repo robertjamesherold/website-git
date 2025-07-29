@@ -1,0 +1,99 @@
+
+.services
+{
+    width: $space100;
+    margin-bottom: $space5;
+}
+
+.servicesTitle
+{
+    font-size: $fs5;
+    font-weight: $fw7;
+    line-height: $tightH;
+
+    margin-bottom: $space3;
+
+    text-align: center;
+
+    color: rgb($codeTextPri);
+}
+
+.servicesGrid
+{
+    display: grid;
+
+    grid-template-columns: 1fr;
+    gap: $space2;
+
+    @media (min-width: $sm)
+    {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (min-width: $lg)
+    {
+        grid-template-columns: repeat(4, 1fr);
+        gap: $space1n5;
+    }
+}
+
+.serviceCard
+{
+    width: $space100;
+    padding: $space2;
+
+    transition: all .3s ease-in-out;
+    text-align: center;
+
+    border: $border1;
+    border-radius: $bR1;
+    background-color: rgb($codeBgSec);
+
+    &:hover
+    {
+        transform: translateY(-6px);
+
+        border-color: rgb($codeBlue);
+        box-shadow: $shadLg;
+    }
+}
+
+.serviceIcon
+{
+    font-size: $fs6;
+
+    display: block;
+
+    margin-bottom: $space1;
+}
+
+.serviceTitle
+{
+    font-size: $fs1;
+    font-weight: $fw6;
+    line-height: $tightH;
+
+    margin-bottom: $space0n75;
+
+    color: rgb($codeTextPri);
+}
+
+.serviceDescription
+{
+    font-size: $fs16;
+    line-height: $baseH;
+    // Optional: Maximale Breite setzen
+
+    max-width: 100%;
+    margin: 0;
+    // Lange Wörter umbrechen
+
+    word-wrap: break-word;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+
+    color: rgb($codeTextPri);
+
+    -ms-hyphens: auto;
+    overflow-wrap: break-word;
+}

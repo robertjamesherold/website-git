@@ -1,9 +1,11 @@
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom'
 import { PageTransition } from '@ut/PageTransition.jsx'
 import Navigation from '@ly/Navigation/Navigation'
-import { Footer } from '@ly/Footer/Footer'
+import Footer from '@ly/Footer/Footer'
 import { CvPage, SkillPage, StoryPage } from '@pg/Pages.jsx'
-import { ConcreteGoldPage, ContactPage, HomePage, ProjectPage, StudyPage } from '@pg/Pages.jsx'
+import { DynamicCaseStudyPage } from '@pg/DynamicCaseStudyPage'
+
+import { ContactPage, HomePage, ProjectPage, CasePage } from '@pg/Pages.jsx'
 import '@scss/global.scss'
 
 function AnimatedRoutes() {
@@ -31,8 +33,8 @@ function AnimatedRoutes() {
           <Route path='/skills' element={<SkillPage />} />
           <Route path='/lebenslauf' element={<CvPage />} />
           <Route path='/projekte' element={<ProjectPage />} />
-          <Route path='/fallstudien' element={<StudyPage />} />
-          <Route path='/fallstudien/concretegold' element={<ConcreteGoldPage />} />
+          <Route path='/fallstudien' element={<CasePage />} />
+          <Route path="/fallstudien/:slug" element={<DynamicCaseStudyPage />} />
           <Route path='/kontakt' element={<ContactPage />} />
         </Routes>
         <Footer />

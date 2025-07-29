@@ -1,0 +1,123 @@
+.personal
+{
+    width: $space100;
+    margin-bottom: $space5;
+}
+
+.personalContent
+{
+    padding: $space3;
+
+    border: $border1;
+    border-radius: $bR1;
+    background-color: rgb($codeBgSec);
+
+    @media (min-width: $md)
+    {
+        padding: $space4;
+    }
+}
+
+.personalTitle
+{
+    font-size: $fs4;
+    font-weight: $fw7;
+    line-height: $tightH;
+
+    margin-bottom: $space2;
+
+    color: rgb($codeTextPri);
+}
+
+.personalGrid
+{
+    display: grid;
+
+    grid-template-columns: 1fr;
+    gap: $space3;
+
+    @media (min-width: $lg)
+    {
+        align-items: center;
+
+        grid-template-columns: 2fr 1fr;
+    }
+}
+
+.personalText
+{
+    p
+    {
+        font-size: $fs16;
+        line-height: $baseH;
+
+        width: $space100;
+        margin-bottom: $space1n5;
+
+        text-wrap: wrap;
+
+        color: rgb($codeTextPri);
+
+        &:last-child
+        {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.personalStats
+{
+    display: grid;
+
+    width: $space100;
+
+    text-align: center;
+
+    grid-template-columns: repeat(auto, 1fr);
+    grid-auto-flow: dense;
+    gap: $space1;
+
+    @media (min-width: $sm)
+    {
+        gap: $space1n5;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media (min-width: $lg)
+    {
+        grid-template-columns: 1fr;
+        gap: $space2;
+    }
+}
+
+.stat
+{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    padding: $space1;
+
+    border: $border1;
+    border-radius: $bR1;
+    background-color: rgb($codeBgTer);
+}
+
+.statNumber
+{
+    font-size: $fs4;
+    font-weight: $fw7;
+    line-height: $tightH;
+
+    color: rgb($codeBlue);
+}
+
+.statLabel
+{
+    font-size: $fs16;
+    font-weight: $fw5;
+
+    margin-top: $space0n25;
+
+    color: rgb($codeTextPri);
+}

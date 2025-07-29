@@ -1,0 +1,186 @@
+
+.hero
+{
+    display: grid;
+    align-items: center;
+
+    width: $space100;
+    height: $spaceFit;
+
+    padding-inline: 0;
+    margin-block: $space3;
+    gap: $space1;
+    grid-template-columns: 1fr;
+
+    @media (min-width: $lg)
+    {
+        width: $space100;
+
+        gap: $space2;
+        grid-template-columns: 1fr 1fr;
+        padding-inline: 0;
+        margin-inline: 0;
+        margin-block: $space6;
+    }
+}
+
+
+
+
+
+.heroContent
+{
+    order: 1;
+
+    width: $space100;
+
+    text-align: center;
+
+    @media (min-width: $lg)
+    {
+        text-align: left;
+    }
+}
+
+.heroTitle
+{
+    font-size: $fs5;
+    font-weight: $fw7;
+    line-height: $tightH;
+
+    margin-bottom: $space1;
+
+    color: rgb($codeBg);
+
+    @media (min-width: $sm)
+    {
+        font-size: $fs6;
+    }
+}
+
+.heroName
+{
+    display: inline-block;
+
+    animation: gradientAnimation 10s infinite ;
+
+    background: linear-gradient(120deg, rgb($codePink), rgb($codePurple), rgb($codeOrange), rgba($codeBlueDark), rgb($codePink), rgb($codePurple));
+    background-repeat: repeat;
+    -webkit-background-clip: text;
+    background-size: 300% 300%;
+
+    -webkit-text-fill-color: transparent;
+}
+
+
+
+@keyframes gradientAnimation
+{
+    0%
+    {
+        background-size: 250% 200%;
+    }
+    50%
+    {
+        background-position: 200% 150%;
+    }
+    100%
+    {
+        background-position: 200% 250%;
+    }
+}
+//  .HEROSUBTITLE
+
+.heroSubtitle
+{
+    font-size: $fs16;
+    line-height: $baseH;
+
+    margin-bottom: $space1n5;
+
+    color: rgb($codeTextPri);
+
+
+    // Alles über 480px
+    @media (min-width: $xs)
+    {
+        font-size: $fs1;
+    }
+
+
+
+    // Alles über 640px
+    @media (min-width: $sm)
+    {
+        font-size: $fs2;
+    }
+
+
+
+    // Alles über 768px
+    @media (min-width: $md)
+    {
+    }
+
+
+    // Alles über 1024px
+    @media (min-width: $lg)
+    {
+    }
+
+
+
+    // Alles über 1280px
+    @media (min-width: $xl)
+    {
+    }
+}
+
+
+.heroButtons
+{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    width: $space100;
+    margin-bottom: $space2;
+
+    gap: $space1;
+
+
+    @media (min-width: $sm)
+    {
+        flex-direction: row;
+
+        gap: $space1;
+    }
+    @media (min-width: $md)
+    {
+        flex-direction: row;
+
+        gap: $space1;
+    }
+
+    @media (min-width: $lg)
+    {
+        flex-direction: row;
+
+        gap: $space0n5;
+    }
+}
+
+
+.ctaButton
+{
+    width: $space100;
+
+    @include ctaButtonPrimary;
+}
+
+.ctaButtonSecondary
+{
+    width: $space100;
+
+    @include ctaButtonSecondary;
+}
