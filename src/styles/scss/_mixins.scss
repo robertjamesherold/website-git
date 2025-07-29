@@ -356,8 +356,8 @@
 
     &:hover
     {
-        transform: translateY(-8px);
-
+        transform: translateY(-8px);border-color: rgb($codeBlue);
+        box-shadow: $shadLg;   
         box-shadow: $shadLg;
     }
 
@@ -437,7 +437,7 @@
     opacity: 0;
     background: linear-gradient(135deg, rgba($codeBlue, .4), rgba($codeLila, .4));
 
-    .featuredCard:hover &
+    .Card:hover &
     {
         opacity: 1;
     }
@@ -539,6 +539,7 @@
 
     transition: all .3s ease-in-out;
     text-decoration: none;
+    text-wrap: nowrap;
 
     color: rgb($codeBlue);
     border: $border2;
@@ -549,8 +550,8 @@
     {
         transform: translateY(-2px);
 
-        color: rgb($codeBlue);
-        background-color: rgb($codeBgPri);
+        color: rgb($codeWhite);
+        background-color: rgb($codeBlue);
         box-shadow: $shadLg;
     }
 

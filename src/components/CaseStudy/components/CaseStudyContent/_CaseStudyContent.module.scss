@@ -74,7 +74,7 @@
 .sectionContent
 {
     // Slide-in Animation
-    padding: $space1;
+    padding: $space2;
 
     animation: slideDown .4s ease;
 
@@ -308,17 +308,17 @@
     {
         font-size: $fs2;
 
-        padding: $space1n5;
+        padding: $space2;
     }
 
     .sectionContent
     {
-        padding: $space1n5;
+        padding: $space2;
     }
 
     .subsection
     {
-        padding: $space1n5;
+        padding: $space2;
     }
 
     .subtitle

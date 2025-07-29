@@ -31,7 +31,7 @@ export default function Hero() {
                 </div>
 
                 <div className={ styles.heroButtons }>
-                    <Link to="/projekte" className={ styles.ctaButton }>Meine Projekte ansehen</Link>
+                    <Link to="/projekte" className={ styles.ctaButton }>Meine Projekte</Link>
                     <Link to="/kontakt" className={ styles.ctaButtonSecondary }>Kontakt aufnehmen</Link>
                 </div>
                 <Social />
