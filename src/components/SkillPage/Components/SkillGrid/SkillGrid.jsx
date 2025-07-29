@@ -25,7 +25,7 @@ const SkillCard = ({ skill, index, getAnimationDelay, getSkillProgressStyle }) =
   </div>
 );
 
-export default function SkillsGrid({ title, data }) {
+export default function SkillGrid({ title, data }) {
   const { isVisible, elementRef, getSkillProgressStyle, getAnimationDelay } = useSkillsAnimation();
 
   return (
