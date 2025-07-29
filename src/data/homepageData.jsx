@@ -1,5 +1,5 @@
-import webdesign from '@img/p4.webp'
-import grafikdesign from '@img/g4.webp'
+import webdesign from '@img/oliveto/p4.webp'
+import grafikdesign from '@img/oliveto/g4.webp'
 
 export const statsData = [
 {  

@@ -15,3 +15,4 @@ export function DynamicCaseStudyPage() {
 
   return <UniversalCaseStudy caseStudyData={caseStudyData} />
 }
+

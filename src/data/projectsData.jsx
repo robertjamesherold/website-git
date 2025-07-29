@@ -1,8 +1,13 @@
+import g6 from '@img/oliveto/g9.webp'
+import g1 from '@img/dbd/g1.webp'
+
+
 export const projectCategories = [
   { id: 'all', label: 'Alle Projekte' },
   { id: 'webdesign', label: 'Webdesign' },
   { id: 'ui-ux', label: 'UI/UX Design' },
-  { id: 'branding', label: 'Branding' },
+  { id: 'motion', label: 'Motion Design' },
+  { id: 'roduktdesign', label: 'Produktdesign' },
   { id: 'mobile', label: 'Mobile Design' }
 ]
 
@@ -19,12 +24,12 @@ export const projectsData = [
   },
   {
     id: 2,
-    title: 'Mobile Banking App Interface',
-    category: 'ui-ux',
+    title: 'Villa Oliveto Olivenöl Branding',
+    category: 'produktdesign',
     description: 'Intuitive Benutzeroberfläche für eine Banking-App mit Schwerpunkt auf Sicherheit und Benutzerfreundlichkeit.',
-    image: 'https://picsum.photos/600/400?random=2',
-    technologies: ['Figma', 'Prototyping', 'User Research'],
-    link: '#project-2',
+    image: g6,
+    technologies: ['Figma', 'Photoshop', 'Illustrator'],
+    link: 'portfolio-redesign',
     featured: true
   },
   {
@@ -32,7 +37,7 @@ export const projectsData = [
     title: 'Startup Brand Identity',
     category: 'branding',
     description: 'Entwicklung einer kompletten Markenidentität für ein Tech-Startup inklusive Logo, Farbschema und Typografie.',
-    image: 'https://picsum.photos/600/400?random=3',
+    image: g1,
     technologies: ['Illustrator', 'Photoshop', 'InDesign'],
     link: '#project-3',
     featured: false
@@ -55,7 +60,7 @@ export const projectsData = [
     image: 'https://picsum.photos/600/400?random=5',
     technologies: ['Figma', 'Prototyping', 'After Effects'],
     link: '#project-5',
-    featured: true
+    featured: false
   },
   {
     id: 6,

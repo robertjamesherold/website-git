@@ -1,4 +1,6 @@
 .projectsGrid
 {
+    margin-bottom: $space2;
+
     @include grid;
 }

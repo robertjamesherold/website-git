@@ -1,28 +1,6 @@
-.featuredCard
+.Card
 {
-    overflow: hidden;
-
-    transition: all .3s ease-in-out;
-
-    border: $border1;
-    border-radius: $bR1;
-    background-color: rgb($codeBgSec);
-    box-shadow: $shadMd;
-
-    &:hover
-    {
-        transform: translateY(-8px);
-
-        box-shadow: $shadLg;
-    }
-
-    @media (max-width: $sm - 1px)
-    {
-        &:hover
-        {
-            transform: translateY(-4px);
-        }
-    }
+    @include bigCard;
 }
 
 .featuredImage
@@ -52,90 +30,26 @@
 
 .featuredOverlay
 {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    transition: opacity .3s ease-in-out;
-
-    opacity: 0;
-    background: linear-gradient(135deg, rgba($codeBlue, .4), rgba($codeLila, .4));
-
-    .featuredCard:hover &
-    {
-        opacity: 1;
-    }
+    @include bigCardOverlay;
 }
-
 .viewProject
 {
-    font-size: $fs1;
-    font-weight: $fw6;
-
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-
-    padding: $space0n75 $space2;
-
-    transition: all .3s ease-in-out;
-    text-decoration: none;
-
-    color: rgb($codeWhite);
-    border-radius: $bR1;
-    background-color: rgb($codeBgPri);
-    box-shadow: $shadMd;
-
-    &:hover
-    {
-        transform: translateY(-2px);
-
-        color: rgb($codeBlue);
-        background-color: rgb($codeWhite);
-        box-shadow: $shadLg;
-    }
+    @include viewProject;
 }
 
 .featuredContent
 {
-    padding: $space2;
-
-    @media (min-width: $md)
-    {
-        padding: $space2n5;
-    }
-
-    @media (max-width: $sm - 1px)
-    {
-        padding: $space1n5;
-    }
+    @include bigCardContent;
 }
 
 .featuredTitle
 {
-    font-size: $fs2;
-    font-weight: $fw6;
-    line-height: $tightH;
-
-    margin-bottom: $space1;
-
-    color: rgb($codeTextPri);
+    @include cardtitle;
 }
 
 .featuredDescription
 {
-    font-size: $fs16;
-    line-height: $baseH;
-
-    margin-bottom: $space1n5;
-
-    color: rgb($codeTextPri);
+    @include carddescription;
 }
 
 .featuredTech

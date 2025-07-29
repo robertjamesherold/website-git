@@ -4,6 +4,7 @@ import Navigation from '@ly/Navigation/Navigation'
 import Footer from '@ly/Footer/Footer'
 import { CvPage, SkillPage, StoryPage } from '@pg/Pages.jsx'
 import { DynamicCaseStudyPage } from '@pg/DynamicCaseStudyPage'
+import { DynamicProjectStudyPage } from '@pg/DynamicProjectStudyPage'
 
 import { ContactPage, HomePage, ProjectPage, CasePage } from '@pg/Pages.jsx'
 import '@scss/global.scss'
@@ -11,15 +12,7 @@ import '@scss/global.scss'
 function AnimatedRoutes() {
   const location = useLocation()
   
-  // Definiere die Pfade für die Über-Mich TabBar
-  const aboutTabBarRoutes = ['/story', '/skills', '/lebenslauf']
-  const showAboutTabBar = aboutTabBarRoutes.includes(location.pathname)
-  
-  // Definiere die Pfade für die Projekte TabBar
-  const projectTabBarRoutes = ['/projekte', '/fallstudien']
-  const showProjectTabBar = projectTabBarRoutes.some(route => 
-    location.pathname === route || location.pathname.startsWith(route + '/')
-  )
+
 
   return (
     <>
@@ -34,6 +27,7 @@ function AnimatedRoutes() {
           <Route path='/lebenslauf' element={<CvPage />} />
           <Route path='/projekte' element={<ProjectPage />} />
           <Route path='/fallstudien' element={<CasePage />} />
+          <Route path='/projekte/:slug' element={<DynamicProjectStudyPage />} />
           <Route path="/fallstudien/:slug" element={<DynamicCaseStudyPage />} />
           <Route path='/kontakt' element={<ContactPage />} />
         </Routes>

@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 export default function FeaturedCard({ project }) {
   return (
-    <div className={styles.featuredCard}>
+    <div className={styles.Card}>
       <div className={styles.featuredImage}>
         <img src={project.image} alt={project.title} />
         <div className={styles.featuredOverlay}>
