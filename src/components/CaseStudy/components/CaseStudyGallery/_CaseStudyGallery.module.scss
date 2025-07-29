@@ -1,7 +1,8 @@
 
 .gallery
 {
-    margin: $space4 0;
+    width: $space100;
+    margin: $space2 0;
     padding: $space3;
 
     transform: translateY(20px);
@@ -12,7 +13,7 @@
     opacity: 0;
     border: $border1;
     border-radius: $bR1;
-    background: rgb($codeBgTer);
+    background: rgb($codeBgSec);
 }
 
 .galleryTitle

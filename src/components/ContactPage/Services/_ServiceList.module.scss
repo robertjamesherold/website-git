@@ -1,0 +1,62 @@
+
+.services
+{
+    width: $space100;
+    margin-top: $space2;
+}
+
+.servicesTitle
+{
+    font-size: $fs5;
+    font-weight: $fw7;
+    line-height: $tightH;
+
+    margin-bottom: $space3;
+
+    text-align: center;
+
+    color: rgb($codeTextPri);
+}
+
+.servicesGrid
+{
+    @include grid;
+}
+
+.serviceCard
+{
+    width: $space100;
+    padding: $space2;
+
+    transition: all .3s ease-in-out;
+    text-align: center;
+
+    border: $border1;
+    border-radius: $bR1;
+    background-color: rgb($codeBgSec);
+
+    &:hover
+    {
+        transform: translateY(-6px);
+
+        border-color: rgb($codeBlue);
+        box-shadow: $shadLg;
+    }
+}
+
+.serviceIcon
+{
+    font-size: $fs5;
+
+    @include cardicon;
+}
+
+.serviceTitle
+{
+    @include cardtitle;
+}
+
+.serviceDescription
+{
+    @include carddescription;
+}

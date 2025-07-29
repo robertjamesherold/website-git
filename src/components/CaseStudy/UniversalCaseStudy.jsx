@@ -5,8 +5,6 @@ import { CaseStudyNav } from './components/CaseStudyNav/CaseStudyNav'
 import { CaseStudyContent } from './components/CaseStudyContent/CaseStudyContent'
 import { CaseStudyMeta } from './components/CaseStudyMeta/CaseStudyMeta'
 import { CaseStudySidebar } from './components/CaseStudySidebar/CaseStudySidebar'
-import { CaseStudyGallery } from './components/CaseStudyGallery/CaseStudyGallery'
-import styles from './_CaseStudy.module.scss'
 
 export function UniversalCaseStudy({ caseStudyData }) {
  const [activeSection, setActiveSection] = useState('')
@@ -18,15 +16,7 @@ export function UniversalCaseStudy({ caseStudyData }) {
     }
   }, [caseStudyData, activeSection])
 
-  // Fehlerbehandlung für fehlende Daten
-  if (!caseStudyData) {
-    return (
-      <div className={styles.error}>
-        <h1>Case Study nicht gefunden</h1>
-        <p>Die angeforderte Fallstudie konnte nicht geladen werden.</p>
-      </div>
-    );
-  }
+ 
 
 
  const {
