@@ -4,9 +4,9 @@ import preproduction from '@img/concreteGold/Vorproduktion.png'
 import storyboard from '@img/concreteGold/Storyboard.jpg'
 import moodboard from '@img/concreteGold/Moodboard.jpg'
 import statistikDiagramm from '@img/concreteGold/statista.jpg'
-import game from '@img/elearning/Game.png'
-import start from '@img/elearning/Start.png'
-import profil from '@img/elearning/Profil.png'
+import game from '@img/elearning/game.png'
+import start from '@img/elearning/start.png'
+import profil from '@img/elearning/profil.png'
 
 // Separate Image Maps
 const elearningImageMap = {
